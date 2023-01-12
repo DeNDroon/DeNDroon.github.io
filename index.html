@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/70c54e2b83.js" crossorigin="anonymous"></script>
+    <script src="frameworks/jquery-3.6.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="src/img/Instagram_logo.svg">
+        <nav id="top-panel">
+            <a class="top-lnk"><i class="fa-regular fa-square-plus"></i></a>
+            <a class="top-lnk"><i class="fa-regular fa-heart"></i></a>
+            <a class="top-lnk"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </nav>
+    </header>
+
+    <main id="posts_container">
+        <div id="story-container" class="trans-back" style="top: 0px">
+            <div id="top-section" class="trans-back">
+                <div id="story-timer">
+                    <div id="progress-timer"></div>
+                </div>
+                <div id="story-nav" class="trans-back">
+                    <div id="story-owner-photo"></div>
+                    <span id="story-owner-name" class="trans-back">giorgi.kartsivadze.16</span>
+                </div>
+            </div>
+            <div id="story-photo-background">
+                <div id="story-open-photo"></div>
+
+            </div>
+            <div id="story-footer">
+                <input type="text" id="reply-field" placeholder="Send message">
+                <a class="link"><i class="fa-regular fa-heart"></i> </a>
+                <a class="link"><i class="fa-regular fa-paper-plane"></i></a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- __________________________________________________________________________________ -->
+
+        <section id="story_section">
+            <span id="my-story" class="story" onclick="showStory(this.id)">
+                <div class="my-photo story-photo"></div>
+                <p class="story-desc">Your story</p>
+            </span>
+        </section>
+
+
+        <div class="post">
+            <div class="post_header">
+                <span class="post_left_container">
+                    <span class="post_photo"></span>
+                    <span class="post_desc">Buga</span>
+                </span>
+                <span class="post_more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            </div>
+            <div id="post_attachment">
+
+            </div>
+            <div class="post_bottom">
+                <div class="action-section">
+                    <span class="action-button first-button"><i class="fa-regular fa-heart"></i></span>
+                    <span class="action-button"><i class="fa-regular fa-comment"></i></span>
+                    <span class="action-button"><i class="fa-regular fa-paper-plane"></i></span>
+                    <span class="action-button last-button" onclick="bookMark()"><i id="bookmark" class="fa-regular fa-bookmark anim-button"></i></span>
+                </div>
+                <p class="view-counter">25,231 views</p>
+                <div class="comment-section">
+                    <a class="post-owner-user" href="#">giorgi.kartsivadze.16</a>
+                    <label class="post-owner-label">If you like video, Like & Comment. I LOVE YOU MY DEAR</label>
+                </div>
+                <label class="post-make-date">2 hours ago</label>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="bottom">
+        <a href="#"><i class="fa-solid fa-house"></i></a>
+        <a><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a><i class="fa-solid fa-clapperboard"></i></a>
+        <a><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="my-page/my-page.html" id="my-profile" class="my-photo"></a>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+
+</html>

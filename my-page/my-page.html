@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page-style.css">
+    <script src="https://kit.fontawesome.com/70c54e2b83.js" crossorigin="anonymous"></script>
+    <script src="../frameworks/jquery-3.6.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../src/img/Instagram_logo.svg">
+        <nav id="top-panel">
+            <a class="top-lnk"><i class="fa-regular fa-square-plus"></i></a>
+            <a class="top-lnk"><i class="fa-regular fa-heart"></i></a>
+            <a class="top-lnk"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section id="my-basic">
+            <img id="my-photo" src="../src/img/my-pic.jpg">
+            <div id="statistic">
+                <label id="posts">
+                    <p id="posts-count">1</p> Posts
+                </label>
+                <label id="followers">
+                    <p id="followers-count">103</p> Followers
+                </label>
+                <label id="following">
+                    <p id="following-count">161</p> Following
+                </label>
+            </div>
+        </section>
+        <h5 id="full-name">Giorgi Kartsivadze</h5>
+        <p id="bio">
+            I LOVE PROgRammING
+        </p>
+        <div id="buttons">
+            <button>Edit Profile</button>
+            <button><i class="fa-solid fa-user-group"></i></button>
+        </div>
+    </main>
+    <section id="photos">
+        <div id="grid-to-posts">
+            <button onclick="changeGrid()"><i class="fa-solid fa-table-cells"></i></button>
+            <button onclick="changeGrid()"><i class="fa-solid fa-id-card-clip"></i></button>
+        </div>
+        <hr id="sub-button">
+        <section class="grid">
+
+        </section>
+    </section>
+
+
+
+
+
+
+    <footer id="bottom">
+        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+        <a><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a><i class="fa-solid fa-clapperboard"></i></a>
+        <a><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="#" id="my-profile" class="my-photo"></a>
+    </footer>
+    <script src="page-script.js"></script>
+</body>
+
+</html>

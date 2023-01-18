@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+
+html {
+  font-family: "Baumans", cursive;
+  background-color:rgba(114, 164, 106, 0.64)
+}
+
+body {
+  height: 100vh;
+  backdrop-filter : blur(5px);
+  background-image: url('src/tourism-back.jpg');
+  background-size: auto 100vh;
+  background-repeat:no-repeat;
+  background-position: center;
+  margin: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  display: flex;
+  justify-content: stretch;
+  position: sticky;
+  height: 100px;
+  left:0;
+  right:0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+.nav-but {
+  width: 150px;
+  text-align: center;
+  padding: 38px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  user-select: none;
+}
+
+#comp_name {
+  font-size: 96px;
+  margin-left: 150px;
+  width: 500px;
+  background-color: rgb(0, 71, 0);
+  color: transparent;
+  text-shadow: 2px 2px 3px green;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  user-select: none;
+  transition: text-shadow 0.2s;
+}
+
+#comp_name:hover {
+    text-shadow: 0 0 3px rgb(0, 176, 0);
+}
+
+#selector {
+    display: flex;
+    flex-direction: column;
+  position: absolute;
+  width: 50%;
+  height: 250px;
+  right: 100px;
+  top: 60%;
+  background: rgba(114, 164, 106, 0.64);
+  border-radius: 5px;
+}
+
+#geo-select {
+    background: url('src/GeorgiaBack.jpg');
+    background-size : cover;
+    color: transparent;
+    -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes anim-geo-in {
+    0% {
+        background: url('src/GeorgiaBack.jpg');
+        filter: blur(5px);
+    }
+    100% {
+        color: black;
+        background: url('src/GeorgiaBack.jpg');
+        filter: none;
+        background-size : cover;
+    }
+}
+
+#geo-select:hover {
+  animation: anim-geo-in 0.2s ease forwards;
+}
+
+#word-select {
+    background: url('src/WordwideBack.jpg');
+    background-size : cover;
+    color: transparent;
+    -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+#word-select:hover{
+    color: black;
+    background: url('src/WordwideBack.jpg');
+    background-size: cover;
+    animation: anim-word-in 0.2s ease forwards;
+}
+
+@keyframes anim-word-in {
+    0% {
+        background: url('src/WordwideBack.jpg');
+        filter: blur(5px);
+    }
+    100% {
+        color: black;
+        background: url('src/WordwideBack.jpg');
+        filter: none;
+        background-size : cover;
+    }
+}
+
+.sub-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    width: 100%;
+    height: 200px;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media (max-width:400px) {
+    header {
+      justify-content:space-evenly;
+    }
+    body {
+        background-image: url('src/mobile-background.jpg');
+        background-size: auto 100vh;
+    }
+    #comp_name {
+        width: 200px;
+        font-size: 48px;
+        margin: 0;
+        padding-left: 20px;
+        margin-top: 50px;
+        color: rgb(0, 119, 0);
+        box-shadow: none;
+        text-shadow: none;
+        background: linear-gradient(90deg, rgba(128, 128, 128, 0.2),rgba(128, 128, 128, 0.2),transparent)
+    }
+    #comp_name:hover {
+      text-shadow: 0 0 3px white;
+  }
+    .nav-but {
+        width: 50px;
+    }
+    #selector {
+        margin: 0 auto;
+        right: 0;
+        width: 100%;
+    }
+}

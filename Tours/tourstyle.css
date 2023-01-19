@@ -49,3 +49,12 @@
     color: rgb(12, 104, 0);
     text-shadow: 0 0 3px white;
 }
+
+@media (max-width: 450px) {
+    .tour-graph {
+        width: 300px;
+        display: flex;
+        flex-direction:column;
+        height: 300px;
+    }
+}

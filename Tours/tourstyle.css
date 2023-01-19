@@ -61,7 +61,9 @@
         height: 30px;
     }
     .tour-desc {
+        text-align: center;
         height: 50px;
+        width: 280px;
     }
     .tour-price{
         height: 40px;

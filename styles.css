@@ -14,6 +14,7 @@ body {
   margin: 0;
   left: 0;
   right: 0;
+  transition: background-image 0.2s;
 }
 
 header {
@@ -136,6 +137,23 @@ header {
   height: 200px;
   user-select: none;
   cursor: pointer;
+}
+
+@media (925px > width > 670px) {
+  body {
+    background: linear-gradient(transparent 40%, white 50%),
+    url("src/tourism-back.jpg");
+  background-size: 100vw auto;
+  }
+}
+
+@media (670px > width > 450px) {
+  body {
+    background: linear-gradient(transparent 10%, white 30%),
+    url("src/tourism-back.jpg");
+    background-repeat: no-repeat;
+  background-size: 100vw auto;
+  }
 }
 
 @media (max-width: 450px) {

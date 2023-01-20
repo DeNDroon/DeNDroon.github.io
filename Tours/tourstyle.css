@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+body {
+    padding-bottom: 50px;
+}
+
 .tour-graph {
     display: grid;
     height: 150px;
@@ -20,6 +24,27 @@
     column-gap: 15px;
     background: rgba(172, 255, 47, 0.1);
     box-shadow: 0 0 5px black;
+    cursor: pointer;
+    animation: drive-in 0.4s forwards;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+#tour-list > a {
+    text-decoration: none;
+    color: black;
+}
+
+.tour-graph:hover {
+    box-shadow: 0 0 5px white;
+    background: rgba(172, 255, 47, 0.5)
+}
+
+@keyframes drive-in {
+    from {
+        transform: translateX(-300px);
+    } to {
+        transform: translateX(0px);
+    }
 }
 
 .tour-img {

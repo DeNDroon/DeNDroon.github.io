@@ -7,9 +7,9 @@ html {
 }
 
 body {
-  background: linear-gradient(transparent 0 20%, white 30% 35%),
+  background: linear-gradient(transparent 0 400px, white 600px 800px),
     url("src/tourism-back.jpg");
-  background-size: 100vw auto;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   margin: 0;
   left: 0;
@@ -143,7 +143,7 @@ header {
   body {
     background: linear-gradient(transparent 0 60%, white 70% 100%),url(src/mobile-background.jpg);
     background-repeat: no-repeat;
-    background-size: 100vw auto;
+    background-size: auto 100vh;
   }
   #comp_name {
     width: 300px;

@@ -141,10 +141,9 @@ header {
 
 @media (max-width: 450px) {
   body {
-    background: linear-gradient(transparent 0 60%, white 70% 3%),
-      url(src/mobile-background.jpg);
+    background: linear-gradient(transparent 0 60%, white 70% 100%),url(src/mobile-background.jpg);
     background-repeat: no-repeat;
-    background-size: 150vw auto;
+    background-size: 100vw auto;
   }
   #comp_name {
     width: 300px;

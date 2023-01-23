@@ -1,5 +1,8 @@
 body {
     background: white;
+    background-image: linear-gradient(transparent, white 30%),url('../src/georgia-tour/georgia-back.jpg');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;   
 }
 
 #info-container {
@@ -17,17 +20,33 @@ body {
     height: 50vw;
     object-fit:cover;
     object-position: center;
-    margin-bottom: 2rem;
 }
 
 #information {
-    display: block;
     text-shadow: 0 0 1px white;
-    background: rgba(128, 128, 128, 0.5);
+    background: linear-gradient(rgba(128, 128, 128, 0.2), transparent);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 3px rgba(128, 128, 128, 0.2);
+    transition: all 0.2s;
+}
+
+#information:hover {
+    text-shadow: 0 0 3px white;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.5);
 }
 
 #photo-section {
     position: relative;
+    box-shadow: 0 0 10px 3px black;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
+}
+
+#photo-section:hover {
+    position: relative;
+    box-shadow: 0 0 20px 6px black;
+    margin-bottom: 2rem;
 }
 
 .switch {
@@ -74,4 +93,49 @@ h1 {
     list-style: none;
     font-size: 36px;
     margin: 10px;
+}
+
+.price {
+    font-size: 36px;
+    color: green;
+    margin-left: 40px;
+    font-weight: bolder
+}
+
+#prices-section ul li {
+    padding: 15px 50px ;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#prices-section ul li:hover {
+    animation: gradient 0.2s ease-in forwards;  
+}
+
+@keyframes gradient {
+    0% {
+        background-image : linear-gradient(90deg, transparent, transparent);
+    }
+    10% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2),transparent 10%)
+    }
+    20% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 20%)
+    }
+    30% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 30%)
+    }
+    40% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 40%)
+    }
+    50% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 50%)
+    }
+    60% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 60%)
+    }
+    100% {
+        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent)
+    }
 }

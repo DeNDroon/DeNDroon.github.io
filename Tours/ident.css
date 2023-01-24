@@ -34,7 +34,8 @@ body {
 }
 
 #information {
-    text-shadow: 0 0 1px white;
+    font-size: 24px;
+    text-shadow: 0 0 3px white;
     background: linear-gradient(rgba(128, 128, 128, 0.2), transparent);
     padding: 15px;
     border-radius: 10px;
@@ -43,7 +44,7 @@ body {
 }
 
 #information:hover {
-    text-shadow: 0 0 3px white;
+    text-shadow: 0 0 5px white;
     box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.5);
 }
 

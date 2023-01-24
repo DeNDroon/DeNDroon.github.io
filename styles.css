@@ -78,7 +78,7 @@ header {
 }
 
 #geo-select {
-  background: url(src/GeorgiaBack.jpg);
+  background: url(src/georgia-tour/main.jpg);
   background-size: cover;
   color: transparent;
   -webkit-background-clip: text;
@@ -88,12 +88,12 @@ header {
 
 @keyframes anim-geo-in {
   0% {
-    background: url(src/GeorgiaBack.jpg);
+    background: url(src/georgia-tour/main.jpg);
     filter: blur(5px);
   }
   100% {
     color: black;
-    background: url(src/GeorgiaBack.jpg);
+    background: url(src/georgia-tour/main.jpg);
     filter: none;
     background-size: cover;
   }

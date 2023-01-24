@@ -22,6 +22,12 @@ body {
     object-position: center;
 }
 
+@keyframes vanishPhoto {
+    50% {
+        filter:blur(10px);
+    }
+}
+
 #information {
     text-shadow: 0 0 1px white;
     background: linear-gradient(rgba(128, 128, 128, 0.2), transparent);

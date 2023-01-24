@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../ident.css">
+    <title>K-TOUR</title>
+</head>
+
+<body onload="loadInfo('sanfrancisco')">
+    <header>
+        <a class="nav-but" id="home_key" href="../../index.html">Home</a>
+        <a class="nav-but" id="tours_key" href="../tours.html">Tours</a>
+        <a class="nav-but" id="about_key" href="../../About/about.html">About</a>
+    </header>
+    <main>
+        <h1 id="tour-name" align="center"></h1>
+        <section id="info-container">
+            <div id="photo-section">
+            <div id="previous" class="switch" onclick="prevPhoto()"><</div>
+            <img id="tour-image" src="../../src/turkey-tour/tour1.jpg">
+            <div id="next" class="switch" onclick="nextPhoto()">></div>
+            </div>
+            <div id="information">
+            </div>
+        </section>
+        <section id="prices-section">
+            <h1>Region Prices :</h1>
+            <ul>
+                <li>
+                    <p>Adjara</p>
+                    <p class="price">50$</p>
+                </li>
+                <li>
+                    <p>Guria</p>
+                    <p class="price">100$</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="../../javascript.js"></script>
+</body>
+</html>

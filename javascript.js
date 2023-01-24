@@ -23,11 +23,11 @@ var tours = {
             'prices' : [150]
         }
     },
-    'san-francisco' : {
+    'sanfrancisco' : {
         'name' : 'San-Francisco',
         'photos' : {
             'main' : null,
-            'list' : ['../../src/sac-francisco/tour1.jpg']
+            'list' : ['../../src/san-francisco/tour1.jpg', '../../src/san-francisco/tour2.jpg']
         },
         'info' : 'San Francisco (Spanish for "Saint Francis"), officially the City and County of San Francisco, is the commercial, financial, and cultural center of Northern California. The city proper is the fourth most populous in California, with 815,201 residents as of 2021, and covers a land area of 46.9 square miles (121 square kilometers),[23] at the end of the San Francisco Peninsula, making it the second most densely populated large U.S. city after New York City and the fifth most densely populated U.S. county, behind only four of the five New York City boroughs. Among the 91 U.S. cities proper with over 250,000 residents, San Francisco was ranked first by per capita income and sixth by aggregate income as of 2021. Colloquial nicknames for San Francisco include SF, San Fran, The City, Frisco, and Baghdad by the Bay.',
         'regions' : {
@@ -66,15 +66,21 @@ function loadInfo(country) {
     switch (country) {
         case 'turk' :
             name.innerText = tours.turkey.name;
+            imageSet = tours.turkey.photos.list;
             tour_image.setAttribute('src', imageSet[0]);
             info.innerText = tours.turkey.info;
-            imageSet = tours.turkey.photos.list;
             break;
         case 'geo' :
             name.innerText = tours.georgia.name;
+            imageSet = tours.georgia.photos.list;
             tour_image.setAttribute('src', imageSet[0]);
             info.innerText = tours.georgia.info;
-            imageSet = tours.georgia.photos.list;
+            break;
+        case 'sanfrancisco' :
+            name.innerText = tours.sanfrancisco.name;
+            imageSet = tours.sanfrancisco.photos.list;
+            tour_image.setAttribute('src', imageSet[0]);
+            info.innerText = tours.sanfrancisco.info;
             break;
     }
     counter = 0;

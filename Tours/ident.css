@@ -1,6 +1,6 @@
 body {
     background: white;
-    background-image: linear-gradient(transparent, white 30%),url('../src/georgia-tour/georgia-back.jpg');
+    background-image: url('../src/georgia-tour/georgia-back.jpg');
     background-size: 100vw auto;
     background-repeat: no-repeat;   
 }

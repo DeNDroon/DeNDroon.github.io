@@ -26,6 +26,7 @@ body {
     box-shadow: 0 0 5px black;
     cursor: pointer;
     animation: drive-in 0.4s forwards;
+    overflow: hidden;
     transition: box-shadow 0.2s, background 0.2s;
 }
 

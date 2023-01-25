@@ -20,7 +20,6 @@ body {
     grid-template-rows: 50px 50px 50px;
     backdrop-filter: blur(20px);
     border-radius: 5px;
-    margin-top: 40px;
     column-gap: 15px;
     background: rgba(172, 255, 47, 0.1);
     box-shadow: 0 0 5px black;
@@ -31,6 +30,7 @@ body {
 }
 
 #tour-list > a {
+    margin-top: 40px;
     text-decoration: none;
     color: black;
 }

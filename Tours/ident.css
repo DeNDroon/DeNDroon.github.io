@@ -1,3 +1,7 @@
+:root {
+    --grad-direction : 90deg;
+}
+
 body {
     background: white;
     background-image: url('../src/georgia-tour/georgia-back.jpg');
@@ -101,10 +105,39 @@ h1 {
     padding-bottom: 2em;
 }
 
-#prices-section ul li {
+.region-list {
     list-style: none;
     font-size: 36px;
     margin: 10px;
+    padding: 15px 50px ;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: scale 0.2s;
+}
+
+.region-list:hover {
+    animation: gradient 0.2s ease-in forwards;
+    scale: 1.1;
+}
+
+.region-list img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 3px black;
+    border-radius: 15px;
+    transition: scale 0.2s, box-shadow 0.2s;
+}
+
+.region-list img:hover {
+    scale: 1.1;
+    box-shadow: 0 0 10px green;
 }
 
 .price {
@@ -114,46 +147,74 @@ h1 {
     font-weight: bolder
 }
 
-#prices-section ul li {
-    padding: 15px 50px ;
-    user-select: none;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-#prices-section ul li:hover {
-    animation: gradient 0.2s ease-in forwards;  
-}
 
 @keyframes gradient {
     0% {
-        background-image : linear-gradient(90deg, transparent, transparent);
+        background-image : linear-gradient(var(--grad-direction), transparent, transparent);
     }
     10% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2),transparent 10%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2),transparent 10%)
     }
     20% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 20%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent 20%)
     }
     30% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 30%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent 30%)
     }
     40% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 40%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent 40%)
     }
     50% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 50%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent 50%)
     }
     60% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent 60%)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent 60%)
     }
     100% {
-        background-image: linear-gradient(90deg, rgba(0, 128, 0, 0.2), transparent)
+        background-image: linear-gradient(var(--grad-direction), rgba(0, 128, 0, 0.2), transparent)
     }
 }
+
+
 
 @media (max-width: 450px) {
     #prices-section ul li {
         margin-left: -50px;
+    }
+    .region-list img {
+        width: 300px;
+        height: 200px
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --grad-direction: 180deg;
+    }
+
+    #prices-section ul {
+        gap: 15px;
+    }
+
+    .region-list {
+        flex-direction: column;
+        padding: 15px 15px;
+        margin: 15px auto;
+    }
+    .region-list > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .region-list img {
+        width: 90%;
+        height: 50%;
+    }
+    .center-text {
+        text-align: center;
+    }
+    .region-name {
+        text-align: left;
     }
 }

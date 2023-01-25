@@ -7,10 +7,16 @@ body {
 }
 
 .about-info {
-    font-size: 36px;
-    margin-top: 36px;
+    font-size: 2rem;
+    margin-top: 24px;
     border: 1px rgba(128, 128, 128, 0.3) solid;
     background: rgba(128, 128, 128, 0.3);
     text-shadow: 0 0 1px white;
     padding: 20px;
+}
+
+@media (max-width: 450px) {
+    .about-info {
+        font-size: 1rem;
+    }
 }

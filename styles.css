@@ -7,8 +7,7 @@ html {
 }
 
 body {
-  background: linear-gradient(transparent 0 400px, white 600px 800px),
-    url("src/tourism-back.jpg");
+  background:url("src/tourism-back.jpg");
   background-size: 100vw auto;
   background-repeat: no-repeat;
   margin: 0;

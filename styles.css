@@ -241,11 +241,6 @@ header {
     width: 90vw;
   }
 }
-@media (450px > width > 400px) {
-  #full-section {
-    margin-top: -150px;
-  }
-}
 @media (600px > width > 450px) {
   #full-section {
     width: 100vw;

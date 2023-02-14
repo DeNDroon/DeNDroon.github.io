@@ -96,7 +96,7 @@ i {
 
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
 }
 
 @media (max-width:400px) {

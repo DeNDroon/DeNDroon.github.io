@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+    <section class="leftSec">
+      <div class="front-side card">
+        <img src="images/card-logo.svg" alt="card_logo">
+        <h1 id="card-number">0000 0000 0000 0000</h1>
+        <div class="flex-row">
+          <h3 id="card-holder">Jane Appleseed</h3>
+          <h3 id="card-expiry"><span id="month">00</span>/<span id="year">00</span></h3>
+        </div>
+      </div>    
+      <div class="back-side card">
+        <h3 id="card-cvc">000</h3>
+      </div>
+    </section>
+
+
+    <form id="main-form" class="rightSec" action="/uploaded.html">
+      <div>
+        <label for="card-holder-in">Cardholder Name</label>
+        <div class="no-back"><input id="card-holder-in" placeholder="e.g. Jane Appleseed" required minlength="5" oninput="cardHol()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
+      </div>
+      <div>
+        <label for="card-number-in">Card Number</label>
+        <div class="no-back"><input  type="number" id="card-number-in" placeholder="e.g. 1234 5678 9123 0000" required minlength="16" maxlength="16" oninput="limitMax(this, 16);cardNum()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
+      </div>
+      <div class="grid-container">
+        <label for="month-in" id="exp-lab">Exp. Date (MM/YY)</label>
+        <label for="cvc-in" id="cvc-lab">CVC</label>
+          <div class="no-back"><input type="number" id="month-in" placeholder="MM" min="0" max="12" required oninput="limitMax(this, 2);changeMM()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
+          <div class="no-back"><input type="number" id="year-in" placeholder="YY" min="23" max="30" required oninput="limitMax(this, 2);changeYY()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
+          <div class="no-back"><input type="number" id="cvc-in" placeholder="e.g. 123" minlength="3" maxlength="3" required oninput="limitMax(this, 3);changeCVC()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
+      </div>
+      <input id="submit" class="but" type="submit" value="Confirm" onclick="saveData()">
+    </form>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

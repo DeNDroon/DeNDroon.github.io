@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --clr1: #2C3333;
+    --clr2: #2E4F4F;
+    --clr3: #0E8388;
+    --clr4: #CBE4DE;
+    --js-back: #B4933F;
+    --css-back: #0d556c;
+    --html-back: #88450e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+html {
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+img {
+    user-select: none;
+}
+
+body {
+    background: var(--clr4);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    color: var(--clr4);
+    right: 0;
+    top: 3em;
+    background-color: var(--clr1);
+    border-radius: 1.25em 0 0 1.25em;
+    overflow: hidden;
+    transition: transform .3s;
+    transform: translate(90%);
+}
+
+.show-menu:hover, nav:focus-within {
+    transform: translate(0);
+}
+
+nav a {
+    padding: 1em;
+    cursor: pointer;
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--clr2);
+    outline: none;          
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#anchor {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.dark-block {
+    padding-block: 1em;
+    color: var(--clr4);
+    background-color: var(--clr1);
+
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+#mid-part {
+    font-size: 1.5em;
+}
+
+#im {
+    width: 40%;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+#name-last {
+    margin-inline: 0.5em;
+}
+
+#ship-svg {
+    height: 2.5em;
+}
+
+h3 {
+    padding: 1em;
+    color: var(--clr3);
+    text-align: center;
+}
+
+#know-sec {
+    height: max-content;
+    padding-block: 50px;
+}
+
+.flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.standart-rec {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    z-index: -1;
+    color: var(--clr4);
+    text-shadow: 0 0 5px #2C3333;
+}
+
+.vertical-rec {
+    box-shadow: 0 0 10px 1px var(--clr1);
+    gap: 0.5em;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5em 1em;
+}
+
+.vertical-rec:nth-of-type(1) {
+    height: max(200px, 30vh);
+    background-color: var(--html-back);
+}
+
+.vertical-rec:nth-of-type(2) {
+    height: max(200px, 40vh);
+    background-color: var(--css-back);
+}
+.dif-vertical-rec {
+    align-items: left;
+    gap: 0;
+}
+
+img {
+    width: 100px;
+    filter: saturate(0.7);
+}
+
+div.jquery {
+    width: 90%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 30vh;
+    background-color: var(--clr2);
+    gap: 0.3em;
+    padding-bottom: 0.5em;
+    color: var(--clr4);
+    box-shadow: 0 0 10px 1px #2C3333;
+}
+
+img.jquery {
+    width: 50px;
+}
+
+.sub-rec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    background-color: var(--js-back);
+    padding: 0.5em;
+    box-shadow: 0 0 10px 1px #2C3333;
+}
+
+#proj-flex {
+    display: flex;
+    flex-wrap:wrap;
+    padding: 50px;
+    background: var(--clr3);
+    color: var(--clr4);
+    height: max-content;
+}
+
+.box {
+
+    /* visualisation */
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    height: min-content;
+    margin: 20px;
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    overflow: hidden;
+
+    /* animation */
+    animation: moveOn 1s forwards infinite linear;
+    transition: transform 0.2s, box-shadow 0.2s, scale 0.2s;
+    
+    /* background */
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.pic1 {
+    background-image: url(./img/inter-card.png);
+}
+.pic2 {
+    background-image: url(./img/prew-card.png);
+}
+.pic3 {
+    background-image: url(./img/tourism.png);
+}
+
+.box img {
+    object-fit:contain;
+    width: 100%;
+    height: 130px;
+    border-radius: 5px 5px 0 0;
+}
+
+.box .sub-text {
+    font-size: 15px;
+    padding: 10px;
+    padding-top: 15px;
+    margin-top: 150px;
+    text-align: left;
+    background: linear-gradient(transparent, #2C3333 10%);
+    color: var(--clr4);
+    text-shadow: 0 0 1px black;
+    transition: transform 0.2s;
+    transform: translateY(55px);
+}
+
+.box:hover {
+    scale: 1.05;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.45);
+}
+
+.box:hover .sub-text {
+    transform: translateY(5px);
+}
+
+.box h2, .box h4 {
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+.grid-contact {
+    /* GRID */
+    margin-inline: 100px;
+    display: grid;
+
+
+    background-color: var(--clr2);
+    font-size: 2em;
+    color: var(--clr4);
+    gap: 50px;
+    padding-block: 150px;
+    padding-inline: 50px;
+    border-radius: 10px;
+}
+
+.grid-contact label {
+    width: 100%;
+}
+
+.grid-contact input, .grid-contact textarea {
+    display: block;
+    font-size: 0.5em;
+    font-family: roboto normal;
+    
+    padding: 10px;
+    width: 100%;
+    padding-block: 0.5em;
+    border-radius: 5px;
+}
+
+.grid-contact label:nth-of-type(3) {
+    grid-column: 1 / 3;
+}
+
+input[type="submit"] {
+    grid-column: 1 / 3;
+    color: var(--clr4);
+    background-color: var(--clr1);
+    border: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--clr3);
+}
+.grid-contact textarea {
+    height: 10ch;
+    resize: none;
+}
+
+
+
+/* __________ TEST ___________ */
+
+/* #welcome-sec {
+    margin-top: -100vh;
+} */
+
+@media (max-width:900px) {
+    html {
+        font-size: 12px;
+    }
+    .grid-contact {
+        margin: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex-evenly {
+        flex-direction: column;
+        gap: 50px;
+        padding-inline: 100px;
+        height: max-content;
+    }
+    .dif-vertical-rec {
+        flex-direction: column-reverse;
+    }
+    div.jquery {
+        width: 100%;
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .flex-evenly {
+        padding-inline: 50px;
+    }
+}

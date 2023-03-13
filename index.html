@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/70c54e2b83.js" crossorigin="anonymous"></script>
+  <script src="assets/jquery-3.6.1.min.js" defer></script>
+  <script src="javascript.js" defer></script>
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
+      <a href="#welcome-sec">Main</a>
+      <a href="#know-sec">Knowledge</a>
+      <a href="#project-sec">Projects</a>
+      <a href="#contact-sec">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="welcome-sec">
+      <h1 class="dark-block">WELCOME</h1>
+      <div id="mid-part" class="flex-row">
+        <svg id="anchor" viewBox="215.63 44.277 54.012 306.618" width="54.012" height="306.618">
+          <path
+            d="M305.193 530.664L313.904 539.427C313.904 539.427 303.222 555.454 291.796 555.774C292.044 555.774 291.857 510.663 291.816 499.731C299.42 497.157 304.961 489.977 304.961 481.429C304.961 470.695 296.321 462 285.674 462C275.007 462 266.367 470.695 266.367 481.424C266.367 489.83 271.736 496.942 279.173 499.642L279.223 555.58C265.437 554.595 257.459 540.842 257.459 540.842L266.771 531.503L233 526.324L238.116 560.281L247.1 551.272C254.88 557.765 263.667 571.251 284.81 571.251C311.371 570.549 317.504 555.727 324.314 549.898L334.142 559.83L339 525.548L305.193 530.664ZM275.72 481.103C275.72 475.579 280.174 471.093 285.664 471.093C291.154 471.093 295.628 475.579 295.628 481.103C295.628 486.643 291.154 491.125 285.664 491.125C280.174 491.125 275.72 486.643 275.72 481.103Z"
+            fill="#2C3333" transform="matrix(0.509543, 0, 0, 0.509543, 96.906525, 59.818501)"></path>
+          <line x1="285.5" y1="476.5" x2="285.5" y2="-30.5" stroke="#2C3333" stroke-width="13" stroke-linecap="round"
+            transform="matrix(0.509543, 0, 0, 0.509543, 96.906525, 59.818501)"></line>
+        </svg>
+        <div id="im" class="dark-block">I'm</div>
+        <div id="name-last">Giorgi Kartsivadze</div>
+        <svg id="ship-svg" width="102" height="102" viewBox="0 0 102 102" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M91.9262 62.3084L90.1837 70.2134C87.1662 83.8134 76.4987 93.5034 61.1137 93.5034H40.8839C25.4989 93.5034 14.8314 83.8134 11.8139 70.2134L10.0714 62.3084C9.22139 58.4409 11.5164 54.0634 15.2139 52.5759L21.2489 50.1534L44.6662 40.7608C46.7062 39.9533 48.8737 39.5283 50.9987 39.5283C53.1237 39.5283 55.2912 39.9533 57.3312 40.7608L80.7487 50.1534L86.7837 52.5759C90.4812 54.0634 92.7762 58.4409 91.9262 62.3084Z"
+            fill="#2C3333" />
+          <path
+            d="M80.75 34V40.12C80.75 41.6075 79.22 42.67 77.8175 42.075L59.67 34.8075C54.1025 32.64 47.8975 32.64 42.2875 34.85L24.1825 42.1175C22.78 42.7125 21.25 41.65 21.25 40.1625V34C21.25 26.9875 26.9875 21.25 34 21.25H68C75.0125 21.25 80.75 26.9875 80.75 34Z"
+            fill="#2C3333" />
+          <path
+            d="M61.625 21.25H40.375V12.75C40.375 10.4125 42.2875 8.5 44.625 8.5H57.375C59.7125 8.5 61.625 10.4125 61.625 12.75V21.25Z"
+            fill="#2C3333" />
+        </svg>
+      </div>
+      <div id="bot-part" class="dark-block">
+        <h3>The most motivated seafarer, who wants to jump into front-end development !</h3>
+      </div>
+    </section>
+    <section id="know-sec">
+      <h1 class="dark-block">KNOWLEDGE</h1>
+      <div class="flex-evenly">
+        <div class="standart-rec vertical-rec"><img src="img/html.svg">HTML</div>
+        <div class="standart-rec vertical-rec"><img src="img/css.svg">CSS</div>
+        <div class="standart-rec dif-vertical-rec">
+          <div class=jquery><img class="jquery" src="img/jquery.svg"> JQuery</div>
+          <div class="sub-rec"><img src="img/js.svg">JAVASCRIPT</div>
+        </div>
+      </div>
+    </section>
+    <section id="project-sec">
+      <h1 class="dark-block">PROJECTS</h1>
+      <div id="proj-flex">
+        <a href="#">
+          <div class="box pic1">
+            <div class="sub-text">
+              <h2>Interactive Card</h2>
+              <h4>The project is copy of MIUI calculator</h4>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="box pic2">
+            <div class="sub-text">
+              <h2>Preview Card</h2>
+              <h4>The project is copy of MIUI calculator</h4>
+            </div>
+          </div>
+        </a>
+        <a href="./tourism/" action="_blank">
+          <div class="box pic3">
+            <div class="sub-text">
+              <h2>Tourism</h2>
+              <h4>The project is copy of MIUI calculator</h4>
+            </div>
+          </div>
+      </div>
+      </a>
+    </section>
+    <section id="contact-sec">
+      <form class="grid-contact">
+        <label>Name<input type="text" required minlength="4"></label>
+        <label>E-mail<input type="email" required minlength="7"></label>
+        <label>Message<textarea required minlength="10"></textarea></label>
+        <input type="submit">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+
+</html>

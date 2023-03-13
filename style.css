@@ -339,6 +339,16 @@ input[type="submit"]:hover {
     .grid-contact {
         margin: 0;
     }
+    .grid-contact {
+        margin: 0 auto;
+        width: 90%;
+        font-size: 20px;
+        padding: 50px;
+        gap: 10px;
+    }
+    input[type="submit"] {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 700px) {
@@ -358,6 +368,10 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 400px) {
+    .grid-contact {
+        font-size: 24px;
+        font-weight: 500;
+    }
     .flex-evenly {
         padding-inline: 50px;
     }

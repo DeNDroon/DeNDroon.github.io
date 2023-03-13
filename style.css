@@ -193,6 +193,10 @@ img.jquery {
     box-shadow: 0 0 10px 1px #2C3333;
 }
 
+#project-sec {
+    height: fit-content;
+}
+
 #proj-flex {
     display: flex;
     flex-wrap:wrap;

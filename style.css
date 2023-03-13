@@ -199,6 +199,8 @@ img.jquery {
 
 #proj-flex {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap:wrap;
     padding: 50px;
     background: var(--clr3);
@@ -250,7 +252,7 @@ img.jquery {
     padding-top: 15px;
     margin-top: 150px;
     text-align: left;
-    background: linear-gradient(transparent, #2C3333 10%);
+    background: linear-gradient(transparent, #2c333382 10%);
     color: var(--clr4);
     text-shadow: 0 0 1px black;
     transition: transform 0.2s;
@@ -358,5 +360,8 @@ input[type="submit"]:hover {
 @media (max-width: 400px) {
     .flex-evenly {
         padding-inline: 50px;
+    }
+    .sub-text {
+        transform: translateY(5px);
     }
 }

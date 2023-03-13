@@ -3,9 +3,14 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 32%, 43%);
 }
 
 :root {
@@ -33,6 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url(images/bg-main-desktop.png);
+    background-size: auto 100vh;
     background-repeat: no-repeat;
 }
 

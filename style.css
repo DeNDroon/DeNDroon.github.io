@@ -79,7 +79,7 @@ h1 {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-10vh);
     z-index: -1;
 }
 

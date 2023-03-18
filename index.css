@@ -23,6 +23,13 @@ body {
   background-size: cover;
 }
 
+h1:not(#welcome) {
+  padding-top: 1em;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -220,10 +227,6 @@ body {
   border-radius: 0 15px 15px 0;
 }
 #project-sec h1 {
-  padding-top: 1em;
-  text-align: center;
-  font-weight: 300;
-  font-size: 2em;
   border-bottom: 1px solid #DCD1FD;
 }
 
@@ -291,4 +294,37 @@ body {
 }
 #project-grid a:nth-of-type(5) .proj-pc .proj-phone {
   background-image: url(assets/qr-port.png);
+}
+
+#contact-sec {
+  margin-top: 150px;
+  background-color: #443458;
+  min-height: 300px;
+}
+
+#grid-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  margin: 100px;
+}
+#grid-cont:nth-child(1) {
+  grid-row: 1/2;
+}
+#grid-cont:nth-child(2) {
+  grid-row: 2/3;
+}
+#grid-cont:nth-child(3) {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+#grid-cont textarea {
+  width: -moz-max-content;
+  width: max-content;
+  resize: none;
+}
+#grid-cont input, #grid-cont textarea {
+  display: block;
+  font-size: 1em;
 }/*# sourceMappingURL=index.css.map */

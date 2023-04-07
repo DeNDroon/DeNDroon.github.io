@@ -30,7 +30,7 @@ function checkNote() {
       return;
     }
   }
-  var noteDate = new Date().getDate() + '/' + new Date().getMonth() + '/' + new Date().getFullYear();
+  var noteDate = new Date().getHours() + ':' + new Date().getMinutes() + ' ' +new Date().getDate() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getFullYear();
   let newNote = {text: new_note, checked: false, date: noteDate}; // create a JSON object
   localStorage.setItem(counter, JSON.stringify(newNote)); // save as a JSON string
   addnewNote(new_note, false, noteDate); // pass checked parameter as false by default

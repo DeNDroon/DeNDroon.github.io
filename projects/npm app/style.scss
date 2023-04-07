@@ -1,0 +1,175 @@
+$clr1: #007A78;
+$clr2: #FFC745;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    color: $clr2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: $clr1;
+}
+
+header {
+    text-align: center;
+    padding-block: 2em;
+    font-weight: 800;
+}
+
+header > h1 {
+    animation: glitch 5s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 1px 2px grey;
+    }
+    15% {
+        text-shadow: -2px 0px 2px rgb(216, 2, 2);
+    }
+    44% {
+        text-shadow: -2px 0px 2px rgb(216, 2, 2);
+    }
+    45% {
+        text-shadow: -2px 1px 2px rgb(0, 255, 13);
+    }
+    60% {
+        text-shadow: -3px 2px 2px rgb(208, 255, 0);
+    }
+    61% {
+        text-shadow: 2px -1px 2px rgb(43, 0, 255);
+    }
+    68% {
+        text-shadow: 1px -2px 2px rgb(255, 0, 21);
+    }
+}
+
+main {
+    margin-inline: 100px;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+#note-sec {
+    display: flex;
+    gap: .2em;
+    padding-bottom: 1em;
+    border-bottom: 3px solid $clr2;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+#note-in {
+    flex: 1;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 0.25em;
+    
+    font-weight: 100;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#note-in ~ input[type=button] {
+    color: $clr2;
+    background: $clr1;
+    font-size: 1em;
+    padding: .5em;
+    border-radius: 0.25em;
+    border-color: $clr2;
+    font-weight: 100;
+    cursor: pointer;
+    transition: color .2s, background-color .2s;
+    &:hover {
+        color:#007A78;
+        background-color: #FFC745;
+    }
+}
+
+.old-note {
+    display: grid;
+    justify-content: space-between;
+    place-items: center;
+    align-items: center;
+    margin: 0.25em;
+    text-align: center;
+    text-shadow: 0 0 3px $clr2;
+    font-weight: 100;
+    opacity: 0;
+    animation: fadeIn .2s forwards;
+    input {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    span {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        transition: border-bottom 0.2s;
+    }
+    i {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+    label {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+input[type=checkbox]:checked ~ span {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+i {
+    cursor: pointer;
+    transition: transform .2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        margin-inline: auto;
+        padding: 0.5em;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 2000px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+#pl-holder {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.25em;
+}

@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  color: #FFC745;
+  font-family: "Open Sans", sans-serif;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #007A78;
+}
+
+header {
+  text-align: center;
+  padding-block: 2em;
+  font-weight: 800;
+}
+
+header > h1 {
+  animation: glitch 5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 1px 2px grey;
+  }
+  15% {
+    text-shadow: -2px 0px 2px rgb(216, 2, 2);
+  }
+  44% {
+    text-shadow: -2px 0px 2px rgb(216, 2, 2);
+  }
+  45% {
+    text-shadow: -2px 1px 2px rgb(0, 255, 13);
+  }
+  60% {
+    text-shadow: -3px 2px 2px rgb(208, 255, 0);
+  }
+  61% {
+    text-shadow: 2px -1px 2px rgb(43, 0, 255);
+  }
+  68% {
+    text-shadow: 1px -2px 2px rgb(255, 0, 21);
+  }
+}
+main {
+  margin-inline: 100px;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+#note-sec {
+  display: flex;
+  gap: 0.2em;
+  padding-bottom: 1em;
+  border-bottom: 3px solid #FFC745;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+#note-in {
+  flex: 1;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 0.25em;
+  font-weight: 100;
+}
+#note-in:focus {
+  outline: none;
+}
+
+#note-in ~ input[type=button] {
+  color: #FFC745;
+  background: #007A78;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  border-color: #FFC745;
+  font-weight: 100;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+#note-in ~ input[type=button]:hover {
+  color: #007A78;
+  background-color: #FFC745;
+}
+
+.old-note {
+  display: grid;
+  justify-content: space-between;
+  place-items: center;
+  align-items: center;
+  margin: 0.25em;
+  text-align: center;
+  text-shadow: 0 0 3px #FFC745;
+  font-weight: 100;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+.old-note input {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.old-note span {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  transition: border-bottom 0.2s;
+}
+.old-note i {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.old-note label {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+input[type=checkbox]:checked ~ span {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+i {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+i:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 550px) {
+  main {
+    margin-inline: auto;
+    padding: 0.5em;
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 36px;
+  }
+}
+#pl-holder {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.25em;
+}/*# sourceMappingURL=style.css.map */

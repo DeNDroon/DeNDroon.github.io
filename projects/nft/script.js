@@ -7,6 +7,7 @@ $("body").mousemove(function (e) {
         posX = e.clientX / this.clientWidth * 45 - 22.5;
         $("#card").css("--x", -posY + "deg");
         $("#card").css("--y", posX + "deg");
+        reflectPosY = e.clientY / this.clientHeight * 80 - 40;
         reflectPosX = e.clientX / this.clientWidth * 70 - 35 + reflectPosY - 40;
         $("#reflect").css("--grad", reflectPosX + "deg");
 })

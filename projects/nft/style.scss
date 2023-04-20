@@ -224,6 +224,12 @@ input {
     height: 100%;
     width: 100%;
     border-radius: 0.625rem;
-    background: linear-gradient(var(--grad,0deg),rgba(128, 128, 128, 0),rgba(255, 255, 255, 0.4),rgba(128, 128, 128, 0));
+    background-image: linear-gradient(var(--grad,0deg),rgba(128, 128, 128, 0),rgba(255, 255, 255, 0.4),rgba(128, 128, 128, 0));
     // filter: blur(20px);
+}
+
+@media (max-width: 370px) {
+    #card {
+        transform: scale(0.75);
+    }
 }

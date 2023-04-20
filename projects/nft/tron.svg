@@ -1,0 +1,22 @@
+<svg width="300" height="35" viewBox="0 0 300 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_i_72_24)">
+        <path d="M120.5 34.5L99 13L88.25 23.75H49.5H10.75L0 13V10C0 4.47715 4.47715 0 10 0H290C295.523 0 300 4.47715 300 10V13L289.25 23.75H252.25H215.25L204.5 13L183 34.5H120.5Z" fill="url(#paint0_diamond_72_24)"/>
+    </g>
+    <defs>
+        <filter id="filter0_i_72_24" x="0" y="-3" width="300" height="37.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="-3"/>
+        <feGaussianBlur stdDeviation="3.5"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_72_24"/>
+        </filter>
+        <radialGradient id="paint0_diamond_72_24" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.95962e-07 17) scale(300 300)">
+        <stop offset="0" stop-color="#FF1E1E"/>
+        <stop offset="0.5" stop-color="#FFB726"/>
+        <stop offset="1" stop-color="#221EFF"/>
+        </radialGradient>
+    </defs>
+</svg>

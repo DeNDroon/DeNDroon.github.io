@@ -18,7 +18,7 @@ function getWeatherData(cityName) {
         .then((response) => response.json())
         .then((data) => {
             let iconCode = data.weather[0].icon;
-            document.getElementById("weather-logo").src = `http://openweathermap.org/img/wn/${iconCode}@4x.png`
+            document.getElementById("weather-logo").src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`
             document.getElementById("temperature").innerText = Math.round(data.main.temp - 273.15);
             document.getElementById("feels-like").innerText = Math.round(data.main.feels_like - 273.15);
             document.getElementById("wind-speed").innerText = Math.round(data.wind.speed);
@@ -59,7 +59,7 @@ function sort() {
 }
 
 function getCast(city) {
-    var url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
     fetch(url)
         .then((response) => response.json())
@@ -68,7 +68,7 @@ function getCast(city) {
             var night = 11;
             document.querySelectorAll(".card").forEach(element => {
                 let iconCode = data.list[day].weather[0].icon;
-                $(element).find("img").attr("src", `http://openweathermap.org/img/wn/${iconCode}@4x.png`);
+                $(element).find("img").attr("src", `https://openweathermap.org/img/wn/${iconCode}@4x.png`);
                 $(element).find(".higher").text(Math.round(data.list[day].main.temp - 273.15));
                 $(element).find(".lower").text(Math.round(data.list[night].main.temp - 273.15));
                 night += 8;

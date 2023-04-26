@@ -213,21 +213,29 @@ nav > img {
 
 
 #test {
+    list-style: none;
+    overflow: hidden;
+    border-radius: 10px;
+
+
     position: absolute;
     right: 0; top: -4em;
-    border-radius: 10px;
-    overflow: hidden;
-    list-style: none;
     background-image:linear-gradient(30deg, rgb(236, 240, 189),white);
+
     li:first-of-type {
         display: block !important;
     }
+
     li {
         cursor: pointer;
         display:none;
         border-bottom: 2px solid rgb(219, 219, 219);
         font-size: 2em;
     }
+}
+
+#test:focus-within > li {
+    display: block;
 }
 
 li:focus-within, li:hover {

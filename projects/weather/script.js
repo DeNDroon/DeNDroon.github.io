@@ -66,7 +66,6 @@ $("#test > li:first-of-type").click(() => {
 
 $("#test").on("mouseleave", function () {
     $("#test > li:not(:first-of-type)").fadeOut(100);
-    // alert("left")
 })
 
 window.addEventListener("resize", sort);

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./assets/logo.svg" alt="logo">
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="top-cont" class="flex-row">
+                <section id="top-left">
+                    <img id="weather-logo" src="./assets/sun.svg" alt="sun">
+                    <div>
+                        <div id="main-info" class="flex-row">
+                            <h1 id="w-type"></h1>
+                            <h1 id="temperature"></h1>
+                        </div>
+                        <div id="line"></div>
+                        <h2 id="feels-like"></h2>
+                        <h2 id="humidity"></h2>
+                        <div id="wind-container" class="flex-row">
+                            <h2 id="wind-speed"></h2>
+                            <div id="wind-dir">
+                                <div id="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <h1 id="week-day">Monday</h1>
+            </div>
+            <section id="days-cast">
+                <div class="card">
+                    <div class="card-top">
+                        <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                        <p class="cast-temperature"><span class="higher">18C</span>/<span class="lower">20C</span></p>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="cast-week-day">Monday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                        <p class="cast-temperature"><span class="higher">18C</span>/<span class="lower">20C</span></p>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="cast-week-day">Tuesday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                        <p class="cast-temperature"><span class="higher">18C</span>/<span class="lower">20C</span></p>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="cast-week-day">Wednesday</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                        <p class="cast-temperature"><span class="higher">18C</span>/<span class="lower">20C</span></p>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="cast-week-day">Thursday</p>
+                    </div>
+                </div>
+            </section>
+            <ul id="test">
+                <li>Batumi</li>
+                <li>Batumi</li>
+                <li>Keda</li>
+                <li>Kobuleti</li>
+                <li>Khelvachauri</li>
+                <li>Tbilisi</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

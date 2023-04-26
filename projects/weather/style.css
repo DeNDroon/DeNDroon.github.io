@@ -32,10 +32,8 @@ nav > img {
   background: linear-gradient(90deg, var(--weather) 15%, #888888);
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  gap: 5em;
-  padding-bottom: 5em;
 }
 
 #top-cont {
@@ -157,7 +155,7 @@ nav > img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
-  padding-inline: 2em;
+  padding: 2em;
 }
 
 .card {
@@ -165,11 +163,17 @@ nav > img {
   height: 12em;
   border-radius: 10px;
   background-image: linear-gradient(45deg, rgba(167, 167, 167, 0.5), rgba(255, 255, 255, 0.5));
-  font-size: 2em;
+  font-size: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 5px black;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.05);
 }
 
 .card-top {
@@ -204,21 +208,29 @@ nav > img {
   border-radius: 10px;
   overflow: hidden;
   list-style: none;
-  width: 20em;
   background-image: linear-gradient(30deg, rgb(236, 240, 189), white);
 }
 #test li:first-of-type {
   display: block !important;
 }
 #test li {
-  padding: 0.2em 0.5em;
   cursor: pointer;
   display: none;
   border-bottom: 2px solid rgb(219, 219, 219);
   font-size: 2em;
 }
-#test li:hover {
-  background-color: rgb(180, 180, 180);
+
+li:focus-within, li:hover {
+  background: rgb(178, 178, 178);
+}
+
+a {
+  display: block;
+  padding: 0.2em 1em;
+  color: currentColor;
+  text-decoration: none;
+  width: 10em;
+  height: 100%;
 }
 
 .cast-temperature {
@@ -246,7 +258,7 @@ nav > img {
   text-stroke: 0.5px white;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1300px) {
   #top-left {
     display: grid;
     place-items: center;
@@ -297,6 +309,10 @@ nav > img {
 @media (max-width: 430px) {
   body {
     font-size: 10px;
+  }
+  #week-day {
+    font-size: 3em;
+    -webkit-text-stroke: 0.5px white;
   }
 }
 @media (min-width: 1740px) {

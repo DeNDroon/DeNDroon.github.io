@@ -29,34 +29,6 @@ function getWeatherData(cityName) {
         })
         .catch((error) => console.error(error));
 }
-getWeatherData($("#test > li:first-of-type").text());
-
-
-$("#test > li:first-of-type").click(() => {
-    $("#test > li:not(:first-of-type)").fadeToggle(100);
-    $("#test > li:not(:first-of-type)").on("click", function () {
-        $("#test > li:first-of-type").text($(this).text());
-        getWeatherData($("#test > li:first-of-type").text())
-        $("#test > li:not(:first-of-type)").fadeOut(100);
-    });
-
-});
-
-$("#test").on("mouseleave", function () {
-    $("#test > li:not(:first-of-type)").fadeOut(100);
-    // alert("left")
-})
-
-window.addEventListener("resize", sort);
-window.addEventListener("load", sort);
-
-function sort() {
-    if (window.innerWidth <= 1170) {
-        $("#week-day").appendTo("#top-left");
-    } else {
-        $("#week-day").appendTo("#top-cont");
-    }
-}
 
 function getCast(city) {
     var url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
@@ -78,6 +50,36 @@ function getCast(city) {
         .catch((error) => console.error(error));
 }
 
+
+
+
+getWeatherData($("#test > li:first-of-type").text());
+$("#test > li:first-of-type").click(() => {
+    $("#test > li:not(:first-of-type)").fadeToggle(100);
+    $("#test > li:not(:first-of-type)").on("click", function () {
+        $("#test > li:first-of-type").html($(this).html());
+        getWeatherData($("#test > li:first-of-type").text())
+        $("#test > li:not(:first-of-type)").fadeOut(100);
+    });
+
+});
+
+$("#test").on("mouseleave", function () {
+    $("#test > li:not(:first-of-type)").fadeOut(100);
+    // alert("left")
+})
+
+window.addEventListener("resize", sort);
+window.addEventListener("load", sort);
+
+function sort() {
+    if (window.innerWidth <= 1300) {
+        $("#week-day").appendTo("#top-left");
+    } else {
+        $("#week-day").appendTo("#top-cont");
+    }
+}
+
 setTimeout(function () {
     $("body").fadeIn(300)
-}, 500)
+}, 750)

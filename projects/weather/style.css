@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 10px;
 }
@@ -163,7 +163,7 @@ nav > img {
   height: 12em;
   border-radius: 10px;
   background-image: linear-gradient(45deg, rgba(167, 167, 167, 0.5), rgba(255, 255, 255, 0.5));
-  font-size: 1em;
+  font-size: 1.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -207,20 +207,20 @@ nav > img {
   border-radius: 10px;
   position: absolute;
   right: 0;
-  top: -4em;
+  top: -3em;
   background-image: linear-gradient(30deg, rgb(236, 240, 189), white);
 }
-#test li:first-of-type {
+#test .main-button {
   display: block !important;
 }
 #test li {
   cursor: pointer;
   display: none;
   border-bottom: 2px solid rgb(219, 219, 219);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-#test:focus-within > li {
+#test:focus-within > li, #test:hover > li {
   display: block;
 }
 
@@ -262,6 +262,19 @@ a {
   text-stroke: 0.5px white;
 }
 
+@media (min-width: 1740px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (min-width: 2000px) {
+  body {
+    font-size: 24px;
+  }
+  #top-left {
+    font-size: 1.3em;
+  }
+}
 @media (max-width: 1300px) {
   #top-left {
     display: grid;
@@ -318,14 +331,7 @@ a {
     font-size: 3em;
     -webkit-text-stroke: 0.5px white;
   }
-}
-@media (min-width: 1740px) {
-  body {
-    font-size: 20px;
-  }
-}
-@media (min-width: 2000px) {
-  body {
-    font-size: 24px;
+  .card {
+    font-size: 1em;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -54,19 +54,10 @@ function getCast(city) {
 
 
 getWeatherData($("#test > li:first-of-type").text());
-$("#test > li:first-of-type").click(() => {
-    $("#test > li:not(:first-of-type)").fadeToggle(100);
     $("#test > li:not(:first-of-type)").on("click", function () {
         $("#test > li:first-of-type").html($(this).html());
         getWeatherData($("#test > li:first-of-type").text())
-        $("#test > li:not(:first-of-type)").fadeOut(100);
-    });
-
 });
-
-$("#test").on("mouseleave", function () {
-    $("#test > li:not(:first-of-type)").fadeOut(100);
-})
 
 window.addEventListener("resize", sort);
 window.addEventListener("load", sort);

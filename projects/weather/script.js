@@ -56,7 +56,7 @@ function getCast(city) {
 getWeatherData($("#test > li:first-of-type").text());
     $("#test > li:not(:first-of-type)").on("click", function () {
         $("#test > li:first-of-type").html($(this).html());
-        getWeatherData($("#test > li:first-of-type").text())
+        getWeatherData($("#test > li:first-of-type").text());
 });
 
 window.addEventListener("resize", sort);

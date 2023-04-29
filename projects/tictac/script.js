@@ -92,14 +92,13 @@ function botAI() {
                     x = i;
                     y = parseInt((z + 1) * 2);
                     pos = i * 3 + y;
-                    console.log("works");
                 } else if (z == 1 && playground[i][z - 1] == "-") {
                     console.log("alert " + i + " - " + parseInt(z - 1));
                     x = i;
                     y = parseInt((z - 1));
                     pos = i * 3 + y;
                 }
-            };
+            }
         }
     }
 

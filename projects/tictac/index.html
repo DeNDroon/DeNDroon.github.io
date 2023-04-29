@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js" defer></script>
+    <title>Tic-tac toe</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./assets/logo.svg" alt="">
+
+        </nav>
+    </header>
+    <main>
+        <section id="reg-sec">
+            <div class="container">
+                <label id="bot-label">
+                    <span class="txt">BOT </span>
+                    <input type="checkbox" id="bot">
+                    <span class="cus-checkbox">
+                        <img src="./assets/player.svg" alt="player" data-pos="left">
+                        <img src="./assets/bot.svg" alt="bot" data-pos="right">
+                    </span>
+                </label>
+                <label id="symbol-label">
+                    <span class="txt">Choose symbol </span>
+                    <input type="checkbox" id="symbol">
+                    <span class="cus-checkbox">
+                        <img src="./assets/o.svg" alt="O" data-pos="left">
+                        <img src="./assets/x.svg" alt="X" data-pos="right">
+                    </span>
+                </label>
+                <input type="button" value="Start" id="game-start">
+            </div>
+        </section>
+        <section id="play-sec">
+            <div class="container">
+                <div id="top-part">
+                    <span id="success" class="score">
+                        <img src="./assets/success.svg">
+                        <span class="txt">0</span>
+                    </span>
+                    <span id="fail" class="score">
+                        <img src="./assets/fail.svg">
+                        <span class="txt">0</span>
+                    </span>
+                </div>
+                <div id="playground">
+                    <input type="button" class="play-cell" data-cell="0 0">
+                    <input type="button" class="play-cell" data-cell="0 1">
+                    <input type="button" class="play-cell" data-cell="0 2">
+                    <input type="button" class="play-cell" data-cell="1 0">
+                    <input type="button" class="play-cell" data-cell="1 1">
+                    <input type="button" class="play-cell" data-cell="1 2">
+                    <input type="button" class="play-cell" data-cell="2 0">
+                    <input type="button" class="play-cell" data-cell="2 1">
+                    <input type="button" class="play-cell" data-cell="2 2">
+                </div>
+            </div>
+            <div id="pop-up">
+                <div class=cont>
+                    <div id="winner"><img id="winner_logo" src="" alt="winner_logo"><span class="txt"> Won</span></div>
+                    <input type="button" value="rematch" id="rematch">
+                    <input type="button" value="restart" id="restart">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

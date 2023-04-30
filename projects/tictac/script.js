@@ -75,7 +75,7 @@ function setSymbol() {
                 botAI();
             }, 300);
         } else {
-            player_symbol == "x" ? player_symbol = "o": player_symbol = "x";
+            player_symbol == "x" ? player_symbol = "o" : player_symbol = "x";
         }
     }
 }
@@ -105,8 +105,17 @@ function botAI() {
                     x = i - 1;
                     y = z;
                     pos = x + y;
-                    console.log(x + " " + y + " " + pos);
                 }
+            } else if (playground[i][z] == playground[i][z + 2] && playground[i][z] != "-" && playground[i][z + 1] == "-") {
+                x = i;
+                y = 1;
+                pos = x * 3 + y;
+                console.log("this1");
+            } else if (i == 0 && playground[i][z] == playground[i + 2][z] && playground[i][z] != "-" && playground[i + 1][z] == "-") {
+                x = 1;
+                y = z;
+                pos = x * 3 + y;
+                console.log("this2");
             }
         }
     }

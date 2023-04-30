@@ -46,6 +46,7 @@ document.querySelectorAll(".play-cell").forEach(element => {
     element.addEventListener("click", setSymbol);
 })
 
+var moveCounter = 0;
 function setSymbol() {
     let setPos = $(this).attr("data-cell");
     let row = setPos.slice(0, 1), col = setPos.slice(2, 3);
@@ -61,7 +62,7 @@ function setSymbol() {
         // place correct symbol;
         $(this).css("background-image", `url(./assets/${player_symbol}.svg)`);
 
-
+        moveCounter+=1;
         if (checkWinner() == true) {
             return;
         }
@@ -73,6 +74,7 @@ function setSymbol() {
             })
             setTimeout(function () {
                 botAI();
+                moveCounter+=1;
             }, 300);
         } else {
             player_symbol == "x" ? player_symbol = "o" : player_symbol = "x";
@@ -142,6 +144,14 @@ function botAI() {
                 pos = 0;
                 console.log("works2");
             }
+        }
+    }
+    console.log(moveCounter + "- moves \n " + player_symbol + " - player symbol" + "\n playground " + playground[0][0] );
+    if (moveCounter <= 1) {
+        if (playground[0][0] == player_symbol || playground[2][0] == player_symbol || playground[0][2] == player_symbol || playground[2][2] == player_symbol) {
+            x = 1;
+            y = 1;
+            pos = 4;
         }
     }
 
@@ -251,6 +261,7 @@ var resetGround = () => {
     document.querySelectorAll("input.play-cell").forEach(element => {
         element.removeAttribute("disabled");
     })
+    moveCounter = 0;
 }
 
 var resetStats = () => {

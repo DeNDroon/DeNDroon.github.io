@@ -116,6 +116,14 @@ function botAI() {
                 y = z;
                 pos = x * 3 + y;
                 console.log("this2");
+            } else if (playground[0][0] == playground[2][2] && playground[1][1] == "-" && playground[0][0] != "-") {
+                x = 1;
+                y = 1;
+                pos = x + y * 3;
+            } else if (playground[2][0] == playground[0][2] && playground[1][1] == "-" && playground[2][0] != "-") {
+                x = 1;
+                y = 1;
+                pos = x + y * 3;
             }
         }
     }

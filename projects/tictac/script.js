@@ -110,12 +110,11 @@ function botAI() {
                 x = i;
                 y = 1;
                 pos = x * 3 + y;
-                console.log("this1");
             } else if (i == 0 && playground[i][z] == playground[i + 2][z] && playground[i][z] != "-" && playground[i + 1][z] == "-") {
                 x = 1;
                 y = z;
                 pos = x * 3 + y;
-                console.log("this2");
+//DIAGONAL MIDDLE CELL
             } else if (playground[0][0] == playground[2][2] && playground[1][1] == "-" && playground[0][0] != "-") {
                 x = 1;
                 y = 1;
@@ -124,6 +123,24 @@ function botAI() {
                 x = 1;
                 y = 1;
                 pos = x + y * 3;
+// DIAGONAL LAST CELL;
+            } else if (playground[0][0] == playground[1][1] && playground[2][2] == "-" && playground[0][0] != "-") {
+                x = 2;
+                y = 2;
+                pos = x + y * 3;
+            } else if (playground[0][2] == playground[1][1] && playground[2][0] == "-" && playground[0][2] != "-") {
+                x = 2;
+                y = 0;
+                pos = 6;
+            } else if (playground[2][0] == playground[1][1] && playground[0][2] == "-" && playground[2][0] != "-") {
+                x = 0;
+                y = 2;
+                pos = 2;
+            }  else if (playground[2][2] == playground[1][1] && playground[0][0] == "-" && playground[2][2] != "-") {
+                x = 0;
+                y = 0;
+                pos = 0;
+                console.log("works2");
             }
         }
     }

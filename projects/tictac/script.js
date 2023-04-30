@@ -84,19 +84,28 @@ function botAI() {
     var pos = Math.floor(Math.random() * 9);
     var x = Math.floor(pos / 3);
     var y = pos % 3;
-
     for (let i = 0; i < 3; i++) {
-        for (let z = 0; z < 2; z++) {
+        for (let z = 0; z < 3; z++) {
             if (playground[i][z] == playground[i][z + 1] && playground[i][z] != "-") {
                 if (z == 0 && playground[i][z + 2] == "-") {
                     x = i;
                     y = parseInt((z + 1) * 2);
                     pos = i * 3 + y;
                 } else if (z == 1 && playground[i][z - 1] == "-") {
-                    console.log("alert " + i + " - " + parseInt(z - 1));
                     x = i;
                     y = parseInt((z - 1));
                     pos = i * 3 + y;
+                }
+            } else if (i < 2 && playground[i][z] == playground[i + 1][z] && playground[i][z] != "-") {
+                if (i == 0 && playground[i + 2][z] == "-") {
+                    x = i + 2;
+                    y = z;
+                    pos = x * 3 + y;
+                } else if (i == 1 && playground[i - 1][z] == "-") {
+                    x = i - 1;
+                    y = z;
+                    pos = x + y;
+                    console.log(x + " " + y + " " + pos);
                 }
             }
         }

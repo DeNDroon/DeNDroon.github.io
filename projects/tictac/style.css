@@ -193,6 +193,11 @@ section:nth-of-type(2) {
 #play-sec .container #playground input:hover, #play-sec .container #playground input:focus {
   background-color: #443b3b;
 }
+#play-sec .container #menu {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
 #play-sec #pop-up {
   position: absolute;
   -webkit-backdrop-filter: blur(10px);

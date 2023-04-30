@@ -142,11 +142,9 @@ function botAI() {
                 x = 0;
                 y = 0;
                 pos = 0;
-                console.log("works2");
             }
         }
     }
-    console.log(moveCounter + "- moves \n " + player_symbol + " - player symbol" + "\n playground " + playground[0][0] );
     if (moveCounter <= 1) {
         if (playground[0][0] == player_symbol || playground[2][0] == player_symbol || playground[0][2] == player_symbol || playground[2][2] == player_symbol) {
             x = 1;
@@ -186,7 +184,9 @@ function botAI() {
 function checkEmpty() {
     let isFull = /-/.test(JSON.stringify(playground));
     if (isFull == false) {
-        resetGround();
+        setTimeout(function() {
+            resetGround();
+        }, 150);
     }
 }
 
@@ -232,6 +232,10 @@ function giveWin(winner) {
     }
     $("#pop-up").fadeIn(300);
 }
+
+$("#return-menu").on("click", function() {
+    $("#restart").click();
+})
 
 $("#rematch").on("click", function () {
     startGame();

@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
 html,
 input {
     font-family: Julius Sans;
@@ -17,11 +22,10 @@ input {
 
 body {
     background: linear-gradient(135deg, #3F0000, #200055);
-    min-height: 100vh;
 }
 
-nav {
-    position: fixed;
+header {
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -33,8 +37,7 @@ nav>img {
 }
 
 section {
-    min-height: 100vh;
-
+    height: 100vh;
     &:nth-of-type(2) {
         display: none;
     }
@@ -307,5 +310,18 @@ input[type="button"] {
 @media (max-width: 500px) {
     html {
         font-size: 12px;
+    }
+    #playground {
+        padding: 1em 2em !important;
+    }
+    #playground > input {
+        width: 6em !important;
+        height: 6em !important;
+    }
+}
+
+@media (max-width: 300px) {
+    html {
+        font-size: 10px;
     }
 }

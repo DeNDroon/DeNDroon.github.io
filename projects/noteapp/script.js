@@ -1,5 +1,4 @@
 var counter = localStorage.length;
-webSettings.setDomStorageEnabled(true);
 function recover() {
   if(localStorage.length >= 1) {
     for(let i = 0; i < localStorage.length; i++) {
@@ -9,7 +8,6 @@ function recover() {
     $("#pl-holder").css("display", "none");
   }
 }
-
 
 $("#note-in").keypress(function (e) {
   if (e.key == "Enter") {

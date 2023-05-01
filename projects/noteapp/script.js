@@ -9,6 +9,7 @@ function recover() {
   }
 }
 
+
 $("#note-in").keypress(function (e) {
   if (e.key == "Enter") {
     checkNote();

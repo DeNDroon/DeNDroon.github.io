@@ -7,75 +7,142 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/70c54e2b83.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <section id="load-screen">
-            <div class="container">
-                <svg viewBox="103.141 48.515 50 50" width="50" height="50">
-                  <rect id="load-scrn" y="0" width="50" height="50" style="fill: transparent; stroke: rgb(220, 209, 253); stroke-width: 5px; stroke-dasharray: 20px; stroke-dashoffset: 50px;" x="0" transform="matrix(1, 0, 0, 1, 103.14135, 48.515244)" rx="4.72" ry="4.72"></rect>
-                </svg>
-            </div>
-        </section>
-        <div id="nav-top">
-            <div id="profile-pic" class="circle">
-
-            </div>
-        </div>
-        <nav id="nav-bot">
-            <a href="#welcome-sec"><i class="fa-solid fa-house"></i></a>
-            <a href="#project-sec"><i class="fa-solid fa-folder-tree"></i></a>
-            <a href="#"><i class="fa-solid fa-address-book"></i></a>
-        </nav>
+        <h1>Giorgi Kartsivadze Portfolio</h1>
+        <ul id="menu">
+            <li><a href="#home"><img src="./assets/home-icon.svg" alt="Menu"></a></li>
+            <li><a href="#tic-sec"><img src="./assets/portfolio-icon.svg" alt="Menu"></a></li>
+            <li><a href="#contact-sec"><img src="./assets/contact-icon.svg" alt="Menu"></a></li>
+        </ul>
     </header>
-    <main>
-        <section id="welcome-sec">
-            <h1 id="welcome">WELCOME</h1>
-            <div id="meet-container">
-                <h3>I'm Giorgi Kartsivadze</h3>
-                <h4>Motivated front-end developer</h4>
-            </div>
-            <div id="knowledge-sec">
-                <div class="flex-column">
-                    <div class="know-cont"><i class="fa-brands fa-html5"></i>HTML</div>
-                </div>
-                <div class="flex-column">
-                    <div class="know-cont"><i class="fa-brands fa-css3-alt"></i>CSS</div>
-                    <div class="sub-cont"><i class="fa-brands fa-sass"></i>SASS</div>
-                </div>
-                <div class="flex-column">
-                    <div class="know-cont"><i class="fa-brands fa-js"></i>JAVASCRIPT</div>
-                    <div class="sub-cont">
-                        <svg class="jquery" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.88 10.41C21.8634 11.2594 20.5515 11.6711 19.2319 11.5548C17.9122 11.4386 16.6925 10.804 15.84 9.78999C14.06 7.66999 14.34 4.49999 16.45 2.74999L16.96 2.36999C16.1326 3.26712 15.6601 4.43476 15.6306 5.65483C15.6012 6.87491 16.0168 8.06398 16.8 8.99999C18.43 10.94 21.25 11.32 23.34 9.96999L22.88 10.41ZM21.1 14.5C20.3471 15.1349 19.4762 15.6148 18.5373 15.9123C17.5984 16.2097 16.6101 16.3189 15.6289 16.2334C14.6478 16.1479 13.6931 15.8695 12.8199 15.4142C11.9466 14.9588 11.1718 14.3355 10.54 13.58C7.87001 10.41 8.29001 5.67999 11.46 2.99999L12.38 2.35999C11.1921 3.7056 10.5266 5.43289 10.5046 7.22771C10.4825 9.02253 11.1054 10.7656 12.26 12.14C14.68 15 18.8 15.63 21.91 13.72L21.1 14.5ZM19.97 19.38C15.53 23.11 8.90001 22.53 5.17001 18.08C1.45001 13.64 2.03001 6.99999 6.47001 3.28999L7.58001 2.49999C4.07001 6.29999 3.85001 12.23 7.28001 16.32C10.71 20.4 16.59 21.22 20.96 18.43L19.97 19.38Z" fill="black"/>
-                            </svg>
-                            JQuery</div>
+    <body>
+        <section id="home">
+            <p>
+Hello, I'm a motivated self-learner in front-end development, and I'm hoping to start a career in this field.I work hard to learn more every day, coding frequently to improve my skills. My passion for this field is strong, so I believe I would be a good fit for any relevant job opportunity.I enjoy facing new challenges in each project I undertake and find it rewarding to solve them, as it helps me to grow and develop my abilities.
+            </p>
+            <div class="d-cont">
+                <div class="rot-element">
+                    
                 </div>
             </div>
         </section>
-        <section id="project-sec">
-            <h1>PROJECTS</h1>
-            <div id="project-grid">
-                <a href=".\projects\calculator"><div class="proj-pc"><div class="proj-phone"></div></div></a>
-                <a href=".\tourism\"><div class="proj-pc"><div class="proj-phone"></div></div></a>
-                <a href=".\frontendmentor\intercard"><div class="proj-pc"><div class="proj-phone"></div></div></a>
-                <a href=".\frontendmentor\prewcard"><div class="proj-pc"><div class="proj-phone"></div></div></a>
-                <a href=".\frontendmentor\qr"><div class="proj-pc"><div class="proj-phone"></div></div></a>
-            </div>
-        </section>
-        <section id="contact-sec">
-            <h1>CONTACT</h1>
-            <div id="grid-cont">
-                <label>Name<input type="text"></label>
-                <label>Email<input type="text"></label>
-                <label>Message<textarea type="text"></textarea></label>
-            </div>
-        </section>
-    </main>
-    <footer>
 
-    </footer>
-    <script src="script.js"></script>
+        <section id="tic-sec">
+            <h1>Tic <span class="highlight">Tac</span> Toe</h1>
+            <div class="cont flex-row">
+                <img src="./assets/tic-tac.png" alt="preview">
+                <div class="flex-col">
+                    <p>It's latest project, within i have used HTML5, SASS and JavaScript with JQuery.</p>
+                    <p>There are 2 mode of gaming: 2 Player and Bot mode.</p>
+                    
+                    <span class="challenge">Challenge : I have tryed to make <span class="hl">AI</span> for playing against bot and it didn't looks bad.</span>
+                    
+                    <p>Try to win the game :)</p>
+                    <div class="button-set flex-row">
+                        <a href="./projects/tictac/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/projects/tictac" target="_blank">Open Source</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="weather-sec">
+            <h1>Weather App</h1>
+            <div class="cont flex-row">
+                <img src="./assets/weather.png" alt="preview">
+                <div class="flex-col">
+                    <p>Standard step for Front-end developer's Portfolio.</p>
+                    <p>There are 2 mode of gaming: 2 Player and Bot mode.</p>
+                    
+                    <span class="challenge">challenge: In this project i have used <span class="hl">API</span> to get data from existing forecast by professionals and responsive styling</span>
+                    
+                    <p>Check the weather before going walk! )</p>
+                    <div class="button-set flex-row">
+                        <a href="./projects/weather/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/projects/weather" target="_blank">Open Source</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nft-sec">
+            <h1>NFT Card</h1>
+            <div class="cont flex-row">
+                <img src="./assets/nft-card.png" alt="preview">
+                <div class="flex-col">
+                    <p>Card for demonstrating DOM skills.</p>
+                    
+                    <span class="challenge">challenge: Use <span class="hl">DOM</span> to act on mouse movement and rotate card's direction proportionally in 3D.</span>
+                    
+                    <p>Check the card</p>
+                    <div class="button-set flex-row">
+                        <a href="./projects/nft/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/projects/nft" target="_blank">Open Source</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="note-sec">
+            <h1>Note App</h1>
+            <div class="cont flex-row">
+                <img src="./assets/noteapp.png" alt="preview">
+                <div class="flex-col">
+                    <p>Want to save note for future? This is for you</p>
+                    
+                    <span class="challenge">challenge: Use of storage for saving data with it's creating time and done state.</span>
+                    
+                    <p>Save notes for future. Don't miss anything</p>
+                    <div class="button-set flex-row">
+                        <a href="./projects/noteapp/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/projects/noteapp" target="_blank">Open Source</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="old-sec">
+            <h1>Older works</h1>
+            <div class="cont flex-row">
+                <div class="card">
+                    <div class="button-set flex-col">
+                        <a href="./projects/calculator" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/projects/calculator" target="_blank">Open Source</a>
+                    </div>
+                </div>
+                <div id="fem-cont" class="flex-row">
+                    <div class="card">
+                        <div class="button-set flex-col">
+                            <a href="./frontendmentor/intercard/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/frontendmentor/intercard" target="_blank">Open Source</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="button-set flex-col">
+                            <a href="./frontendmentor/prewcard/" target="_blank">Check LIVE</a><a href="https://github.com/gkartsivadze/gkartsivadze.github.io/tree/main/frontendmentor/prewcard" target="_blank">Open Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-sec">
+            <h1>Contact</h1>
+            <div class="cont">
+                <form action="https://formspree.io/f/xvonlzbq" method="POST">
+                <label id="mail-lab">
+                  Your email:
+                  <input type="email" name="email">
+                </label>
+                <label id="message-lab">
+                  Your message:
+                  <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+              </form>
+              <a href="" class="cv-downloader">Download CV</a>
+            </div>
+        </section>
+    </body>
 </body>
 </html>

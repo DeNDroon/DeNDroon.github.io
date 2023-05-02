@@ -7,10 +7,3 @@ document.addEventListener("scroll", function() {
         $("header > h1").css("opacity", "1");
     }
 })
-
-$("#menu a").attr("disabled", "true")
-$("#menu a").on("hover",function() {
-    setTimeout(function() {
-        $(this).attr("disabled", "false");
-    }, 200);
-})  

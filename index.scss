@@ -382,6 +382,7 @@ section {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 5em;
+        padding-inline: 3em;
         i{
             font-size: 10em;
             transition: 0.2s;
@@ -509,6 +510,20 @@ section {
             width: 20em !important;
             height: 3px;
         }
+    }
+    #skills-sec {
+        i {
+            font-size: 5em !important;
+        }
+        img {
+            height: 5em !important; width: 5em !important;
+        }
+        .cont {
+            height: fit-content;
+            padding-block: 3em !important;
+            gap: 3em;
+        }
+        height: auto !important;
     }
 }
 

@@ -363,6 +363,7 @@ section .cont .button-set a:nth-of-type(2) {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 5em;
+  padding-inline: 3em;
 }
 #skills-sec .cont i {
   font-size: 10em;
@@ -482,6 +483,22 @@ section .cont .button-set a:nth-of-type(2) {
     left: 50%;
     width: 20em !important;
     height: 3px;
+  }
+  #skills-sec {
+    height: auto !important;
+  }
+  #skills-sec i {
+    font-size: 5em !important;
+  }
+  #skills-sec img {
+    height: 5em !important;
+    width: 5em !important;
+  }
+  #skills-sec .cont {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-block: 3em !important;
+    gap: 3em;
   }
 }
 @media (max-width: 500px) {

@@ -129,7 +129,6 @@ section {
 }
 #home p:hover {
   transform: scale(1.05);
-  letter-spacing: 0.1em;
 }
 #home .d-cont {
   width: 15em;
@@ -188,6 +187,10 @@ section .cont img {
   width: 40em;
   box-shadow: 3px 3px 10px black;
   border-radius: 5px;
+  transition: 0.2s;
+}
+section .cont img:hover {
+  transform: scale(1.2);
 }
 section .cont div {
   gap: 1em;
@@ -352,6 +355,41 @@ section .cont .button-set a:nth-of-type(2) {
 
 .button-set {
   background: grey;
+}
+
+#skills-sec .cont {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5em;
+}
+#skills-sec .cont i {
+  font-size: 10em;
+  transition: 0.2s;
+}
+#skills-sec .cont i:nth-of-type(1):hover {
+  color: orange;
+}
+#skills-sec .cont i:nth-of-type(2):hover {
+  color: rgb(0, 132, 255);
+}
+#skills-sec .cont i:nth-of-type(3):hover {
+  color: rgb(255, 97, 123);
+}
+#skills-sec .cont i:nth-of-type(4):hover {
+  color: yellow;
+}
+#skills-sec .cont i:nth-of-type(5):hover {
+  color: #171515;
+}
+#skills-sec .cont img {
+  width: 10em !important;
+  box-shadow: none;
+  filter: brightness(50);
+}
+#skills-sec .cont img:hover {
+  filter: none;
 }
 
 #contact-sec .cont {

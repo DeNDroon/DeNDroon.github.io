@@ -20,7 +20,11 @@ html {
   scroll-behavior: smooth;
 }
 
-html, input, pre, button, textarea {
+html,
+input,
+pre,
+button,
+textarea {
   font-family: "Abel", sans-serif;
 }
 
@@ -58,13 +62,7 @@ header #menu {
   width: 3em;
   height: 3em;
   list-style: none;
-  background: url(./assets/menu-icon.svg) no-repeat center, white;
-  background-size: 60%;
-  border-radius: 50%;
   transition: 0.2s;
-}
-header #menu:hover, header #menu:focus-within {
-  border-radius: 0 50% 0 0;
 }
 header #menu:hover > li > a, header #menu:focus-within > li > a {
   opacity: 1;
@@ -90,6 +88,12 @@ header #menu:hover > li:nth-of-type(3), header #menu:focus-within > li:nth-of-ty
 header #menu:hover > li:nth-of-type(3) a, header #menu:focus-within > li:nth-of-type(3) a {
   border-radius: 0 0 50% 0;
 }
+header #menu:hover > li:nth-of-type(4) img, header #menu:focus-within > li:nth-of-type(4) img {
+  height: 3em;
+}
+header #menu:hover > li:nth-of-type(4) a, header #menu:focus-within > li:nth-of-type(4) a {
+  border-radius: 0 50% 0 0;
+}
 header #menu li {
   position: absolute;
   left: 50%;
@@ -105,7 +109,9 @@ header #menu li a {
   border-radius: 50%;
   background-color: white;
   transition: 0.2s;
-  opacity: 0;
+}
+header #menu li a img {
+  width: 1.5em;
 }
 
 section {
@@ -418,7 +424,8 @@ section .cont .button-set a:nth-of-type(2) {
 #contact-sec .cont label {
   font-size: 2em;
 }
-#contact-sec .cont input, #contact-sec .cont textarea {
+#contact-sec .cont input,
+#contact-sec .cont textarea {
   display: block;
   font-size: 1em;
   width: 100%;

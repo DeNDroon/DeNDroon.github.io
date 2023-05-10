@@ -40,6 +40,7 @@ body {
     background-image: url(images/bg-main-desktop.png);
     background-size: auto 100vh;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 .container {

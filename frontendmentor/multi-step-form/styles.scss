@@ -438,10 +438,31 @@ form>section:not(:nth-of-type(1)) {
     }
 }
 
-
 #period {
     width: fit-content;
     color: var(--clr5);
+}
+
+.forAttention {
+    color: var(--danger);
+}
+
+.invalid {
+    animation: boom 0.3s linear;
+}
+
+@keyframes boom {
+    from {
+        border: 1px solid var(--clr5);
+    }
+    50% {
+        outline: 3px solid var(--danger);
+        box-shadow: 0 0 3px var(--danger);
+    }
+    100% {
+        outline: 1px solid var(--danger);
+    }
+    
 }
 
 #step-5 {
@@ -456,9 +477,11 @@ form>section:not(:nth-of-type(1)) {
         margin-top: 1rem;
     }
 }
-
-
 @media (max-width: 950px) {
+    .forAttention {
+        display: block;
+        margin-top: 1rem;
+    }
     main {
         flex-direction: column;
         width: 100%;

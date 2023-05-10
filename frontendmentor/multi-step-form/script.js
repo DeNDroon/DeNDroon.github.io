@@ -2,36 +2,36 @@ var curPlan = "arcade";
 var curAddons = [];
 var curPeriod = "month";
 var period = {
-    year : {
+    year: {
         periodic: "Yearly",
         long: "Year",
         short: "ye"
     },
-    month : {
+    month: {
         periodic: "Monthly",
         long: "Month",
         short: "mo"
     }
 }
 const plan = {
-    arcade : {
+    arcade: {
         name: "Arcade",
         month: 9,
         year: 90
     },
-    advanced : {
+    advanced: {
         name: "Advanced",
         month: 12,
         year: 120
     },
-    pro : {
+    pro: {
         name: "Pro",
         month: 15,
         year: 150
     }
 }
 var planPrices = {
-    toYearly : () => {
+    toYearly: () => {
         $(".price")[0].innerText = `$${plan.arcade.year}/ye`;
         $(".price")[1].innerText = `$${plan.advanced.year}/ye`;
         $(".price")[2].innerText = `$${plan.pro.year}/ye`;
@@ -41,7 +41,7 @@ var planPrices = {
         $(".card").append("<p class='bonus'>2 months free");
         curPeriod = "year";
     },
-    toMonthly : () => {
+    toMonthly: () => {
         $(".price")[0].innerText = `$${plan.arcade.month}/mo`;
         $(".price")[1].innerText = `$${plan.advanced.month}/mo`;
         $(".price")[2].innerText = `$${plan.pro.month}/mo`;
@@ -53,16 +53,16 @@ var planPrices = {
     }
 }
 
-$("#plan-change").on("click", function() {
+$("#plan-change").on("click", function () {
     step.two();
 })
 
-$("input[name='plan']").on("click", function() {
+$("input[name='plan']").on("click", function () {
     curPlan = this.value;
     refreshData();
 })
-$("#month-year-check").on("click", function() {
-    if($(this).prop("checked")) {
+$("#month-year-check").on("click", function () {
+    if ($(this).prop("checked")) {
         planPrices.toYearly();
     } else {
         planPrices.toMonthly();
@@ -71,36 +71,36 @@ $("#month-year-check").on("click", function() {
 })
 
 $("input[name='add-on']").on("click", function () {
-    if($(this).prop("checked") && !curAddons.includes($(this).val())) {
+    if ($(this).prop("checked") && !curAddons.includes($(this).val())) {
         curAddons.push($(this).val());
-    } else if(!$(this).prop("checked")) {
+    } else if (!$(this).prop("checked")) {
         removeAddOn($(this).val());
     }
     refreshData();
 })
 
 const step = {
-    one : function() {
+    one: function () {
         $(".sub-cont").css("display", "none");
         $("#step-1").css("display", "flex");
         $("#rad_1").prop("checked", "true");
     },
-    two : function() {
+    two: function () {
         $(".sub-cont").css("display", "none");
         $("#step-2").css("display", "flex");
         $("#rad_2").prop("checked", "true");
     },
-    three : function() {
+    three: function () {
         $(".sub-cont").css("display", "none");
         $("#step-3").css("display", "flex");
         $("#rad_3").prop("checked", "true");
     },
-    four : function() {
+    four: function () {
         $(".sub-cont").css("display", "none");
         $("#step-4").css("display", "flex");
         $("#rad_4").prop("checked", "true");
     },
-    thanks : function() {
+    thanks: function () {
         $(".sub-cont").css("display", "none");
         $("#step-5").css("display", "flex");
         $("#rad_4").prop("checked", "true");
@@ -108,17 +108,17 @@ const step = {
 }
 
 const addonsPrice = {
-    "Online service" : {
+    "Online service": {
         name: "Online service",
         month: 1,
         year: 12
     },
-    "Larger storage" : {
+    "Larger storage": {
         name: "Larger storage",
         month: 2,
         year: 12
     },
-    "Customizable Profile" : {
+    "Customizable Profile": {
         name: "Customizable Profile",
         month: 2,
         year: 24
@@ -128,18 +128,49 @@ const addonsPrice = {
 $("#rad_1").on("click", () => {
     step.one();
 })
+
+var invalidAnimation = () => {
+    $("input:invalid").addClass("invalid");
+    setTimeout(function() {
+        $("input:invalid").removeClass("invalid");
+    }, 300)
+}
+
 $("#rad_2").on("click", () => {
-    step.two();
+    if ($("input:invalid").length > 0) {
+        invalidAnimation();
+        step.one();
+    } else {
+        $("input:invalid").css("border", "none");
+        step.two();
+    }
 })
 $("#rad_3").on("click", () => {
-    step.three();
+    if ($("input:invalid").length > 0) {
+        invalidAnimation();
+        step.one();
+    } else {
+        $("input:invalid").css("border", "none");
+        step.three();
+    }
 })
 $("#rad_4").on("click", () => {
-    step.four();
+    if ($("input:invalid").length > 0) {
+        invalidAnimation();
+        step.one();
+    } else {
+        $("input:invalid").css("border", "none");
+        step.four();
+    }
 })
 
 $("#step-1 > .next.btn").on("click", () => {
-    $("#rad_2").click();
+    if ($("input:invalid").length > 0) {
+        invalidAnimation();
+    } else {
+        $("input:invalid").css("border", "none");
+        $("#rad_2").click();
+    }
 })
 
 
@@ -159,13 +190,10 @@ $("#step-4  .back.btn").on("click", () => {
     $("#rad_3").click();
 })
 
-$("#form-submit").on("click", function() {
-    if($("input:invalid").length > 0) {
-        $("input:invalid").css("border", "1px solid var(--danger)");
-        $("#rad_1").click();
-    } else {
-        step.thanks();
-    }
+$("#form-submit").on("click", function (e) {
+    e.preventDefault();
+    $("input[type='radio']").prop("disabled", "true")
+    step.thanks();
 })
 
 function refreshData() {
@@ -178,7 +206,7 @@ function refreshData() {
     // Sum of prices
     $("#period").text("Total per (" + curPeriod + ")");
     $("#sum").text("+$" + sumOfAll() + "/" + period[curPeriod].short);
-    
+
 }
 
 function sumOfAll() {
@@ -191,7 +219,7 @@ function sumOfAll() {
 
 function removeAddOn(item) {
     let index = curAddons.indexOf(item);
-    if(index !== -1) {
+    if (index !== -1) {
         curAddons.splice(index, 1);
     }
 }

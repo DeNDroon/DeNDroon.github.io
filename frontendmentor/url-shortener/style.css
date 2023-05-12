@@ -51,7 +51,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }
 nav > img {
   margin-top: 0.5rem;
@@ -339,6 +339,9 @@ footer #soc-media {
   header nav > ul #menu {
     display: block;
     padding: 1rem;
+  }
+  header nav > ul:focus-within #sub-menu, header nav > ul:hover #sub-menu {
+    display: flex;
   }
   header nav ul li ul {
     display: none;

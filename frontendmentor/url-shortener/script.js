@@ -25,7 +25,7 @@ function menuBut() {
         menu.open();
     }
 }
-document.getElementById("")
+
 document.getElementsByTagName("main")[0].addEventListener("click", () => {
     menu.close();
 })

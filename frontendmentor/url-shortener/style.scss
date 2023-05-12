@@ -31,6 +31,12 @@ html {
     color: hsl(228, 45%, 44%);
 }
 
+.new-link, .old-link {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
 
 a {
     color: var(--clr5);

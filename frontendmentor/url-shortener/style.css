@@ -313,6 +313,13 @@ footer #soc-media {
   }
 }
 @media (max-width: 750px) {
+  .new-link {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    max-width: 100%;
+  }
   #top-sec {
     flex-direction: column-reverse !important;
   }

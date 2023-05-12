@@ -5,6 +5,31 @@ function backup() {
         addHist(i[0], i[1]);
     })
 }
+
+let menuOpen = false;
+const menu = {
+    open: function() {
+        document.getElementById("sub-menu").style.display = "flex";
+        menuOpen = true;
+    },
+    close: function() {
+        document.getElementById("sub-menu").style.display = "none";
+        menuOpen = false;
+    }
+}
+
+function menuBut() {
+    if(menuOpen) {
+        menu.close();
+    } else {
+        menu.open();
+    }
+}
+document.getElementById("")
+document.getElementsByTagName("main")[0].addEventListener("click", () => {
+    menu.close();
+})
+
 backup()
 
 function shortenUrl(longUrl) {
@@ -54,8 +79,10 @@ function addHist(old, newLink) {
     let nOld = document.createElement("span");
     nOld.classList.add("old-link");
     nOld.innerText = old;
-    let nNew = document.createElement("span");
+    let nNew = document.createElement("a");
     nNew.classList.add("new-link");
+    nNew.href = newLink;
+    nNew.target = "_blank";
     nNew.innerText = newLink;
     let nBtn = document.createElement("input");
     nBtn.classList.add("btn");

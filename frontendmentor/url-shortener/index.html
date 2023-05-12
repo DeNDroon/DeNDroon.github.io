@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <script src="./script.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
@@ -16,9 +15,9 @@
     <nav>
       <img src="images/logo.svg" alt="">
       <ul>
-        <li id="menu"><a href="#"><img src="./images/menu.svg" alt=""></a></li>
+        <li id="menu"><a href="#" onclick="menuBut()"><img src="./images/menu.svg" alt=""></a></li>
         <li>
-          <ul class="sub-menu">
+          <ul id="sub-menu">
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Resources</a></li>
@@ -53,13 +52,13 @@
 
     <section id="history">
         <div class="flex-row">
-          <span class="old-link">www.gkartsivadze.github.io/frontendmentor</span>
-          <span class="new-link">rel.sdafs/asdqew</span>
+          <span class="old-link">Interactive Card</span>
+          <a href="https://tinyurl.com/2fr8ww34" target="_blank" class="new-link">https://tinyurl.com/2fr8ww34</a>
           <input class="btn" type="button" value="Copy">
         </div>
         <div class="flex-row">
-          <span class="old-link">www.asdsadsf.com</span>
-          <span class="new-link">rel.sda/asdew</span>
+          <span class="old-link">Multi-step Form</span>
+          <a href="https://tinyurl.com/2p895eap" target="_blank" class="new-link">https://tinyurl.com/2p895eap</a>
           <input class="btn" type="button" value="Copy">
         </div>
     </section>
@@ -142,6 +141,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

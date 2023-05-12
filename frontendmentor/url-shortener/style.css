@@ -30,7 +30,7 @@ html, html input {
   color: hsl(228, 45%, 44%);
 }
 
-.new-link, .old-link {
+.old-link {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -53,13 +53,17 @@ nav {
   padding: 1rem;
   padding-inline: 2rem;
 }
-nav img {
+nav > img {
   margin-top: 0.5rem;
   height: 1.5rem;
   margin-right: 1rem;
 }
 nav #menu {
   display: none;
+}
+nav #menu a > img {
+  width: 2rem;
+  aspect-ratio: 1;
 }
 nav ul {
   width: 100%;
@@ -335,9 +339,6 @@ footer #soc-media {
   header nav > ul #menu {
     display: block;
     padding: 1rem;
-  }
-  header nav > ul:focus-within .sub-menu, header nav > ul:hover .sub-menu {
-    display: flex;
   }
   header nav ul li ul {
     display: none;

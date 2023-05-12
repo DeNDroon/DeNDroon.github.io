@@ -6,30 +6,6 @@ function backup() {
     })
 }
 
-let menuOpen = false;
-const menu = {
-    open: function() {
-        document.getElementById("sub-menu").style.display = "flex";
-        menuOpen = true;
-    },
-    close: function() {
-        document.getElementById("sub-menu").style.display = "none";
-        menuOpen = false;
-    }
-}
-
-function menuBut() {
-    if(menuOpen) {
-        menu.close();
-    } else {
-        menu.open();
-    }
-}
-
-document.getElementsByTagName("main")[0].addEventListener("click", () => {
-    menu.close();
-})
-
 backup()
 
 function shortenUrl(longUrl) {

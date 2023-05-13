@@ -1,0 +1,82 @@
+$danger: hsl(5, 85%, 63%);
+$dark: hsl(240, 100%, 5%);
+$info:  hsl(236, 13%, 42%);
+$secondary: hsl(233, 8%, 79%);
+$warning: hsl(35, 77%, 62%);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+    font-size: 15px;
+    font-family: Inter, sans-serif;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+h1 {
+    font-weight: 800;
+}
+
+a.btn {
+    transition: color 0.2s;
+    &:hover {
+        color: $warning;
+    }
+}
+
+p.h5 {
+    font-weight: 800;
+    transition: color 0.2s;
+    &:hover {
+        color: $warning;
+    }
+}
+
+.h1 {
+    font-weight: 700
+}
+
+
+#menu-btn {
+    display: none;
+    padding: 3rem;
+    background: url(./assets/images/icon-menu.svg) no-repeat;
+    background-position: center;
+}
+
+.open-menu {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+@media (max-width: 767px) {
+    #menu-btn {
+        display: inline-block;
+        position: fixed;
+        top: 0; right: 0;
+        z-index: 5;
+    }
+    #menu-list { 
+        position: fixed;
+        align-items: start;
+        right: 0;
+        top: 0; bottom: 0;
+        padding-top: 6rem;
+        background-color: white;
+        gap: 1rem;
+        a {
+            padding-left: 2rem;
+            padding-right: 5rem;
+        }
+    }
+}
+

@@ -54,10 +54,18 @@ p.h5 {
     background-size: 50%;
     background-position: center;
     border-radius: 50%;
+    transition: transform 0.2s;
 }
 
-.open-menu {
+#menu-list.open-menu {
     right: 0 !important;
+}
+
+#menu-btn.open-menu {
+    transform: rotate(180deg);
+    background-image: url(./assets/images/icon-menu-close.svg) !important;
+    background-size: 50%;
+    background-position: center
 }
 
 @media (max-width: 767px) {

@@ -48,9 +48,12 @@ p.h5 {
 
 #menu-btn {
     display: none;
-    padding: 3rem;
-    background: url(./assets/images/icon-menu.svg) no-repeat;
+    padding: 1rem 2rem;
+    background: url(./assets/images/icon-menu.svg) no-repeat,
+                white;
+    background-size: 50%;
     background-position: center;
+    border-radius: 50%;
 }
 
 .open-menu {
@@ -62,7 +65,7 @@ p.h5 {
     #menu-btn {
         display: inline-block;
         position: fixed;
-        top: 0; right: 0;
+        top: 1rem; right: 1.5rem;
         z-index: 5;
     }
     #menu-list { 

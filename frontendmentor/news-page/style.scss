@@ -80,3 +80,15 @@ p.h5 {
     }
 }
 
+@media (min-width: 1150px) {
+    .responsive-image {
+      content: url('./assets/images/image-web-3-desktop.jpg');
+    }
+  }
+  
+  /* Styles for mobile screens */
+  @media (max-width: 1150px) {
+    .responsive-image {
+      content: url('./assets/images/image-web-3-mobile.jpg');
+    }
+  }

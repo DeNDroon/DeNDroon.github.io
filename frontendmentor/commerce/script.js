@@ -81,11 +81,19 @@ $("#main-cont .main-photo").on("click", function() {
 })
 
 $("#btn-next").on("click", function() {
-    images.cur += 1
+    if(images.cur < 4) {
+        images.cur += 1
+    } else if (images.cur = 4) {
+        images.cur = 1;
+    }
     images.placeFull(images.cur, $("#full-screen .main-photo"))
 })
 $("#btn-prev").on("click", function() {
-    images.cur -= 1
+    if(images.cur > 1) {
+        images.cur -= 1
+    } else if (images.cur = 1) {
+        images.cur = 4;
+    }
     images.placeFull(images.cur, $("#full-screen .main-photo"))
 })
 

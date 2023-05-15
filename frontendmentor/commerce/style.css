@@ -207,7 +207,7 @@ h1 {
 }
 
 #full-screen {
-  display: grid;
+  display: none;
   place-items: center;
   background-color: var(--clr8);
   position: absolute;

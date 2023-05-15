@@ -72,7 +72,7 @@ $('#main-cont input[name="photo-carousel"]').on("click", function () {
     images.placeFull($(this).index(), $(".main-photo"));
 })
 $('#full-screen input[name="photo-carousel"]').on("click", function () {
-    images.placeFull($(this).index() - 1, $("#full-screen .main-photo"));
+    images.placeFull($(this).index() - 3, $("#full-screen .main-photo"));
 })
 
 $("#main-cont .main-photo").on("click", function() {
@@ -81,8 +81,12 @@ $("#main-cont .main-photo").on("click", function() {
 })
 
 $("#btn-next").on("click", function() {
-    images.placeFull(images.cur + 1, $("#full-screen .main-photo"))
-    
+    images.cur += 1
+    images.placeFull(images.cur, $("#full-screen .main-photo"))
+})
+$("#btn-prev").on("click", function() {
+    images.cur -= 1
+    images.placeFull(images.cur, $("#full-screen .main-photo"))
 })
 
 $("#close-full").on("click", function() {

@@ -80,6 +80,11 @@ $("#main-cont .main-photo").on("click", function() {
 
 })
 
+$("#btn-next").on("click", function() {
+    images.placeFull(images.cur + 1, $("#full-screen .main-photo"))
+    
+})
+
 $("#close-full").on("click", function() {
     $("#full-screen").css("display", "none");
 })

@@ -207,7 +207,7 @@ h1 {
 }
 
 #full-screen {
-  display: none;
+  display: grid;
   place-items: center;
   background-color: var(--clr8);
   position: absolute;
@@ -220,19 +220,38 @@ h1 {
 #full-screen .main-photo {
   width: 40rem;
 }
-#full-screen .btn {
+#full-screen #close-full {
   position: absolute;
   right: 0;
   top: -3rem;
 }
-#full-screen .btn img {
+#full-screen #close-full img {
   width: 1.5rem;
   aspect-ratio: 1;
   filter: grayscale(1) brightness(10);
 }
-#full-screen .btn img:hover {
+#full-screen #close-full img:hover {
   filter: none;
 }
+#full-screen #btn-next, #full-screen #btn-prev {
+  position: absolute;
+  top: 40%;
+  background-color: var(--clr1);
+  border-radius: 50%;
+  padding: 0.75rem 1rem;
+  filter: grayscale(1);
+  transition: filter 0.2s;
+}
+#full-screen #btn-next:hover, #full-screen #btn-prev:hover {
+  filter: none;
+}
+#full-screen #btn-next {
+  right: -1.5rem;
+}
+#full-screen #btn-prev {
+  left: -1.5rem;
+}
+
 input[name=photo-carousel] {
   position: relative;
   width: 100%;

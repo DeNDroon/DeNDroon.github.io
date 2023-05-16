@@ -28,9 +28,6 @@ html {
 body {
     min-height: 100vh;
 }
-main {
-    height: calc(100vh - 6rem);
-}
 header {
     height: 6rem;
     a {
@@ -319,7 +316,7 @@ input[name="photo-carousel"] {
 
 #main-cont {
     gap: 5rem;
-    height: calc(100% - 6rem);
+    min-height: calc(100vh - 6rem);
 }
 
 #info {

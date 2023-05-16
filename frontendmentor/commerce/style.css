@@ -29,10 +29,6 @@ body {
   min-height: 100vh;
 }
 
-main {
-  height: calc(100vh - 6rem);
-}
-
 header {
   height: 6rem;
 }
@@ -308,7 +304,7 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
 
 #main-cont {
   gap: 5rem;
-  height: calc(100% - 6rem);
+  min-height: calc(100vh - 6rem);
 }
 
 #info {

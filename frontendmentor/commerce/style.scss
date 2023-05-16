@@ -21,8 +21,9 @@ html {
     &,
     input,
     button,
-    textarea,a {
-        font-family: 'Kumbh Sans', sans-serif !important;
+    textarea,
+    a {
+        font-family: 'Kumbh+Sans', sans-serif !important;
     }
 }
 body {
@@ -47,14 +48,14 @@ header {
     }
     
     #nav-menu {
-        display: flex;
+        display: none;
     }
 
     #item-cart-counter {
         display: none;
         position: absolute;
         top: 1.7rem;
-        right: 9rem;
+        right: 7rem;
         background: var(--clr5);
         color: white;
         padding-inline: 0.25rem;
@@ -124,6 +125,7 @@ header {
     right: 1rem;
     transition: opacity 0.2s;
     opacity: 0;
+    z-index: 7;
     h5 {
         margin: 0;
     }
@@ -222,7 +224,7 @@ h1 {
     background-color: var(--clr8);
     position: absolute;
     inset: 0;
-    z-index: 50;
+    z-index: 2;
     .photo-cont {
         position: relative;
     }
@@ -249,7 +251,7 @@ h1 {
         padding: 0.75rem 1rem ;
         filter: grayscale(1);
         transition: filter 0.2s;
-        z-index: 500;
+        z-index: 3;
         &:hover {
             filter: none;
         }
@@ -427,7 +429,6 @@ input[name="photo-carousel"] {
         padding-right: 0;
     }
     #full-screen {
-        width: 95.5vw;
         #close-full {
             display: none;
         }
@@ -450,32 +451,8 @@ input[name="photo-carousel"] {
     #info {
         padding: 0.5rem;
     }
-}
-
-@media (max-width: 500px) {
-    #logo {
-        height: 0.75rem;
-    }
-    #my-profile {
-        width: 1.5rem;
-    }
-    #cart-check {
-        width: 2rem;
-    }
-}
-
-@media (max-width: 390px) {
-    #bottom-sec {
-        flex-direction: column;
-    }
-    #item-counter {
-        justify-content: space-evenly;
-    }
-    #price-cont {
-        grid-template-columns: repeat(5,1fr);
-        .price-old {
-            grid-column: 5 / 6;
-        }
+    #item-cart-counter {
+        right: 6rem !important;
     }
 }
 
@@ -483,12 +460,13 @@ input[name="photo-carousel"] {
     #outer-menu {
         flex-direction: row-reverse;
     }
+   
     #menu-btn {
         display: inline-block !important;
         width: max-content;
         padding: 0.75rem 1rem;
         filter: grayscale(1);
-        z-index: 10001;
+        z-index: 11;
         border: none;
         background-color: transparent;
     }
@@ -501,7 +479,7 @@ input[name="photo-carousel"] {
         position: absolute;
         flex-direction: column;
         height: 100vh;
-        z-index: 10000;
+        z-index: 10;
         
         a {
             color: var(--clr7);
@@ -510,4 +488,76 @@ input[name="photo-carousel"] {
 
         }
     }
+    #item-cart-counter {
+        top: 1rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #logo {
+        height: 0.75rem;
+    }
+    #my-profile {
+        width: 1.5rem;
+    }
+    #cart-check {
+        width: 2rem;
+    }
+    #item-cart {
+        width: 90%;
+        left: 5%; right: auto;
+        top: 7rem;
+        font-size: 0.6rem;
+    }
+    #item-cart-counter {
+        right: 4rem !important;
+        top: 1.2rem !important;
+        scale: 0.7;
+    }
+}
+
+@media (max-width: 460px) {
+    #price-cont {
+        grid-template-columns: repeat(5,1fr);
+        place-items: center;
+        .price-old {
+            grid-column: 5 / 6;
+        }
+        p, h1 {
+            margin-bottom: 0rem !important;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    #bottom-sec {
+        flex-direction: column;
+    }
+    #item-counter {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 300px) {
+    #logo {
+        height: 0.6rem;
+    }
+    #my-profile {
+        width: 1rem;
+    }
+    #cart-check {
+        width: 1.5rem;
+    }
+    #price-cont {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        .price-old {
+            grid-column: 4 / 5;
+        }
+    }
+    .discount {
+        margin-left: 0.25rem;
+    }
+
 }

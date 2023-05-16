@@ -144,3 +144,9 @@ $("#menu-btn").on("click", function() {
     }
     
 })
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth > 800) {
+        $("#nav-menu").css("display","flex")
+    }
+})

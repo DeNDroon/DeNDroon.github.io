@@ -21,8 +21,9 @@ html {
 html,
 html input,
 html button,
-html textarea, html a {
-  font-family: "Kumbh Sans", sans-serif !important;
+html textarea,
+html a {
+  font-family: "Kumbh+Sans", sans-serif !important;
 }
 
 body {
@@ -48,13 +49,13 @@ header #menu-btn {
   display: none;
 }
 header #nav-menu {
-  display: flex;
+  display: none;
 }
 header #item-cart-counter {
   display: none;
   position: absolute;
   top: 1.7rem;
-  right: 9rem;
+  right: 7rem;
   background: var(--clr5);
   color: white;
   padding-inline: 0.25rem;
@@ -119,6 +120,7 @@ header img[alt=cart] {
   right: 1rem;
   transition: opacity 0.2s;
   opacity: 0;
+  z-index: 7;
 }
 #item-cart h5 {
   margin: 0;
@@ -215,7 +217,7 @@ h1 {
   background-color: var(--clr8);
   position: absolute;
   inset: 0;
-  z-index: 50;
+  z-index: 2;
 }
 #full-screen .photo-cont {
   position: relative;
@@ -244,7 +246,7 @@ h1 {
   padding: 0.75rem 1rem;
   filter: grayscale(1);
   transition: filter 0.2s;
-  z-index: 500;
+  z-index: 3;
 }
 #full-screen #btn-next:hover, #full-screen #btn-prev:hover {
   filter: none;
@@ -405,7 +407,6 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
     padding-right: 0;
   }
   #full-screen {
-    width: 95.5vw;
     display: grid !important;
     position: relative;
     background: none;
@@ -428,30 +429,8 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
   #info {
     padding: 0.5rem;
   }
-}
-@media (max-width: 500px) {
-  #logo {
-    height: 0.75rem;
-  }
-  #my-profile {
-    width: 1.5rem;
-  }
-  #cart-check {
-    width: 2rem;
-  }
-}
-@media (max-width: 390px) {
-  #bottom-sec {
-    flex-direction: column;
-  }
-  #item-counter {
-    justify-content: space-evenly;
-  }
-  #price-cont {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  #price-cont .price-old {
-    grid-column: 5/6;
+  #item-cart-counter {
+    right: 6rem !important;
   }
 }
 @media (max-width: 800px) {
@@ -464,7 +443,7 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
     width: max-content;
     padding: 0.75rem 1rem;
     filter: grayscale(1);
-    z-index: 10001;
+    z-index: 11;
     border: none;
     background-color: transparent;
   }
@@ -478,11 +457,79 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
     position: absolute;
     flex-direction: column;
     height: 100vh;
-    z-index: 10000;
+    z-index: 10;
   }
   #nav-menu a {
     color: var(--clr7);
     font-weight: 700;
     padding-right: 30vw !important;
+  }
+  #item-cart-counter {
+    top: 1rem !important;
+  }
+}
+@media (max-width: 500px) {
+  #logo {
+    height: 0.75rem;
+  }
+  #my-profile {
+    width: 1.5rem;
+  }
+  #cart-check {
+    width: 2rem;
+  }
+  #item-cart {
+    width: 90%;
+    left: 5%;
+    right: auto;
+    top: 7rem;
+    font-size: 0.6rem;
+  }
+  #item-cart-counter {
+    right: 4rem !important;
+    top: 1.2rem !important;
+    scale: 0.7;
+  }
+}
+@media (max-width: 460px) {
+  #price-cont {
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+  }
+  #price-cont .price-old {
+    grid-column: 5/6;
+  }
+  #price-cont p, #price-cont h1 {
+    margin-bottom: 0rem !important;
+    padding: 0;
+  }
+}
+@media (max-width: 390px) {
+  #bottom-sec {
+    flex-direction: column;
+  }
+  #item-counter {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 300px) {
+  #logo {
+    height: 0.6rem;
+  }
+  #my-profile {
+    width: 1rem;
+  }
+  #cart-check {
+    width: 1.5rem;
+  }
+  #price-cont {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  #price-cont .price-old {
+    grid-column: 4/5;
+  }
+  .discount {
+    margin-left: 0.25rem;
   }
 }/*# sourceMappingURL=style.css.map */

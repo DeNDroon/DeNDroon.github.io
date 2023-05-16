@@ -415,6 +415,7 @@ input[name="photo-carousel"] {
         flex-direction: column !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        min-height: 50vh;
         .photo-cont {
             display: none;
         }
@@ -514,6 +515,17 @@ input[name="photo-carousel"] {
         top: 1.2rem !important;
         scale: 0.7;
     }
+    #picked-items > div {
+        justify-content: space-between;
+        & > div {
+            display: flex;
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            p {
+                margin-right: 0.5rem;
+            }
+        }
+    }
 }
 
 @media (max-width: 460px) {
@@ -537,6 +549,9 @@ input[name="photo-carousel"] {
     #item-counter {
         justify-content: space-evenly;
     }
+    #item-cart {
+        min-width: auto;
+    }
 }
 
 @media (max-width: 300px) {
@@ -558,6 +573,12 @@ input[name="photo-carousel"] {
     }
     .discount {
         margin-left: 0.25rem;
+    }
+    #picked-items > div {
+        p {
+            white-space:break-spaces;
+            margin-right: 0 !important;
+        }
     }
 
 }

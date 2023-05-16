@@ -394,6 +394,7 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
     flex-direction: column !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    min-height: 50vh;
   }
   #main-cont .photo-cont {
     display: none;
@@ -490,6 +491,17 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
     top: 1.2rem !important;
     scale: 0.7;
   }
+  #picked-items > div {
+    justify-content: space-between;
+  }
+  #picked-items > div > div {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  #picked-items > div > div p {
+    margin-right: 0.5rem;
+  }
 }
 @media (max-width: 460px) {
   #price-cont {
@@ -511,6 +523,9 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
   #item-counter {
     justify-content: space-evenly;
   }
+  #item-cart {
+    min-width: auto;
+  }
 }
 @media (max-width: 300px) {
   #logo {
@@ -531,5 +546,9 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
   }
   .discount {
     margin-left: 0.25rem;
+  }
+  #picked-items > div p {
+    white-space: break-spaces;
+    margin-right: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -389,7 +389,7 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
 }
 @media (max-width: 1000px) {
   #main-cont {
-    flex-direction: column;
+    flex-direction: column !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }

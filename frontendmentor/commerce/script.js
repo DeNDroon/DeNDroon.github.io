@@ -158,3 +158,10 @@ window.addEventListener("resize", function() {
         $("#nav-menu").css("display","none")
     }
 })
+window.addEventListener("load", function() {
+    if (window.innerWidth > 800) {
+        $("#nav-menu").css("display","flex")
+    } else {
+        $("#nav-menu").css("display","none")
+    }
+})

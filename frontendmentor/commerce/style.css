@@ -49,7 +49,7 @@ header #menu-btn {
   display: none;
 }
 header #nav-menu {
-  display: none;
+  display: flex;
 }
 header #item-cart-counter {
   display: none;

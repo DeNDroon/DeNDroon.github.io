@@ -102,11 +102,13 @@ $("#close-full").on("click", function() {
 })
 
 var cur_Product = "Fall Limited Edition Sneakers";
-
+var pro_Amount = 1;
 const cart = {
-    add: () => {
+    add: (amount) => {
+        for(let i = 0; i < amount; i++) {
         cart.items.push(itemId[cur_Product]);
         $("#item-amount").text(cart.items.filter(x => x == itemId[cur_Product]).length);
+        }
         refreshCart();
     },
     remove: (item) => {
@@ -120,13 +122,17 @@ const cart = {
 }
 
 $("#item-plus").on("click", () => {
-    cart.add(cur_Product);
+    pro_Amount += 1;
+    $("#item-amount").text(pro_Amount)
 })
 $("#add-btn").on("click", () => {
-    cart.add(cur_Product);
+    cart.add(pro_Amount);
 })
 $("#item-minus").on("click", () => {
-    cart.remove(cur_Product);
+    if(pro_Amount > 1) {
+    pro_Amount -= 1;
+    $("#item-amount").text(pro_Amount)
+    }
 })
 let opened = false;
 $("#menu-btn").on("click", function() {
@@ -148,5 +154,7 @@ $("#menu-btn").on("click", function() {
 window.addEventListener("resize", function() {
     if (window.innerWidth > 800) {
         $("#nav-menu").css("display","flex")
+    } else {
+        $("#nav-menu").css("display","none")
     }
 })

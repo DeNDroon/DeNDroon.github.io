@@ -128,3 +128,19 @@ $("#add-btn").on("click", () => {
 $("#item-minus").on("click", () => {
     cart.remove(cur_Product);
 })
+let opened = false;
+$("#menu-btn").on("click", function() {
+    if (opened) {
+        $(this).children("img").attr("src", "./images/icon-menu.svg")
+        $("#nav-menu").css("display", "none");
+        $("body").css("overflow", "auto")
+        opened = false;
+    } else {
+        $("body").css("overflow", "hidden")
+        $(this).children("img").attr("src", "./images/icon-close.svg")
+        $("#nav-menu").css("display", "flex");
+        opened = true;
+
+    }
+    
+})

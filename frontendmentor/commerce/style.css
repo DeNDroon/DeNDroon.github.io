@@ -21,12 +21,13 @@ html {
 html,
 html input,
 html button,
-html textarea {
-  font-family: "Kumbh Sans", sans-serif;
+html textarea, html a {
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 body {
   min-height: 100vh;
+  padding-inline: 3rem;
 }
 
 header {
@@ -42,6 +43,12 @@ header a:hover {
   color: var(--clr7);
   text-decoration: none;
   border-color: var(--clr5);
+}
+header #menu-btn {
+  display: none;
+}
+header #nav-menu {
+  display: flex;
 }
 header #item-cart-counter {
   display: none;
@@ -237,6 +244,7 @@ h1 {
   padding: 0.75rem 1rem;
   filter: grayscale(1);
   transition: filter 0.2s;
+  z-index: 500;
 }
 #full-screen #btn-next:hover, #full-screen #btn-prev:hover {
   filter: none;
@@ -367,5 +375,114 @@ input[name=photo-carousel]:hover::after, input[name=photo-carousel]:focus::after
   }
   50% {
     filter: blur(10px);
+  }
+}
+@media (max-width: 1200px) {
+  #main-cont {
+    gap: 1rem;
+  }
+}
+@media (max-width: 1050px) {
+  #main-cont {
+    padding-inline: 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  #main-cont {
+    flex-direction: column;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #main-cont .photo-cont {
+    display: none;
+  }
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #full-screen {
+    width: 95.5vw;
+    display: grid !important;
+    position: relative;
+    background: none;
+  }
+  #full-screen #close-full {
+    display: none;
+  }
+  #full-screen input[type=radio] {
+    display: none;
+  }
+  #full-screen #btn-prev {
+    left: 1rem;
+  }
+  #full-screen #btn-next {
+    right: 1rem;
+  }
+  #full-screen .main-photo {
+    width: 100%;
+  }
+  #info {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 500px) {
+  #logo {
+    height: 0.75rem;
+  }
+  #my-profile {
+    width: 1.5rem;
+  }
+  #cart-check {
+    width: 2rem;
+  }
+}
+@media (max-width: 390px) {
+  #bottom-sec {
+    flex-direction: column;
+  }
+  #item-counter {
+    justify-content: space-evenly;
+  }
+  #price-cont {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #price-cont .price-old {
+    grid-column: 5/6;
+  }
+}
+@media (max-width: 800px) {
+  #outer-menu {
+    flex-direction: row-reverse;
+  }
+  #menu-btn {
+    display: inline-block !important;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0.75rem 1rem;
+    filter: grayscale(1);
+    z-index: 10001;
+    border: none;
+    background-color: transparent;
+  }
+  #nav-menu {
+    display: none;
+    left: 0;
+    top: 0;
+    padding-top: 5rem;
+    margin-right: 2rem;
+    background-color: var(--clr1);
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 10000;
+  }
+  #nav-menu a {
+    color: var(--clr7);
+    font-weight: 700;
+    padding-right: 30vw !important;
   }
 }/*# sourceMappingURL=style.css.map */

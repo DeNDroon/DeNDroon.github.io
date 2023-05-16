@@ -13,16 +13,19 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
-<body class="container-fluid px-5">
+<body class="container-fluid">
   <header>
     <nav class="d-flex justify-content-between align-items-center p-3">
-      <div class="d-flex align-items-center">
-        <img class="mr-4" src="./images/logo.svg" alt="logo">
+      <div id="outer-menu" class="d-flex align-items-center">
+        <img id="logo" class="mr-4" src="./images/logo.svg" alt="logo">
+        <button id="menu-btn"><img src="./images/icon-menu.svg" alt=""></button>
+        <div id="nav-menu">
         <a class="px-3 py-4" href="#">Collections</a>
         <a class="px-3 py-4" href="#">Men</a>
         <a class="px-3 py-4" href="#">Women</a>
         <a class="px-3 py-4" href="#">About</a>
         <a class="px-3 py-4" href="#">Contact</a>
+      </div>
       </div>
       <div class="nav-r d-flex align-items-center">
         <input type="checkbox" name="my-card" id="cart-check">

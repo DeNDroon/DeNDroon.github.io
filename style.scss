@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-inline: 10rem;
+    padding-block: 5rem;
+}
+
+#html-logo:hover {
+    path {
+        fill: orange;
+    }
+}
+#css-logo:hover {
+    path {
+        fill: cyan;
+    }
+}
+#js-logo:hover {
+    path {
+        fill: rgb(234, 255, 0);
+    }
+}
+#jquery-logo:hover {
+    path {
+        fill: rgb(0, 155, 202);
+    }
+}
+#scss-logo:hover {
+    path {
+        fill: rgb(203, 55, 136);
+    }
+}
+
+path {
+    transition: 0.2s;
+}
+
+#iconmonstr-github-1:hover path {
+    stroke-width: 1px;
+    fill: black;
+}
+
+#iconmonstr-linkedin-3:hover path {
+    fill: #0072B1;
+}
+
+#iconmonstr-email-13:hover path {
+    fill: white;
+    stroke-width: 1px;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    top: 3rem;
+    padding-inline: 5rem;
+
+    nav {
+        display: grid;
+        justify-content: space-between;
+        max-width: 100% !important;
+        grid-template-columns: 1fr 0.2fr 1fr;
+        gap: 3rem;
+    }
+
+    svg {
+        max-width: 100%;
+    }
+}
+
+section {
+    max-width: 100% !important;
+    margin-bottom: 0.25rem;
+}
+
+#welcome-sec {
+    min-height: 100vh;
+    background-image: url("./assets/leaves-bg.jpg");
+    background-attachment: fixed;
+    grid-template-rows: repeat(3, 1fr);
+    padding-inline: 0;
+    gap: 3rem;
+
+    .footer {
+        p {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 0.5rem;
+            color: white;
+            text-align: center;
+            background-color: #925800;
+            border-radius: 1rem;
+            width: fit-content;
+            padding: 0.25rem 3rem;
+            margin-bottom: 0;
+        }
+
+        #skills {
+            display: flex;
+            background-color: #925800;
+            padding: 1rem 2rem;
+            border-radius: 5rem;
+            gap: 4rem;
+        }
+
+    }
+
+    #motivate {
+        left: 0;
+        padding-block: 3rem;
+        font-size: 3rem;
+        color: white;
+        background-color: rgba(190, 144, 51, 0.75);
+        border-radius: 0 0 10rem 0;
+        p {
+            font-weight: 900;
+            text-shadow: 0 0 0.3rem white;
+        }
+    }
+
+    #motivate, #about {
+        width: 45%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    #about {
+        right: 0;
+        background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.75), hsla(40, 62%, 30%, 0.75));
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: 5rem;
+        color: white;
+        border-radius: 10rem 0 0 0;
+    }
+}
+
+
+#product-sec {
+    background: url(./assets/fabric.jpg);
+    background-attachment: fixed;
+    background-size: auto 100%;
+}
+
+section:not(:first-of-type) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: white;
+    }
+
+    img {
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    &>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #7D5D1D;
+            border-radius: 1rem 0 0 1rem;
+            box-shadow: -2rem 0 5rem rgba(0, 0, 0, 0.591) inset;
+            padding: 3rem;
+            color: white;
+            font-size: 1.5rem;
+            height: 90%;
+        }
+    }
+}
+
+.btn-container {
+    position: relative;
+    width: 15rem;
+    transform-style: preserve-3d;
+    margin-left: auto;
+
+    button {
+        position: absolute;
+        padding: 0 2rem;
+        border: none;
+        transition: width 0.2s, clip-path 0.2s, transform 0.2s, background-color 0.2s;
+        transition-delay: 0.1s;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .btn-live {
+        left: 0;
+        width: 8rem;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        margin-right: -1rem;
+        background-color: #d5b079;
+        color: rgb(0, 0, 0);
+
+        &:hover,
+        &:focus {
+            width: 13rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transform: translateZ(1px);
+            background-color: #e6ceaa;
+        }
+    }
+
+    .btn-repo {
+        width: 8rem;
+        right: 0;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        margin-left: -1rem;
+        background-color: #583b0e;
+        color: white;
+
+        &:hover,
+        &:focus {
+            width: 13rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transform: translateZ(1px);
+            background-color: #342105;
+        }
+    }
+}
+
+#shortener-sec {
+    background-image: url(./assets/ice.jpg);
+    background-attachment: fixed;
+
+    .info {
+        background-color: #2ACFCF;
+    }
+}
+
+#multi-sec {
+    background-image: url(./assets/galaxy.jpg);
+    background-attachment: fixed;
+
+    .info {
+        background-color: #6259FF;
+    }
+}

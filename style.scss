@@ -79,13 +79,14 @@ html {
 
 header {
     position: fixed;
-    top: 2rem;
+    top: 0;
     left: 0;
     right: 0;
     padding-inline: 10rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 0.25rem solid var(--yellow);
-
+    transition: background-color 0.2s;
     svg {
         max-width: 100%;
     }
@@ -161,7 +162,7 @@ section:not(:first-of-type) {
     padding: 0.5rem 3rem;
     color: var(--white);
     animation: hoverOut 0.2s forwards reverse;
-    &:hover {
+    &:hover, &:focus-within {
         animation: hoverIn 0.2s forwards;
         & .top, & .bottom {
             opacity: 1;
@@ -170,12 +171,16 @@ section:not(:first-of-type) {
     .top, .bottom{
         opacity: 0;
         transition: opacity 0.2s;
-        transition-delay: 0.1s;
+        transition-delay: 0.2s;
     }
     .bottom {
         display: flex;
         justify-content: space-between;
         align-items: end;
+    }
+    &:nth-of-type(even) {
+        margin-left: auto;
+        margin-right: 0;
     }
 }
 

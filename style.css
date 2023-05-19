@@ -77,12 +77,14 @@ html {
 
 header {
   position: fixed;
-  top: 2rem;
+  top: 0;
   left: 0;
   right: 0;
   padding-inline: 10rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 0.25rem solid var(--yellow);
+  transition: background-color 0.2s;
 }
 header svg {
   max-width: 100%;
@@ -155,21 +157,25 @@ section:not(:first-of-type) h1 {
   color: var(--white);
   animation: hoverOut 0.2s forwards reverse;
 }
-.proj-preview:hover {
+.proj-preview:hover, .proj-preview:focus-within {
   animation: hoverIn 0.2s forwards;
 }
-.proj-preview:hover .top, .proj-preview:hover .bottom {
+.proj-preview:hover .top, .proj-preview:hover .bottom, .proj-preview:focus-within .top, .proj-preview:focus-within .bottom {
   opacity: 1;
 }
 .proj-preview .top, .proj-preview .bottom {
   opacity: 0;
   transition: opacity 0.2s;
-  transition-delay: 0.1s;
+  transition-delay: 0.2s;
 }
 .proj-preview .bottom {
   display: flex;
   justify-content: space-between;
   align-items: end;
+}
+.proj-preview:nth-of-type(even) {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 #product {

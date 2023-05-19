@@ -14,7 +14,8 @@
     background-color: var(--warning);
     text-align: center;
     position: fixed;
-    left: 50%; top: 50%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     width: 100vw;
 }
@@ -35,7 +36,7 @@ html {
         position: absolute;
         padding: 0 2rem;
         border: none;
-        transition: width 0.2s, clip-path 0.2s, transform 0.2s, background-color 0.2s;
+        transition: width 0.2s, clip-path 0.2s, transform 0.2s, background-color 0.2s, color 0.2s;;
         transition-delay: 0.1s;
         transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     }
@@ -45,8 +46,8 @@ html {
         width: 8rem;
         clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
         margin-right: -1rem;
-        background-color: #d5b079;
-        color: rgb(0, 0, 0);
+        background-color: var(--orange);
+        color: var(--white);
 
         &:hover,
         &:focus {
@@ -62,15 +63,16 @@ html {
         right: 0;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
         margin-left: -1rem;
-        background-color: #583b0e;
-        color: white;
+        background-color: var(--white);
+        color: var(--black);
 
         &:hover,
         &:focus {
             width: 13rem;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             transform: translateZ(1px);
-            background-color: #342105;
+            color: var(--white);
+            background-color: var(--black);
         }
     }
 }
@@ -78,19 +80,23 @@ html {
 header {
     position: fixed;
     top: 2rem;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     padding-inline: 10rem;
     padding-bottom: 1rem;
     border-bottom: 0.25rem solid var(--yellow);
+
     svg {
         max-width: 100%;
     }
+
     nav {
         display: grid;
         grid-template-columns: 1fr 0.25fr 1fr;
         align-items: center;
         gap: 2rem;
     }
+
     div {
         display: flex;
         justify-content: end;
@@ -110,6 +116,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     color: var(--white);
+
     h1 {
         position: absolute;
         font-size: 2.5rem;
@@ -121,16 +128,20 @@ body {
         padding-right: 2rem;
         border-right: 0.25rem solid var(--yellow);
     }
+
     pre {
         position: absolute;
-        right: 15rem; top: 70%;
+        right: 15rem;
+        top: 70%;
         padding-left: 2rem;
         border-left: 0.15rem solid var(--yellow);
     }
 }
+
 section:not(:first-of-type) {
     min-height: 100rem;
     padding: 10rem 15rem;
+
     h1 {
         color: var(--black);
         width: fit-content;
@@ -148,6 +159,19 @@ section:not(:first-of-type) {
     height: 27rem;
     margin-bottom: 3rem;
     padding: 0.5rem 3rem;
+    color: var(--white);
+    animation: hoverOut 0.2s forwards reverse;
+    &:hover {
+        animation: hoverIn 0.2s forwards;
+        & .top, & .bottom {
+            opacity: 1;
+        }
+    }
+    .top, .bottom{
+        opacity: 0;
+        transition: opacity 0.2s;
+        transition-delay: 0.1s;
+    }
     .bottom {
         display: flex;
         justify-content: space-between;
@@ -157,19 +181,53 @@ section:not(:first-of-type) {
 
 #product {
     margin-top: 5rem;
-    background: url(./assets/product.png);
+    --img: url(./assets/product.png);
+    background: var(--img);
     background-size: cover;
+    
+}
+
+@keyframes hoverIn {
+    0% {background: linear-gradient(black ,transparent 0% 100%, black), var(--img); background-size: cover}
+    10% {background: linear-gradient(black ,transparent 5% 95%, black), var(--img); background-size: cover}
+    20% {background: linear-gradient(black ,transparent 10% 90%, black), var(--img); background-size: cover}
+    30% {background: linear-gradient(black ,transparent 15% 85%, black), var(--img); background-size: cover}
+    40% {background: linear-gradient(black ,transparent 20% 80%, black), var(--img); background-size: cover}
+    50% {background: linear-gradient(black ,transparent 25% 75%, black), var(--img); background-size: cover}
+    60% {background: linear-gradient(black ,transparent 30% 70%, black), var(--img); background-size: cover}
+    70% {background: linear-gradient(black ,transparent 35% 65%, black), var(--img); background-size: cover}
+    80% {background: linear-gradient(black ,transparent 40% 60%, black), var(--img); background-size: cover}
+    90% {background: linear-gradient(black ,transparent 45% 55%, black), var(--img); background-size: cover}
+    100% {background: linear-gradient(black ,transparent 50% 50%, black), var(--img); background-size: cover}
+}
+@keyframes hoverOut {
+    0% {background: linear-gradient(black ,transparent 0% 100%, black), var(--img); background-size: cover}
+    10% {background: linear-gradient(black ,transparent 5% 95%, black), var(--img); background-size: cover}
+    20% {background: linear-gradient(black ,transparent 10% 90%, black), var(--img); background-size: cover}
+    30% {background: linear-gradient(black ,transparent 15% 85%, black), var(--img); background-size: cover}
+    40% {background: linear-gradient(black ,transparent 20% 80%, black), var(--img); background-size: cover}
+    50% {background: linear-gradient(black ,transparent 25% 75%, black), var(--img); background-size: cover}
+    60% {background: linear-gradient(black ,transparent 30% 70%, black), var(--img); background-size: cover}
+    70% {background: linear-gradient(black ,transparent 35% 65%, black), var(--img); background-size: cover}
+    80% {background: linear-gradient(black ,transparent 40% 60%, black), var(--img); background-size: cover}
+    90% {background: linear-gradient(black ,transparent 45% 55%, black), var(--img); background-size: cover}
+    100% {background: linear-gradient(black ,transparent 50% 50%, black), var(--img); background-size: cover}
 }
 
 #multi {
-    background: url(./assets/multi.png);
+    --img: url(./assets/multi.png);
+    background: var(--img);
     background-size: cover;
 }
+
 #inter {
-    background: url(./assets/inter.png);
+    --img: url(./assets/inter.png);
+    background: var(--img);
     background-size: cover;
 }
+
 #shortener {
-    background: url(./assets/shortener.png);
-    background-size: contain;
+    --img: url(./assets/shortener.png);
+    background: var(--img);
+    background-size: cover;
 }

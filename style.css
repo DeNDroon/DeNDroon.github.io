@@ -1,171 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --black: #0D0D0D;
+  --warning: #F24405;
+  --orange: #F25C05;
+  --yellow: #F2CF66;
+  --white: #F2F2F2;
+}
+
+#testing {
+  font-size: 8rem;
+  color: var(--white);
+  background-color: var(--warning);
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 100vw;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
 
-section {
-  padding-inline: 10rem;
-  padding-block: 5rem;
-}
-
-#html-logo:hover path {
-  fill: orange;
-}
-
-#css-logo:hover path {
-  fill: cyan;
-}
-
-#js-logo:hover path {
-  fill: rgb(234, 255, 0);
-}
-
-#jquery-logo:hover path {
-  fill: rgb(0, 155, 202);
-}
-
-#scss-logo:hover path {
-  fill: rgb(203, 55, 136);
-}
-
-path {
-  transition: 0.2s;
-}
-
-#iconmonstr-github-1:hover path {
-  stroke-width: 1px;
-  fill: black;
-}
-
-#iconmonstr-linkedin-3:hover path {
-  fill: #0072B1;
-}
-
-#iconmonstr-email-13:hover path {
-  fill: white;
-  stroke-width: 1px;
-}
-
-header {
-  z-index: 999;
-  position: fixed;
-  width: 100%;
-  top: 3rem;
-  padding-inline: 5rem;
-}
-header nav {
-  display: grid;
-  justify-content: space-between;
-  max-width: 100% !important;
-  grid-template-columns: 1fr 0.2fr 1fr;
-  gap: 3rem;
-}
-header svg {
-  max-width: 100%;
-}
-
-section {
-  max-width: 100% !important;
-  margin-bottom: 0.25rem;
-}
-
-#welcome-sec {
-  min-height: 100vh;
-  background-image: url("./assets/leaves-bg.jpg");
-  background-attachment: fixed;
-  grid-template-rows: repeat(3, 1fr);
-  padding-inline: 0;
-  gap: 3rem;
-}
-#welcome-sec .footer p {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.5rem;
-  color: white;
-  text-align: center;
-  background-color: #925800;
-  border-radius: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.25rem 3rem;
-  margin-bottom: 0;
-}
-#welcome-sec .footer #skills {
-  display: flex;
-  background-color: #925800;
-  padding: 1rem 2rem;
-  border-radius: 5rem;
-  gap: 4rem;
-}
-#welcome-sec #motivate {
-  left: 0;
-  padding-block: 3rem;
-  font-size: 3rem;
-  color: white;
-  background-color: rgba(190, 144, 51, 0.75);
-  border-radius: 0 0 10rem 0;
-}
-#welcome-sec #motivate p {
-  font-weight: 900;
-  text-shadow: 0 0 0.3rem white;
-}
-#welcome-sec #motivate, #welcome-sec #about {
-  width: 45%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-#welcome-sec #about {
-  right: 0;
-  background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.75), hsla(40, 62%, 30%, 0.75));
-  font-size: 1.5rem;
-  padding-bottom: 1rem;
-  padding-top: 5rem;
-  color: white;
-  border-radius: 10rem 0 0 0;
-}
-
-#product-sec {
-  background: url(./assets/fabric.jpg);
-  background-attachment: fixed;
-  background-size: auto 100%;
-}
-
-section:not(:first-of-type) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-section:not(:first-of-type) h1 {
-  color: white;
-}
-section:not(:first-of-type) img {
-  width: 50%;
-  border-radius: 1rem;
-}
-section:not(:first-of-type) > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section:not(:first-of-type) > div .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #7D5D1D;
-  border-radius: 1rem 0 0 1rem;
-  box-shadow: -2rem 0 5rem rgba(0, 0, 0, 0.591) inset;
-  padding: 3rem;
-  color: white;
-  font-size: 1.5rem;
-  height: 90%;
-}
-
 .btn-container {
   position: relative;
   width: 15rem;
+  height: 2rem;
   transform-style: preserve-3d;
   margin-left: auto;
 }
@@ -212,18 +74,107 @@ section:not(:first-of-type) > div .info {
   background-color: #342105;
 }
 
-#shortener-sec {
-  background-image: url(./assets/ice.jpg);
-  background-attachment: fixed;
+header {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  padding-inline: 10rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.25rem solid var(--yellow);
 }
-#shortener-sec .info {
-  background-color: #2ACFCF;
+header svg {
+  max-width: 100%;
+}
+header nav {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+header div {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-#multi-sec {
-  background-image: url(./assets/galaxy.jpg);
-  background-attachment: fixed;
+body {
+  background: linear-gradient(30deg, #C2C2C2, #F2F2F2);
 }
-#multi-sec .info {
-  background-color: #6259FF;
+
+#welcome-sec {
+  background: url(./assets/welcome.png) center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: var(--white);
+}
+#welcome-sec h1 {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 35%;
+  left: 15rem;
+  text-shadow: 0 0 2rem #ffffff;
+  width: 25rem;
+  text-align: right;
+  padding-right: 2rem;
+  border-right: 0.25rem solid var(--yellow);
+}
+#welcome-sec pre {
+  position: absolute;
+  right: 15rem;
+  top: 70%;
+  padding-left: 2rem;
+  border-left: 0.15rem solid var(--yellow);
+}
+
+section:not(:first-of-type) {
+  min-height: 100rem;
+  padding: 10rem 15rem;
+}
+section:not(:first-of-type) h1 {
+  color: var(--black);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.25rem 1rem;
+  border-bottom: 0.25rem solid var(--orange);
+}
+
+.proj-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48rem;
+  height: 27rem;
+  margin-bottom: 3rem;
+  padding: 0.5rem 3rem;
+}
+.proj-preview .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#product {
+  margin-top: 5rem;
+  background: url(./assets/product.png);
+  background-size: cover;
+}
+
+#multi {
+  background: url(./assets/multi.png);
+  background-size: cover;
+}
+
+#inter {
+  background: url(./assets/inter.png);
+  background-size: cover;
+}
+
+#shortener {
+  background: url(./assets/shortener.png);
+  background-size: contain;
 }/*# sourceMappingURL=style.css.map */

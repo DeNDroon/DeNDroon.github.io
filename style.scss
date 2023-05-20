@@ -6,6 +6,8 @@
     --orange: #F25C05;
     --yellow: #F2CF66;
     --white: #F2F2F2;
+    --h-left: 15rem;
+    --pre-right: 15rem;
 }
 
 #testing {
@@ -15,8 +17,8 @@
     background-color: var(--warning);
     text-align: center;
     position: fixed;
-    right: 10%;
-    bottom: 10%;
+    right: 1%;
+    bottom: 1%;
 }
 
 html {
@@ -142,6 +144,7 @@ body {
     min-height: 125vh;
     color: var(--white);
     transition: background-position 0.1s;
+    overflow-x: hidden;
 
     h1 {
         position: absolute;
@@ -167,20 +170,19 @@ body {
 
 @keyframes slideInHeader {
     0% {width: 0; transform: rotate(90deg); left: -100%}
-    30% {left: 15rem; transform: rotate(90deg); }
+    30% {left: var(--h-left); transform: rotate(90deg); }
     60% {transform: rotate(0deg); width: 0; padding-right: 0}
-    100% {width: 25rem;padding-right: 2rem; left: 15rem;}
+    100% {width: 25rem;padding-right: 2rem; left: var(--h-left);}
 }
 @keyframes slideInPre {
     0% {width: 0; transform: rotate(-90deg); right: -100%}
-    30% {right: 15rem; transform: rotate(-90deg); }
+    30% {right: var(--pre-right); transform: rotate(-90deg); }
     60% {transform: rotate(0deg); width: 0; padding-right: 0}
-    100% {width: 30rem;padding-left: 2rem; right: 15rem;}
+    100% {width: 30rem;padding-left: 2rem; right: var(--pre-right);}
 }
 
 section:not(:first-of-type) {
-    min-height: 100rem;
-    padding: 10rem 15rem;
+    padding: 8rem 15rem;
 
     h1 {
         color: var(--black);
@@ -213,7 +215,7 @@ section:not(:first-of-type) {
     transition: --x 0.2s, --y 0.2s;
     display: grid;
     place-items: center;
-    background: radial-gradient(100px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent),
+    background: radial-gradient(200px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent),
                 var(--warning);
     border-radius: 50%;
     height: 12rem; aspect-ratio: 1;
@@ -302,4 +304,121 @@ section:not(:first-of-type) {
     --img: url(./assets/shortener.png);
     background: var(--img);
     background-size: cover;
+}
+
+#contact {
+    & > div {
+        position: relative;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.25rem;
+            height: 15rem;
+            background: var(--warning);
+        }
+        .left {
+            display: grid;
+            input, textarea {
+                margin-bottom: 1rem;
+                resize: none;
+            }
+            input[type="button"] {
+                background-color: var(--warning);
+                border: none;
+                color: var(--white);
+                font-size: 1.5rem;
+                transition: background-color 0.2s;
+                &:hover {
+                    background-color: var(--orange);
+                }
+            }
+        }
+        .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: fit-content;
+            gap: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1490px) {
+    :root {
+        --h-left: 7rem;
+        --pre-right: 7rem;
+    }
+    #project-sec {
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    header {
+        padding-inline: 5rem;
+        #nav-logo {
+            width: 15rem;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    section:not(:first-of-type) {
+        padding: 5rem 8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #welcome-sec {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        h1, pre {
+            position: static;
+        }
+    }
+    section:not(:first-of-type) {
+        padding: 5rem 2rem;
+    }
+}
+
+@media (max-width:700px) {
+    html {
+        font-size: 0.7rem;
+    }
+    #welcome-sec {
+        gap: 8rem;
+    }
+    .soc-network {
+        height: 2rem;
+        gap: 1rem;
+        svg {
+            max-width: inherit;
+            max-height: 100%;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 0.5rem;
+    }
+    header {
+        padding: 1rem;
+        a {
+            width: fit-content;
+        }
+        
+    }
 }

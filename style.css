@@ -5,6 +5,8 @@
   --orange: #F25C05;
   --yellow: #F2CF66;
   --white: #F2F2F2;
+  --h-left: 15rem;
+  --pre-right: 15rem;
 }
 
 #testing {
@@ -14,8 +16,8 @@
   background-color: var(--warning);
   text-align: center;
   position: fixed;
-  right: 10%;
-  bottom: 10%;
+  right: 1%;
+  bottom: 1%;
 }
 
 html {
@@ -135,6 +137,7 @@ body {
   min-height: 125vh;
   color: var(--white);
   transition: background-position 0.1s;
+  overflow-x: hidden;
 }
 #welcome-sec h1 {
   position: absolute;
@@ -164,7 +167,7 @@ body {
     left: -100%;
   }
   30% {
-    left: 15rem;
+    left: var(--h-left);
     transform: rotate(90deg);
   }
   60% {
@@ -175,7 +178,7 @@ body {
   100% {
     width: 25rem;
     padding-right: 2rem;
-    left: 15rem;
+    left: var(--h-left);
   }
 }
 @keyframes slideInPre {
@@ -185,7 +188,7 @@ body {
     right: -100%;
   }
   30% {
-    right: 15rem;
+    right: var(--pre-right);
     transform: rotate(-90deg);
   }
   60% {
@@ -196,12 +199,11 @@ body {
   100% {
     width: 30rem;
     padding-left: 2rem;
-    right: 15rem;
+    right: var(--pre-right);
   }
 }
 section:not(:first-of-type) {
-  min-height: 100rem;
-  padding: 10rem 15rem;
+  padding: 8rem 15rem;
 }
 section:not(:first-of-type) h1 {
   color: var(--black);
@@ -235,7 +237,7 @@ section:not(:first-of-type) h1 {
   transition: --x 0.2s, --y 0.2s;
   display: grid;
   place-items: center;
-  background: radial-gradient(100px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent), var(--warning);
+  background: radial-gradient(200px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent), var(--warning);
   border-radius: 50%;
   height: 12rem;
   aspect-ratio: 1;
@@ -384,4 +386,114 @@ section:not(:first-of-type) h1 {
   --img: url(./assets/shortener.png);
   background: var(--img);
   background-size: cover;
+}
+
+#contact > div {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+#contact > div::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.25rem;
+  height: 15rem;
+  background: var(--warning);
+}
+#contact > div .left {
+  display: grid;
+}
+#contact > div .left input, #contact > div .left textarea {
+  margin-bottom: 1rem;
+  resize: none;
+}
+#contact > div .left input[type=button] {
+  background-color: var(--warning);
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: background-color 0.2s;
+}
+#contact > div .left input[type=button]:hover {
+  background-color: var(--orange);
+}
+#contact > div .right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 2rem;
+}
+
+@media (max-width: 1490px) {
+  :root {
+    --h-left: 7rem;
+    --pre-right: 7rem;
+  }
+  #project-sec .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1300px) {
+  header {
+    padding-inline: 5rem;
+  }
+  header #nav-logo {
+    width: 15rem;
+  }
+}
+@media (max-width: 1100px) {
+  section:not(:first-of-type) {
+    padding: 5rem 8rem;
+  }
+}
+@media (max-width: 800px) {
+  #welcome-sec {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  #welcome-sec h1, #welcome-sec pre {
+    position: static;
+  }
+  section:not(:first-of-type) {
+    padding: 5rem 2rem;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 0.7rem;
+  }
+  #welcome-sec {
+    gap: 8rem;
+  }
+  .soc-network {
+    height: 2rem;
+    gap: 1rem;
+  }
+  .soc-network svg {
+    max-width: inherit;
+    max-height: 100%;
+    aspect-ratio: 1;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 0.5rem;
+  }
+  header {
+    padding: 1rem;
+  }
+  header a {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }/*# sourceMappingURL=style.css.map */

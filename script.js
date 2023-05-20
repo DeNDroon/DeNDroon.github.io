@@ -8,7 +8,6 @@ document.addEventListener("scroll", function() {
         $("#welcome-sec h1, #welcome-sec pre").css("margin-top", -moveTop).css("opacity", (200 - moveTop) / 200).css("scale", (window.innerHeight - moveTop) / window.innerHeight);
     }
 })
-document.documentElement.scrollTop = 3080;
 document.body.addEventListener("mousemove", function(e) {
     elem = document.querySelectorAll(".skill");
     document.querySelectorAll(".skill").forEach(elem => {

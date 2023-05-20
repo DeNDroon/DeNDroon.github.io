@@ -9,20 +9,39 @@
 }
 
 #testing {
-    font-size: 8rem;
+    font-size: 2rem;
+    padding: 3rem;
     color: var(--white);
     background-color: var(--warning);
     text-align: center;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 100vw;
+    right: 10%;
+    bottom: 10%;
 }
 
 html {
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
+}
+path {
+    transition: 0.2s;
+}
+
+#iconmonstr-github-1 {
+    &:hover path {
+        fill: black;
+        stroke: white;
+    }
+}
+#iconmonstr-linkedin-3 {
+    &:hover path {
+        fill: #0072b1;
+    }
+}
+#iconmonstr-email-13 {
+    &:hover path {
+        fill: var(--orange);
+    }
 }
 
 .btn-container {
@@ -32,7 +51,11 @@ html {
     transform-style: preserve-3d;
     margin-left: auto;
 
-    button {
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
         position: absolute;
         padding: 0 2rem;
         border: none;
@@ -72,7 +95,7 @@ html {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             transform: translateZ(1px);
             color: var(--white);
-            background-color: var(--black);
+            background-color: #adadad;
         }
     }
 }
@@ -113,30 +136,46 @@ body {
 
 
 #welcome-sec {
-    background: url(./assets/welcome.png) center fixed;
+    background: url(./assets/welcome.png);
+    background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 125vh;
     color: var(--white);
+    transition: background-position 0.1s;
 
     h1 {
         position: absolute;
         font-size: 2.5rem;
         top: 35%;
-        left: 15rem;
         text-shadow: 0 0 2rem #ffffff;
-        width: 25rem;
         text-align: right;
-        padding-right: 2rem;
         border-right: 0.25rem solid var(--yellow);
+        animation: slideInHeader 2s forwards;
+        white-space: nowrap;
     }
-
+    h1,pre {
+        transition: margin-top 0.1s, scale 0.1s;
+        overflow: hidden;
+    }
     pre {
         position: absolute;
-        right: 15rem;
         top: 70%;
-        padding-left: 2rem;
         border-left: 0.15rem solid var(--yellow);
+        animation: slideInPre 2s forwards;
     }
+}
+
+@keyframes slideInHeader {
+    0% {width: 0; transform: rotate(90deg); left: -100%}
+    30% {left: 15rem; transform: rotate(90deg); }
+    60% {transform: rotate(0deg); width: 0; padding-right: 0}
+    100% {width: 25rem;padding-right: 2rem; left: 15rem;}
+}
+@keyframes slideInPre {
+    0% {width: 0; transform: rotate(-90deg); right: -100%}
+    30% {right: 15rem; transform: rotate(-90deg); }
+    60% {transform: rotate(0deg); width: 0; padding-right: 0}
+    100% {width: 30rem;padding-left: 2rem; right: 15rem;}
 }
 
 section:not(:first-of-type) {
@@ -152,16 +191,49 @@ section:not(:first-of-type) {
     }
 }
 
+.grid-container {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+}
+#project-sec .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#skills-sec .grid-container {
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.skill {
+    --x: 0px;
+    --y: 0px;
+    transition: --x 0.2s, --y 0.2s;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(100px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent),
+                var(--warning);
+    border-radius: 50%;
+    height: 12rem; aspect-ratio: 1;
+
+}
+
+
+
 .proj-preview {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 48rem;
-    height: 27rem;
+    aspect-ratio: 16 / 9;
     margin-bottom: 3rem;
-    padding: 0.5rem 3rem;
     color: var(--white);
     animation: hoverOut 0.2s forwards reverse;
+    padding: 0.25rem 2rem;
+
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.25rem;
     &:hover, &:focus-within {
         animation: hoverIn 0.2s forwards;
         & .top, & .bottom {
@@ -178,14 +250,9 @@ section:not(:first-of-type) {
         justify-content: space-between;
         align-items: end;
     }
-    &:nth-of-type(even) {
-        margin-left: auto;
-        margin-right: 0;
-    }
 }
 
 #product {
-    margin-top: 5rem;
     --img: url(./assets/product.png);
     background: var(--img);
     background-size: cover;

@@ -1,3 +1,5 @@
+AOS.init();
+
 $(document).on("scroll touchmove", function() {
     if ($(document).scrollTop() > $(window).innerHeight()) {
       $("header").css("background-color", "rgba(0,0,0,0.5)");

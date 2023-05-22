@@ -168,14 +168,14 @@ header {
         align-items: center;
     }
     
-    .soc-network {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        svg {
-            padding-block: 1rem;
-        }
+}
+.soc-network {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    svg {
+        padding-block: 1rem;
     }
 }
 
@@ -308,13 +308,6 @@ section:not(:first-of-type) {
     }
 }
 
-#product {
-    --img: url(./assets/product.jpg);
-    background: var(--img);
-    background-size: cover;
-    
-}
-
 @keyframes hoverIn {
     0% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 0% 100%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
     10% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 5% 95%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
@@ -342,21 +335,25 @@ section:not(:first-of-type) {
     100% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 50% 50%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
 }
 
+#product {
+    background: url(./assets/product.jpg);
+    background-size: cover;
+    
+}
+
+
 #multi {
-    --img: url(./assets/multi.jpg);
-    background: var(--img);
+    background: url(./assets/multi.jpg);
     background-size: cover;
 }
 
 #inter {
-    --img: url(./assets/inter.jpg);
-    background: var(--img);
+    background: url(./assets/inter.jpg);
     background-size: cover;
 }
 
 #shortener {
-    --img: url(./assets/shortener.jpg);
-    background: var(--img);
+    background: url(./assets/shortener.jpg);
     background-size: cover;
 }
 

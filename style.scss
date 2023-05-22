@@ -76,7 +76,7 @@ path {
 
     .btn-live {
         left: 0;
-        width: 8rem;
+        width: 4.5rem;
         clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
         margin-right: -1rem;
         background-color: var(--orange);
@@ -84,7 +84,7 @@ path {
 
         &:hover,
         &:focus {
-            width: 13rem;
+            width: 10rem;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             transform: translateZ(1px);
             background-color: #e6ceaa;
@@ -92,7 +92,7 @@ path {
     }
 
     .btn-repo {
-        width: 8rem;
+        width: 4.5rem;
         right: 0;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
         margin-left: -1rem;
@@ -101,7 +101,7 @@ path {
 
         &:hover,
         &:focus {
-            width: 13rem;
+            width: 10rem;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             transform: translateZ(1px);
             color: var(--white);

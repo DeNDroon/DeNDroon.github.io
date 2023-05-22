@@ -73,7 +73,7 @@ path {
 }
 .btn-container .btn-live {
   left: 0;
-  width: 8rem;
+  width: 4.5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
   margin-right: -1rem;
@@ -81,14 +81,14 @@ path {
   color: var(--white);
 }
 .btn-container .btn-live:hover, .btn-container .btn-live:focus {
-  width: 13rem;
+  width: 10rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform: translateZ(1px);
   background-color: #e6ceaa;
 }
 .btn-container .btn-repo {
-  width: 8rem;
+  width: 4.5rem;
   right: 0;
   -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
@@ -97,7 +97,7 @@ path {
   color: var(--black);
 }
 .btn-container .btn-repo:hover, .btn-container .btn-repo:focus {
-  width: 13rem;
+  width: 10rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transform: translateZ(1px);

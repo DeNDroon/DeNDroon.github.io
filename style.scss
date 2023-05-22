@@ -473,6 +473,9 @@ section:not(:first-of-type) {
 }
 
 @media (max-width: 800px) {
+    .soc-network {
+        gap: 3rem;
+    }
     #welcome-sec {
         background: url(./assets/welcome-port.jpg);
         background-position: center;
@@ -516,6 +519,9 @@ section:not(:first-of-type) {
 @media (max-width: 600px) {
     html {
         font-size: 0.5rem;
+    }
+    .soc-network {
+        gap: .75rem;
     }
     header {
         padding: 1rem 3rem;

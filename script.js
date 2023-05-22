@@ -30,3 +30,25 @@ document.body.addEventListener("mousemove", function(e) {
         }
     })
 })
+
+
+//  SENDING   EMAIL
+
+(function(){
+  emailjs.init("EA-3RrG_w1F1m5nHq");
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Get the form data
+  var formData = new FormData(this);
+
+  // Send the email using Email.js
+  emailjs.send("service_0k7yua7", "template_0qcmeep", formData)
+    .then(function(response) {
+      console.log('Email sent!', response.status, response.text);
+    }, function(error) {
+      console.error('Error sending email:', error);
+    });
+});

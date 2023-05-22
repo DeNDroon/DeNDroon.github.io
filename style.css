@@ -53,7 +53,7 @@ path {
 .btn-container {
   position: relative;
   width: 15rem;
-  height: 2rem;
+  height: 1.15rem;
   transform-style: preserve-3d;
   margin-left: auto;
 }
@@ -284,7 +284,8 @@ section:not(:first-of-type) h1 {
 .proj-preview .bottom {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
+  height: 3rem;
 }
 
 #product {
@@ -403,14 +404,14 @@ section:not(:first-of-type) h1 {
   background-size: cover;
 }
 
-#contact > div {
+#contact form {
   position: relative;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
-#contact > div::after {
+#contact form::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -420,24 +421,33 @@ section:not(:first-of-type) h1 {
   height: 15rem;
   background: var(--warning);
 }
-#contact > div .left {
+#contact form .left {
   display: grid;
 }
-#contact > div .left input, #contact > div .left textarea {
+#contact form .left label {
+  margin-bottom: 0.25rem;
+}
+#contact form .left input, #contact form .left textarea {
   margin-bottom: 1rem;
   resize: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
-#contact > div .left input[type=button] {
+#contact form .left input:focus, #contact form .left textarea:focus {
+  outline: 0.1rem solid var(--warning);
+}
+#contact form .left input[type=button] {
   background-color: var(--warning);
   border: none;
   color: var(--white);
   font-size: 1.5rem;
   transition: background-color 0.2s;
 }
-#contact > div .left input[type=button]:hover {
+#contact form .left input[type=button]:hover {
   background-color: var(--orange);
 }
-#contact > div .right {
+#contact form .right {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: -moz-fit-content;

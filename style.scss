@@ -57,7 +57,7 @@ path {
 .btn-container {
     position: relative;
     width: 15rem;
-    height: 2rem;
+    height: 1.15rem;
     transform-style: preserve-3d;
     margin-left: auto;
 
@@ -265,7 +265,8 @@ section:not(:first-of-type) {
     .bottom {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: center;
+        height: 3rem;
     }
 }
 
@@ -322,7 +323,7 @@ section:not(:first-of-type) {
 }
 
 #contact {
-    & > div {
+    form {
         position: relative;
         display: grid;
         align-items: center;
@@ -339,9 +340,18 @@ section:not(:first-of-type) {
         }
         .left {
             display: grid;
+            label {
+                margin-bottom: 0.25rem;
+            }
             input, textarea {
                 margin-bottom: 1rem;
                 resize: none;
+                border: none;
+                font-size: 1rem;
+                padding: 0.5rem;
+                &:focus {
+                    outline: 0.1rem solid var(--warning)
+                }
             }
             input[type="button"] {
                 background-color: var(--warning);

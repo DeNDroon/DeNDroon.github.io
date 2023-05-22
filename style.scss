@@ -309,7 +309,7 @@ section:not(:first-of-type) {
 }
 
 #product {
-    --img: url(./assets/product.png);
+    --img: url(./assets/product.jpg);
     background: var(--img);
     background-size: cover;
     
@@ -343,19 +343,19 @@ section:not(:first-of-type) {
 }
 
 #multi {
-    --img: url(./assets/multi.png);
+    --img: url(./assets/multi.jpg);
     background: var(--img);
     background-size: cover;
 }
 
 #inter {
-    --img: url(./assets/inter.png);
+    --img: url(./assets/inter.jpg);
     background: var(--img);
     background-size: cover;
 }
 
 #shortener {
-    --img: url(./assets/shortener.png);
+    --img: url(./assets/shortener.jpg);
     background: var(--img);
     background-size: cover;
 }

@@ -222,14 +222,16 @@ section {
 @keyframes slideInHeader {
     0% {width: 0; transform: rotate(90deg); left: -100%}
     30% {left: var(--h-left); transform: rotate(90deg); }
-    60% {transform: rotate(0deg); width: 0; padding-right: 0}
-    100% {width: 25rem;padding-right: 2rem; left: var(--h-left);}
+    60% {transform: rotate(0deg); width: 0; padding-right: 0;}
+    90% {overflow: hidden};
+    100% {width: 25rem; padding-right: 2rem; left: var(--h-left); overflow: visible}
 }
 @keyframes slideInPre {
     0% {width: 0; transform: rotate(-90deg); right: -100%}
-    30% {right: var(--pre-right); transform: rotate(-90deg); }
-    60% {transform: rotate(0deg); width: 0; padding-right: 0}
-    100% {width: 30rem;padding-left: 2rem; right: var(--pre-right);}
+    30% {right: var(--pre-right); transform: rotate(-90deg);}
+    60% {transform: rotate(0deg); width: 0; padding-right: 0;}
+    90% {overflow: hidden}
+    100% {width: 30rem; padding-left: 2rem; right: var(--pre-right); overflow: visible}
 }
 
 section:not(:first-of-type) {
@@ -488,7 +490,7 @@ section:not(:first-of-type) {
         padding: 5rem 2rem;
     }
     #contact {
-        padding-inline: 5rem;
+        padding-inline: 4rem;
     }
 }
 

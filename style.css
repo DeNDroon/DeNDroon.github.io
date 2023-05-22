@@ -186,7 +186,7 @@ section {
 
 #welcome-sec {
   position: relative;
-  background: url(./assets/welcome.png);
+  background: url(./assets/welcome-land.jpg);
   background-position: center;
   background-size: cover;
   min-height: 100vh;
@@ -210,6 +210,8 @@ section {
 #welcome-sec pre {
   position: absolute;
   top: 65%;
+  width: -moz-fit-content;
+  width: fit-content;
   border-left: 0.15rem solid var(--yellow);
   animation: slideInPre 2s forwards;
 }
@@ -529,6 +531,10 @@ section:not(:first-of-type) h1 {
   }
 }
 @media (max-width: 1100px) {
+  :root {
+    --h-left: 2rem;
+    --pre-right: 5rem;
+  }
   section:not(:first-of-type) {
     padding: 5rem 8rem;
   }
@@ -543,12 +549,14 @@ section:not(:first-of-type) h1 {
 }
 @media (max-width: 800px) {
   #welcome-sec {
-    min-height: 100vh;
+    background: url(./assets/welcome-port.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 10rem;
   }
   #welcome-sec h1, #welcome-sec pre {
     position: static;

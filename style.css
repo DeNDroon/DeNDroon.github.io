@@ -426,21 +426,25 @@ section:not(:first-of-type) h1 {
   }
 }
 #product {
+  --img: url(./assets/product.jpg);
   background: url(./assets/product.jpg);
   background-size: cover;
 }
 
 #multi {
+  --img: url(./assets/multi.jpg);
   background: url(./assets/multi.jpg);
   background-size: cover;
 }
 
 #inter {
+  --img: url(./assets/inter.jpg);
   background: url(./assets/inter.jpg);
   background-size: cover;
 }
 
 #shortener {
+  --img: url(./assets/shortener.jpg);
   background: url(./assets/shortener.jpg);
   background-size: cover;
 }

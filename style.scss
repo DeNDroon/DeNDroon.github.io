@@ -336,6 +336,7 @@ section:not(:first-of-type) {
 }
 
 #product {
+    --img: url(./assets/product.jpg);
     background: url(./assets/product.jpg);
     background-size: cover;
     
@@ -343,16 +344,19 @@ section:not(:first-of-type) {
 
 
 #multi {
-    background: url(./assets/multi.jpg);
-    background-size: cover;
+--img: url(./assets/multi.jpg);
+background: url(./assets/multi.jpg);
+background-size: cover;
 }
 
 #inter {
-    background: url(./assets/inter.jpg);
-    background-size: cover;
+--img: url(./assets/inter.jpg);
+background: url(./assets/inter.jpg);
+background-size: cover;
 }
 
 #shortener {
+    --img: url(./assets/shortener.jpg);
     background: url(./assets/shortener.jpg);
     background-size: cover;
 }

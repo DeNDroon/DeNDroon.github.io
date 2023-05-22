@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --black: #0D0D0D;
     --warning: #F24405;
@@ -13,6 +8,11 @@
     --white: #F2F2F2;
     --h-left: 15rem;
     --pre-right: 15rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 #testing {
@@ -134,6 +134,12 @@ header {
         gap: 2rem;
         margin-left: auto;
         width: fit-content;
+    }
+    .soc-network {
+        svg {
+            width: fit-content;
+            aspect-ratio: 1;
+        }
     }
 }
 
@@ -405,8 +411,8 @@ section:not(:first-of-type) {
         gap: 8rem;
     }
     .soc-network {
-        height: 2rem;
-        gap: 1rem;
+        height: 3rem;
+        gap: 2rem;
         svg {
             max-width: inherit;
             max-height: 100%;

@@ -285,58 +285,30 @@ section:not(:first-of-type) {
     margin-bottom: 3rem;
     color: var(--white);
     animation: hoverOut 0.2s forwards reverse;
-    padding: 0.25rem 2rem;
 
     box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
     border-radius: 0.25rem;
     &:hover, &:focus-within {
-        animation: hoverIn 0.2s forwards;
-        & .top, & .bottom {
+        & .bottom {
             opacity: 1;
         }
     }
-    .top, .bottom{
+    
+    .bottom {
         opacity: 0;
         transition: opacity 0.2s;
         transition-delay: 0.2s;
-    }
-    .bottom {
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.644),black);
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 3rem;
+        padding: 1rem;
+        padding-top: 2rem;
     }
 }
 
-@keyframes hoverIn {
-    0% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 0% 100%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    10% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 5% 95%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    20% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 10% 90%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    30% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 15% 85%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    40% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 20% 80%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    50% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 25% 75%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    60% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 30% 70%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    70% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 35% 65%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    80% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 40% 60%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    90% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 45% 55%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    100% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 50% 50%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-}
-@keyframes hoverOut {
-    0% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 0% 100%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    10% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 5% 95%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    20% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 10% 90%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    30% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 15% 85%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    40% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 20% 80%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    50% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 25% 75%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    60% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 30% 70%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    70% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 35% 65%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    80% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 40% 60%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    90% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 45% 55%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-    100% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 50% 50%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
-}
-
 #product {
-    --img: url(./assets/product.jpg);
     background: url(./assets/product.jpg);
     background-size: cover;
     
@@ -344,19 +316,16 @@ section:not(:first-of-type) {
 
 
 #multi {
---img: url(./assets/multi.jpg);
 background: url(./assets/multi.jpg);
 background-size: cover;
 }
 
 #inter {
---img: url(./assets/inter.jpg);
 background: url(./assets/inter.jpg);
 background-size: cover;
 }
 
 #shortener {
-    --img: url(./assets/shortener.jpg);
     background: url(./assets/shortener.jpg);
     background-size: cover;
 }

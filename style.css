@@ -107,7 +107,7 @@ path {
 
 header {
   position: fixed;
-  top: 0;
+  top: 0dvh;
   left: 0;
   right: 0;
   padding-inline: 10rem;
@@ -115,6 +115,7 @@ header {
   padding-bottom: 1rem;
   border-bottom: 0.25rem solid var(--yellow);
   transition: background-color 0.2s;
+  z-index: 9999;
 }
 header svg {
   max-width: 100%;
@@ -147,7 +148,7 @@ body {
   background: url(./assets/welcome.png);
   background-position: center;
   background-size: cover;
-  min-height: 125vh;
+  min-height: 100vh;
   color: var(--white);
   transition: background-position 0.1s;
   overflow-x: hidden;
@@ -168,7 +169,7 @@ body {
 }
 #welcome-sec pre {
   position: absolute;
-  top: 70%;
+  top: 45%;
   border-left: 0.15rem solid var(--yellow);
   animation: slideInPre 2s forwards;
 }
@@ -460,9 +461,33 @@ section:not(:first-of-type) h1 {
     width: 15rem;
   }
 }
+@media (max-width: 1250px) {
+  #contact > div {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+  }
+  #contact > div:after {
+    width: 100%;
+    height: 0.25rem;
+  }
+  #contact > div .right {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 @media (max-width: 1100px) {
   section:not(:first-of-type) {
     padding: 5rem 8rem;
+  }
+  #skills-sec .skill {
+    height: 8rem;
+    aspect-ratio: 1;
+  }
+  #skills-sec .skill svg {
+    height: 4rem;
+    width: 4rem;
   }
 }
 @media (max-width: 800px) {
@@ -479,6 +504,9 @@ section:not(:first-of-type) h1 {
   }
   section:not(:first-of-type) {
     padding: 5rem 2rem;
+  }
+  #contact {
+    padding-inline: 5rem;
   }
 }
 @media (max-width: 700px) {

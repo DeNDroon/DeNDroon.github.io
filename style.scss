@@ -112,7 +112,7 @@ path {
 
 header {
     position: fixed;
-    top: 0;
+    top: 0dvh;
     left: 0;
     right: 0;
     padding-inline: 10rem;
@@ -120,6 +120,7 @@ header {
     padding-bottom: 1rem;
     border-bottom: 0.25rem solid var(--yellow);
     transition: background-color 0.2s;
+    z-index: 9999;
     svg {
         max-width: 100%;
     }
@@ -155,7 +156,7 @@ body {
     background: url(./assets/welcome.png);
     background-position: center;
     background-size: cover;
-    min-height: 125vh;
+    min-height: 100vh;
     color: var(--white);
     transition: background-position 0.1s;
     overflow-x: hidden;
@@ -176,7 +177,7 @@ body {
     }
     pre {
         position: absolute;
-        top: 70%;
+        top: 45%;
         border-left: 0.15rem solid var(--yellow);
         animation: slideInPre 2s forwards;
     }
@@ -383,9 +384,38 @@ section:not(:first-of-type) {
     }
 }
 
+@media (max-width: 1250px) {
+    #contact {
+        
+        & > div {
+            margin-top: 3rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            align-items: start;
+            &:after {
+                width: 100%;
+                height: 0.25rem;
+            }
+            .right {
+                height: fit-content
+            }
+        }
+    }
+}
+
 @media (max-width: 1100px) {
     section:not(:first-of-type) {
         padding: 5rem 8rem;
+    }
+    #skills-sec {
+        .skill {
+            height: 8rem;
+            aspect-ratio: 1;
+            svg {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
     }
 }
 
@@ -403,6 +433,9 @@ section:not(:first-of-type) {
     }
     section:not(:first-of-type) {
         padding: 5rem 2rem;
+    }
+    #contact {
+        padding-inline: 5rem;
     }
 }
 
@@ -422,6 +455,7 @@ section:not(:first-of-type) {
             aspect-ratio: 1;
         }
     }
+
 }
 
 @media (max-width: 600px) {
@@ -433,6 +467,5 @@ section:not(:first-of-type) {
         a {
             width: fit-content;
         }
-        
     }
 }

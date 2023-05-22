@@ -176,6 +176,10 @@ body {
   background: linear-gradient(30deg, #C2C2C2, #F2F2F2);
 }
 
+section {
+  overflow-x: hidden;
+}
+
 #welcome-sec {
   position: relative;
   background: url(./assets/welcome.png);
@@ -184,7 +188,6 @@ body {
   min-height: 100vh;
   color: var(--white);
   transition: background-position 0.1s;
-  overflow-x: hidden;
 }
 #welcome-sec h1 {
   position: absolute;

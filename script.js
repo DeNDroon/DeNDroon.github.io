@@ -41,9 +41,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   
   $(".send").css('display', "grid");
   $(".loading").css('flex');
-  var formData = new FormData(this);
+  var formData = {
+    to_name: "Giorgi",
+    from_name: $("#name").val(),
+    message: $("#message").val()
+  };
 
   // Send the email using Email.js
+  
   emailjs.send("service_0k7yua7", "template_0qcmeep", formData)
     .then(function(response) {
       $(".loading").css("display", "none");

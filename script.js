@@ -44,7 +44,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   var formData = {
     to_name: "Giorgi",
     from_name: $("#name").val(),
-    message: `From mail : ${$("#mail")}. Message: ${$("#message").val()}`
+    message: `From mail : ${$("#mail").val()}. Message: ${$("#message").val()}`
   };
 
   // Send the email using Email.js

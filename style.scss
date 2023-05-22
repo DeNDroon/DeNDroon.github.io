@@ -166,18 +166,15 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2rem;
     }
-
-    div {
-        display: flex;
-        justify-content: end;
-        gap: 2rem;
-    }
+    
     .soc-network {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
         svg {
-            width: fit-content;
-            aspect-ratio: 1;
+            padding-block: 1rem;
         }
     }
 }

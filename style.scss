@@ -159,12 +159,12 @@ header {
     transition: background-color 0.2s;
     z-index: 9999;
     svg {
-        max-width: 100%;
+        max-width: 20rem;
     }
 
     nav {
-        display: grid;
-        grid-template-columns: 1fr 0.25fr 1fr;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         gap: 2rem;
     }
@@ -189,7 +189,7 @@ body {
 }
 
 section {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 

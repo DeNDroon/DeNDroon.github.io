@@ -154,11 +154,11 @@ header {
   z-index: 9999;
 }
 header svg {
-  max-width: 100%;
+  max-width: 20rem;
 }
 header nav {
-  display: grid;
-  grid-template-columns: 1fr 0.25fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
@@ -181,7 +181,7 @@ body {
 }
 
 section {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #welcome-sec {

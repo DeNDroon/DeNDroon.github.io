@@ -4,10 +4,15 @@ $(document).on("scroll touchmove", function() {
     } else {
       $("header").css("background-color", "transparent");
       let moveTop = $(document).scrollTop();
-      $("#welcome-sec h1, #welcome-sec pre").css({
+      $("#welcome-sec h1").css({
         "margin-top": -moveTop,
         "opacity": (200 - moveTop) / 200,
         "transform": "scale(" + (1 - moveTop / $(window).innerHeight()) + ")"
+      });
+      $("#welcome-sec pre").css({
+        "margin-top": -moveTop + 150,
+        "opacity": (200 - moveTop) / 200,
+        "transform": "scale(" + (1 - (moveTop + 150) / $(window).innerHeight()) + ")"
       });
     }
   });

@@ -162,7 +162,7 @@ body {
         white-space: nowrap;
     }
     h1,pre {
-        transition: margin-top 0.1s, scale 0.1s;
+        transition: margin-top 0.1s, scale 0.1s, transform 0.1s;
         overflow: hidden;
     }
     pre {
@@ -420,7 +420,7 @@ section:not(:first-of-type) {
         font-size: 0.5rem;
     }
     header {
-        padding: 1rem;
+        padding: 1rem 3rem;
         a {
             width: fit-content;
         }

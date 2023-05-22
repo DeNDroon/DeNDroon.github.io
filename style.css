@@ -37,6 +37,13 @@ path {
   transition: 0.2s;
 }
 
+#nav-logo {
+  overflow: visible;
+}
+#nav-logo * {
+  overflow: visible;
+}
+
 #iconmonstr-github-1:hover path {
   fill: black;
   stroke: white;
@@ -103,6 +110,31 @@ path {
   transform: translateZ(1px);
   color: var(--white);
   background-color: #adadad;
+}
+
+.sent {
+  position: absolute;
+  inset: -1rem;
+  border-radius: 0.5rem;
+  display: none;
+  place-items: center;
+  background-color: rgba(128, 128, 128, 0.398);
+  -webkit-backdrop-filter: blur(0.1rem);
+          backdrop-filter: blur(0.1rem);
+}
+.sent div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.sent div svg {
+  width: 5rem;
+}
+.sent div .main {
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 header {
@@ -422,6 +454,7 @@ section:not(:first-of-type) h1 {
   background: var(--warning);
 }
 #contact form .left {
+  position: relative;
   display: grid;
 }
 #contact form .left label {
@@ -437,14 +470,14 @@ section:not(:first-of-type) h1 {
 #contact form .left input:focus, #contact form .left textarea:focus {
   outline: 0.1rem solid var(--warning);
 }
-#contact form .left input[type=button] {
+#contact form .left input[type=submit] {
   background-color: var(--warning);
   border: none;
   color: var(--white);
   font-size: 1.5rem;
   transition: background-color 0.2s;
 }
-#contact form .left input[type=button]:hover {
+#contact form .left input[type=submit]:hover {
   background-color: var(--orange);
 }
 #contact form .right {
@@ -473,17 +506,17 @@ section:not(:first-of-type) h1 {
   }
 }
 @media (max-width: 1250px) {
-  #contact > div {
+  #contact form {
     margin-top: 3rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: start;
   }
-  #contact > div:after {
+  #contact form:after {
     width: 100%;
     height: 0.25rem;
   }
-  #contact > div .right {
+  #contact form .right {
     height: -moz-fit-content;
     height: fit-content;
   }

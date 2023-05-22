@@ -29,14 +29,13 @@ document.body.addEventListener("mousemove", function(e) {
             elem.style.setProperty("--y", posY + "px");
         }
     })
-})
+});
 
 
 //  SENDING   EMAIL
 
-(function(){
-  emailjs.init("EA-3RrG_w1F1m5nHq");
-})();
+
+emailjs.init("EA-3RrG_w1F1m5nHq");
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the form from submitting normally
@@ -47,8 +46,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   // Send the email using Email.js
   emailjs.send("service_0k7yua7", "template_0qcmeep", formData)
     .then(function(response) {
-      console.log('Email sent!', response.status, response.text);
+      $(".sent").css('display', "grid");
     }, function(error) {
-      console.error('Error sending email:', error);
+      alert("Something went wrong. Please try again")
     });
 });

@@ -37,6 +37,13 @@ path {
     transition: 0.2s;
 }
 
+#nav-logo {
+    overflow: visible;
+    * {
+        overflow: visible;
+    }
+}
+
 #iconmonstr-github-1 {
     &:hover path {
         fill: black;
@@ -106,6 +113,32 @@ path {
             transform: translateZ(1px);
             color: var(--white);
             background-color: #adadad;
+        }
+    }
+}
+
+.sent {
+    position: absolute;
+    inset: -1rem;
+    border-radius: 0.5rem;
+
+    display: none;
+    place-items: center;
+
+    background-color: rgba(128, 128, 128, 0.398);
+    backdrop-filter: blur(0.1rem);
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        svg {
+            width: 5rem;
+        }
+        .main {
+            font-size: 2rem;
+            font-weight: 900;
         }
     }
 }
@@ -339,6 +372,7 @@ section:not(:first-of-type) {
             background: var(--warning);
         }
         .left {
+            position: relative;
             display: grid;
             label {
                 margin-bottom: 0.25rem;
@@ -353,7 +387,7 @@ section:not(:first-of-type) {
                     outline: 0.1rem solid var(--warning)
                 }
             }
-            input[type="button"] {
+            input[type="submit"] {
                 background-color: var(--warning);
                 border: none;
                 color: var(--white);
@@ -397,7 +431,7 @@ section:not(:first-of-type) {
 @media (max-width: 1250px) {
     #contact {
         
-        & > div {
+        form {
             margin-top: 3rem;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;

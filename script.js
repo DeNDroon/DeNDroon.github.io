@@ -1,13 +1,16 @@
-document.addEventListener("scroll", function() {
-    if(document.documentElement.scrollTop > window.innerHeight) {
-        $("header").css("background-color", "rgb(0,0,0,0.5)")
+$(document).on("scroll touchmove", function() {
+    if ($(document).scrollTop() > $(window).innerHeight()) {
+      $("header").css("background-color", "rgba(0,0,0,0.5)");
     } else {
-        // $("#welcome-sec").css("background-position", "center " + -1500 * document.documentElement.scrollTop / window.innerHeight + "px");
-        $("header").css("background-color", "transparent")
-        let moveTop = document.documentElement.scrollTop;
-        $("#welcome-sec h1, #welcome-sec pre").css("margin-top", -moveTop).css("opacity", (200 - moveTop) / 200).css("scale", (window.innerHeight - moveTop) / window.innerHeight);
+      $("header").css("background-color", "transparent");
+      let moveTop = $(document).scrollTop();
+      $("#welcome-sec h1, #welcome-sec pre").css({
+        "margin-top": -moveTop,
+        "opacity": (200 - moveTop) / 200,
+        "transform": "scale(" + (1 - moveTop / $(window).innerHeight()) + ")"
+      });
     }
-})
+  });
 document.body.addEventListener("mousemove", function(e) {
     elem = document.querySelectorAll(".skill");
     document.querySelectorAll(".skill").forEach(elem => {

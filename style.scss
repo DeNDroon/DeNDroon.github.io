@@ -117,7 +117,7 @@ path {
     }
 }
 
-.sent {
+.send {
     position: absolute;
     inset: -1rem;
     border-radius: 0.5rem;
@@ -127,8 +127,8 @@ path {
 
     background-color: rgba(128, 128, 128, 0.398);
     backdrop-filter: blur(0.1rem);
-    div {
-        display: flex;
+    .succ {
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -140,6 +140,10 @@ path {
             font-size: 2rem;
             font-weight: 900;
         }
+    }
+    .loadin {
+        display: grid;
+        place-items: center;
     }
 }
 
@@ -380,7 +384,7 @@ section:not(:first-of-type) {
             label {
                 margin-bottom: 0.25rem;
             }
-            input, textarea {
+            input, button, textarea {
                 margin-bottom: 1rem;
                 resize: none;
                 border: none;
@@ -390,14 +394,14 @@ section:not(:first-of-type) {
                     outline: 0.1rem solid var(--warning)
                 }
             }
-            input[type="submit"] {
+            button {
                 background-color: var(--warning);
                 border: none;
                 color: var(--white);
                 font-size: 1.5rem;
                 transition: background-color 0.2s;
                 &:hover {
-                    background-color: var(--orange);
+                    background-color: var(--black);
                 }
             }
         }

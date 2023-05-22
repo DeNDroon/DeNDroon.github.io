@@ -112,7 +112,7 @@ path {
   background-color: #adadad;
 }
 
-.sent {
+.send {
   position: absolute;
   inset: -1rem;
   border-radius: 0.5rem;
@@ -122,19 +122,23 @@ path {
   -webkit-backdrop-filter: blur(0.1rem);
           backdrop-filter: blur(0.1rem);
 }
-.sent div {
-  display: flex;
+.send .succ {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-.sent div svg {
+.send .succ svg {
   width: 5rem;
 }
-.sent div .main {
+.send .succ .main {
   font-size: 2rem;
   font-weight: 900;
+}
+.send .loadin {
+  display: grid;
+  place-items: center;
 }
 
 header {
@@ -463,25 +467,25 @@ section:not(:first-of-type) h1 {
 #contact form .left label {
   margin-bottom: 0.25rem;
 }
-#contact form .left input, #contact form .left textarea {
+#contact form .left input, #contact form .left button, #contact form .left textarea {
   margin-bottom: 1rem;
   resize: none;
   border: none;
   font-size: 1rem;
   padding: 0.5rem;
 }
-#contact form .left input:focus, #contact form .left textarea:focus {
+#contact form .left input:focus, #contact form .left button:focus, #contact form .left textarea:focus {
   outline: 0.1rem solid var(--warning);
 }
-#contact form .left input[type=submit] {
+#contact form .left button {
   background-color: var(--warning);
   border: none;
   color: var(--white);
   font-size: 1.5rem;
   transition: background-color 0.2s;
 }
-#contact form .left input[type=submit]:hover {
-  background-color: var(--orange);
+#contact form .left button:hover {
+  background-color: var(--black);
 }
 #contact form .right {
   display: grid;

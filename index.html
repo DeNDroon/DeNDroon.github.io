@@ -188,17 +188,20 @@ positively to your organization.</pre>
       <h1>CONTACT</h1>
       <form id="contact-form">
         <div class="left">
-          <div class="sent">
-            <div>
+          <div class="send">
+            <div class="succ">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle style="fill:#ff6600;" cx="25" cy="25" r="25"></circle> <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points=" 38,15 22,33 12,25 "></polyline> </g></svg>
               <p class="main">Succesfully Sent</p>
               <p>Thanks for message</p>
+            </div>
+            <div class="loading">
+              <img src="./assets/loading.svg" alt="Loading...">
             </div>
           </div>
           <label for="name">Name : </label><input id="name" type="text" name="name" placeholder="Your Name" required>
           <label for="mail">Email : </label><input type="email" name="email" id="mail" placeholder="Your Email" required>
           <label for="message">Message : </label><textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-          <input type="submit" value="Send">
+          <button id="submit-btn" type="submit">Send</button>
         </div>
         <div class="right">
           <label>My email: </label><a href="mailto:giorgi.kartsivadze.2001@gmail.com">giorgi.kartsivadze.2001@gmail.com</a>

@@ -63,7 +63,7 @@ nav #menu {
 }
 nav #menu a > img {
   width: 2rem;
-  height: 2rem
+  aspect-ratio: 1;
 }
 nav ul {
   width: 100%;
@@ -200,7 +200,8 @@ main #stat-sec .flex-row .card:before {
   place-items: center;
   background-color: var(--clr3);
   border-radius: 50%;
-  width: 3rem; height: 3rem;
+  width: 3rem;
+  aspect-ratio: 1;
   position: absolute;
   background-size: cover;
   padding: 1rem;

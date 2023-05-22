@@ -5,14 +5,13 @@ $(document).on("scroll touchmove", function() {
       $("header").css("background-color", "transparent");
       let moveTop = $(document).scrollTop();
       $("#welcome-sec h1").css({
-        "margin-top": -moveTop,
+        "top": $("welcome-sec h1").css("top") - moveTop,
         "opacity": (200 - moveTop) / 200,
-        "transform": "scale(" + (1 - moveTop / $(window).innerHeight()) + ")"
+        "transform": "scale(" + (1 - (moveTop) / $(window).innerHeight()) + ") translateY(" + -moveTop / 1.25 + "px)"
       });
       $("#welcome-sec pre").css({
-        "margin-top": -moveTop + 150,
         "opacity": (200 - moveTop) / 200,
-        "transform": "scale(" + (1 - (moveTop + 150) / $(window).innerHeight()) + ")"
+        "transform": "scale(" + (1 - (moveTop) / $(window).innerHeight()) + ") translateY(" + -moveTop / 1.25 + "px)"
       });
     }
   });

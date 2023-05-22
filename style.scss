@@ -153,6 +153,7 @@ body {
 
 
 #welcome-sec {
+    position: relative;
     background: url(./assets/welcome.png);
     background-position: center;
     background-size: cover;
@@ -160,7 +161,6 @@ body {
     color: var(--white);
     transition: background-position 0.1s;
     overflow-x: hidden;
-
     h1 {
         position: absolute;
         font-size: 2.5rem;
@@ -172,12 +172,12 @@ body {
         white-space: nowrap;
     }
     h1,pre {
-        transition: margin-top 0.1s, scale 0.1s, transform 0.1s;
+        transition: top 0.4s, scale 0.1s, transform 0.1s;
         overflow: hidden;
     }
     pre {
         position: absolute;
-        top: 45%;
+        top: 65%;
         border-left: 0.15rem solid var(--yellow);
         animation: slideInPre 2s forwards;
     }
@@ -277,30 +277,30 @@ section:not(:first-of-type) {
 }
 
 @keyframes hoverIn {
-    0% {background: linear-gradient(black ,transparent 0% 100%, black), var(--img); background-size: cover}
-    10% {background: linear-gradient(black ,transparent 5% 95%, black), var(--img); background-size: cover}
-    20% {background: linear-gradient(black ,transparent 10% 90%, black), var(--img); background-size: cover}
-    30% {background: linear-gradient(black ,transparent 15% 85%, black), var(--img); background-size: cover}
-    40% {background: linear-gradient(black ,transparent 20% 80%, black), var(--img); background-size: cover}
-    50% {background: linear-gradient(black ,transparent 25% 75%, black), var(--img); background-size: cover}
-    60% {background: linear-gradient(black ,transparent 30% 70%, black), var(--img); background-size: cover}
-    70% {background: linear-gradient(black ,transparent 35% 65%, black), var(--img); background-size: cover}
-    80% {background: linear-gradient(black ,transparent 40% 60%, black), var(--img); background-size: cover}
-    90% {background: linear-gradient(black ,transparent 45% 55%, black), var(--img); background-size: cover}
-    100% {background: linear-gradient(black ,transparent 50% 50%, black), var(--img); background-size: cover}
+    0% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 0% 100%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    10% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 5% 95%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    20% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 10% 90%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    30% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 15% 85%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    40% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 20% 80%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    50% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 25% 75%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    60% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 30% 70%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    70% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 35% 65%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    80% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 40% 60%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    90% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 45% 55%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    100% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 50% 50%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
 }
 @keyframes hoverOut {
-    0% {background: linear-gradient(black ,transparent 0% 100%, black), var(--img); background-size: cover}
-    10% {background: linear-gradient(black ,transparent 5% 95%, black), var(--img); background-size: cover}
-    20% {background: linear-gradient(black ,transparent 10% 90%, black), var(--img); background-size: cover}
-    30% {background: linear-gradient(black ,transparent 15% 85%, black), var(--img); background-size: cover}
-    40% {background: linear-gradient(black ,transparent 20% 80%, black), var(--img); background-size: cover}
-    50% {background: linear-gradient(black ,transparent 25% 75%, black), var(--img); background-size: cover}
-    60% {background: linear-gradient(black ,transparent 30% 70%, black), var(--img); background-size: cover}
-    70% {background: linear-gradient(black ,transparent 35% 65%, black), var(--img); background-size: cover}
-    80% {background: linear-gradient(black ,transparent 40% 60%, black), var(--img); background-size: cover}
-    90% {background: linear-gradient(black ,transparent 45% 55%, black), var(--img); background-size: cover}
-    100% {background: linear-gradient(black ,transparent 50% 50%, black), var(--img); background-size: cover}
+    0% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 0% 100%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    10% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 5% 95%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    20% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 10% 90%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    30% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 15% 85%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    40% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 20% 80%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    50% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 25% 75%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    60% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 30% 70%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    70% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 35% 65%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    80% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 40% 60%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    90% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 45% 55%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
+    100% {background: linear-gradient(rgb(0,0,0,0.75) ,transparent 50% 50%, rgb(0,0,0,0.75)), var(--img); background-size: cover}
 }
 
 #multi {

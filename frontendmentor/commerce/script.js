@@ -54,11 +54,19 @@ let images = {
         3: "./images/image-product-3.jpg",
         4: "./images/image-product-4.jpg"
     },
+
     placeFull: function (index, dir) {
         if (dir.attr("src") != images.full[index]) {
+            let img = new Image();
+            img.src = images.full[index];
+            img.classList.add("bluring", "main-photo");
             dir.addClass("bluring");
             setTimeout(() => {
-                dir.attr("src", images.full[index]);
+                dir.after(img);
+                dir.remove();
+                $("#main-cont .main-photo").on("click", function() {
+                    $("#full-screen").css("display", "grid")
+                })
                 setTimeout(() => {
                     dir.removeClass("bluring");
                 }, 100)
@@ -67,6 +75,9 @@ let images = {
         }
     }
 }
+
+
+
 
 $('#main-cont input[name="photo-carousel"]').on("click", function () {
     images.placeFull($(this).index(), $(".main-photo"));
@@ -77,7 +88,6 @@ $('#full-screen input[name="photo-carousel"]').on("click", function () {
 
 $("#main-cont .main-photo").on("click", function() {
     $("#full-screen").css("display", "grid")
-
 })
 
 

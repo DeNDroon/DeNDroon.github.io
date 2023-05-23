@@ -209,6 +209,7 @@ h1 {
   width: 25rem;
   grid-row: 1/5;
   grid-column: 1/5;
+  border-radius: 0.5rem;
 }
 
 #full-screen {

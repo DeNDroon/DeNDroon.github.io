@@ -80,6 +80,8 @@ $("#main-cont .main-photo").on("click", function() {
 
 })
 
+
+// Carousel from last and first images
 $("#btn-next").on("click", function() {
     if(images.cur < 4) {
         images.cur += 1
@@ -97,10 +99,13 @@ $("#btn-prev").on("click", function() {
     images.placeFull(images.cur, $("#full-screen .main-photo"))
 })
 
+
+// close fullscreen
 $("#close-full").on("click", function() {
     $("#full-screen").css("display", "none");
 })
 
+// object for controlling cart
 var cur_Product = "Fall Limited Edition Sneakers";
 var pro_Amount = 1;
 const cart = {
@@ -121,19 +126,26 @@ const cart = {
     items: []
 }
 
+
+// Add amount
 $("#item-plus").on("click", () => {
     pro_Amount += 1;
     $("#item-amount").text(pro_Amount)
 })
-$("#add-btn").on("click", () => {
-    cart.add(pro_Amount);
-})
+// minus amount
 $("#item-minus").on("click", () => {
     if(pro_Amount > 1) {
     pro_Amount -= 1;
     $("#item-amount").text(pro_Amount)
     }
 })
+// Add item to cart
+$("#add-btn").on("click", () => {
+    cart.add(pro_Amount);
+})
+
+
+// Mobile menu
 let opened = false;
 $("#menu-btn").on("click", function() {
     if (opened) {
@@ -146,10 +158,9 @@ $("#menu-btn").on("click", function() {
         $(this).children("img").attr("src", "./images/icon-close.svg")
         $("#nav-menu").css("display", "flex");
         opened = true;
-
     }
-    
 })
+
 
 window.addEventListener("resize", function() {
     if (window.innerWidth > 800) {

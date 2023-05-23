@@ -55,14 +55,19 @@ let images = {
         4: "./images/image-product-4.jpg"
     },
 
-    placeFull: function (index, dir) {
+    placeFull: async function (index, dir) {
         if (dir.attr("src") != images.full[index]) {
-            let img = new Image();
-            img.src = images.full[index];
-            img.classList.add("bluring", "main-photo");
+            let prom = new Promise((resolve, reject) => {
+                let img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = reject;
+                img.classList.add("bluring", "main-photo");
+                img.src = images.full[index];
+            })
+            let result = await prom;
             dir.addClass("bluring");
             setTimeout(() => {
-                dir.after(img);
+                dir.after(result);
                 dir.remove();
                 $("#main-cont .main-photo").on("click", function() {
                     $("#full-screen").css("display", "grid")

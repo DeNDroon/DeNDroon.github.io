@@ -15,30 +15,34 @@ html {
 
 body {
     background-color: var(--vd-blue);
+    overflow-x: hidden;
 }
-
+#logo {
+    z-index: 10;
+}
 header {
-    z-index: 9999;
+    z-index: 9;
     position: fixed;
     top: 0;
     left: 0; right: 0;
     padding: 2.063rem 8.313rem;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-
+    gap: 2rem;
         .vl {
             width: 1px;
             height: 100%;
             background-color: var(--d-blue);
         }
-
+        #menu-btn {
+            z-index: 11;
+        }
         .nav-cont {
+            display: flex;
+            align-items: center;
+            width: 100%;
             a {
                 margin-right: 1.688rem;
             }
@@ -46,9 +50,14 @@ header {
             .active {
                 text-decoration: underline;
             }
+            .btn {
+                margin-left: auto;
+            }
         }
-    }
+}
 
+.open-menu {
+    display: flex !important;
 }
 
 .sub-top-sec {
@@ -66,7 +75,6 @@ ul {
     background-color: var(--d-blue); 
     color: var(--white);
     border-radius: 2.5rem;
-    overflow: hidden;
 }
 
 .news-blog-full {
@@ -275,6 +283,21 @@ a {
     a {
         &:visited {
             color: var(--blue);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header .nav-cont {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        background-image: linear-gradient(var(--d-blue), var(--blue), var(--d-blue));
+        top: 0; height: 100vh; left: 0; right: 0;
+        .btn {
+            margin-left: 0 !important;
         }
     }
 }

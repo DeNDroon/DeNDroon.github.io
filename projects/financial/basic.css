@@ -14,34 +14,50 @@ html {
 
 body {
   background-color: var(--vd-blue);
+  overflow-x: hidden;
+}
+
+#logo {
+  z-index: 10;
 }
 
 header {
-  z-index: 9999;
+  z-index: 9;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 2.063rem 8.313rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav {
-  display: flex;
+  justify-content: left;
   align-items: center;
   gap: 2rem;
 }
-header nav .vl {
+header .vl {
   width: 1px;
   height: 100%;
   background-color: var(--d-blue);
 }
-header nav .nav-cont a {
+header #menu-btn {
+  z-index: 11;
+}
+header .nav-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+header .nav-cont a {
   margin-right: 1.688rem;
 }
-header nav .nav-cont .active {
+header .nav-cont .active {
   text-decoration: underline;
+}
+header .nav-cont .btn {
+  margin-left: auto;
+}
+
+.open-menu {
+  display: flex !important;
 }
 
 .sub-top-sec {
@@ -60,7 +76,6 @@ ul {
   background-color: var(--d-blue);
   color: var(--white);
   border-radius: 2.5rem;
-  overflow: hidden;
 }
 
 .news-blog-full {
@@ -259,4 +274,22 @@ a {
 }
 .pages-nav a:visited {
   color: var(--blue);
+}
+
+@media (max-width: 1200px) {
+  header .nav-cont {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(var(--d-blue), var(--blue), var(--d-blue));
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+  }
+  header .nav-cont .btn {
+    margin-left: 0 !important;
+  }
 }/*# sourceMappingURL=basic.css.map */

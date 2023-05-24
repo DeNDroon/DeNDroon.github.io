@@ -350,6 +350,16 @@ section {
     }
 }
 
+@media (max-width: 1200px) {
+    main {
+        padding-top: 5rem;
+    }
+    header > .btn {
+        margin-left: auto;
+    }
+    
+}
+
 @media (max-width: 1180px) {
     #earn-sec {
         flex-direction: column;
@@ -423,9 +433,6 @@ section {
 }
 
 @media (max-width: 990px) {
-    header {
-        display: none;
-    }
     .sub-top-sec {
         flex-direction: column;
         p {
@@ -471,7 +478,8 @@ section {
             padding-inline: 4rem;
         }
     }
-    section {
+    section,
+    header {
         padding-inline: 4rem;
     }
 }
@@ -501,10 +509,9 @@ section {
     .sub-top-sec {
         h1 {white-space:break-spaces}
     }
-    section {
-        padding-inline: 1rem;
-    }
-    footer {
+    section,
+    footer,
+    header {
         padding-inline: 1rem;
     }
     #download-sec {

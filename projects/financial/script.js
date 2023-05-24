@@ -25,3 +25,7 @@ $("#video-player").on("click", () => {
     $(".video-cont > button").fadeToggle();
     playing = !playing
 })
+
+$("#menu-btn").on("click", () => {
+    $(".nav-cont").toggleClass("open-menu");
+})

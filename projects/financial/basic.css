@@ -60,6 +60,7 @@ ul {
   background-color: var(--d-blue);
   color: var(--white);
   border-radius: 2.5rem;
+  overflow: hidden;
 }
 
 .news-blog-full {

@@ -490,4 +490,64 @@ section h1 {
   #download-sec img {
     top: 80% !important;
   }
+}
+.blured {
+  width: 40rem;
+  height: 40rem;
+  filter: blur(10rem);
+  background-color: var(--d-blue);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+.blured:nth-of-type(1) {
+  top: 0rem;
+}
+.blured else:nth-of-type(1) {
+  left: 5rem;
+}
+.blured:nth-of-type(2) {
+  top: 50rem;
+}
+.blured:nth-of-type(2) {
+  right: 5rem;
+}
+.blured else:nth-of-type(2) {
+  left: 5rem;
+}
+.blured:nth-of-type(3) {
+  top: 100rem;
+}
+.blured else:nth-of-type(3) {
+  left: 5rem;
+}
+.blured:nth-of-type(4) {
+  top: 150rem;
+}
+.blured:nth-of-type(4) {
+  right: 5rem;
+}
+.blured else:nth-of-type(4) {
+  left: 5rem;
+}
+.blured:nth-of-type(5) {
+  top: 200rem;
+}
+.blured else:nth-of-type(5) {
+  left: 5rem;
+}
+.blured:nth-of-type(6) {
+  top: 250rem;
+}
+.blured:nth-of-type(6) {
+  right: 5rem;
+}
+.blured else:nth-of-type(6) {
+  left: 5rem;
+}
+.blured:nth-of-type(7) {
+  top: 300rem;
+}
+.blured else:nth-of-type(7) {
+  left: 5rem;
 }/*# sourceMappingURL=style.css.map */

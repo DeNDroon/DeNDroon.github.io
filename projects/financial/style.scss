@@ -541,3 +541,27 @@ section {
         top: 80% !important;
     }
 }
+
+.blured {
+    width: 40rem;
+    height: 40rem;
+    filter: blur(10rem);
+    background-color: var(--d-blue);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    @for $i from 1 to 8 {
+        &:nth-of-type(#{$i}) {
+            top: calc(50rem * ($i - 1));
+        }
+        @if $i % 2 == 0 {
+            &:nth-of-type(#{$i}) {
+                right: 5rem;
+            }
+        } else {
+            &:nth-of-type(#{$i}) {
+            left: 5rem;
+            }
+        }
+    }
+}

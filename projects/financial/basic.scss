@@ -136,7 +136,7 @@ footer {
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
-                align-items: center; 
+                align-items: center;
                 svg {
                     height: 1.25rem;
                     width: 1.25rem;
@@ -148,11 +148,15 @@ footer {
         margin-top: 5.75rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .bot-left {
             ul {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                row-gap: 1rem;
+                column-gap: 3rem;
                 list-style: none;
+                font-weight: lighter;
             }
         }
         .bot-right {

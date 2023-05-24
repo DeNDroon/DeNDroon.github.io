@@ -142,11 +142,16 @@ footer .foot-bot {
   margin-top: 5.75rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 footer .foot-bot .bot-left ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
   list-style: none;
+  font-weight: lighter;
 }
 footer .foot-bot .bot-right {
   width: 31.813rem;

@@ -50,6 +50,11 @@ header nav .nav-cont .active {
   justify-content: space-between;
 }
 
+ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
 .news-blog {
   display: flex;
   background-color: var(--d-blue);

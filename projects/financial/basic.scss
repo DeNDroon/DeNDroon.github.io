@@ -57,6 +57,10 @@ header {
     justify-content: space-between;
 }
 
+ul {
+    padding-inline-start: 0;
+}
+
 .news-blog {
     display: flex;
     background-color: var(--d-blue); 

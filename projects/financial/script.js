@@ -42,3 +42,15 @@ $("#video-player").on("click", () => {
 $("#menu-btn").on("click", () => {
     $(".nav-cont").toggleClass("open-menu");
 })
+
+if ($(window).width() > 768) {
+    $('.com-carousel').on('mousewheel DOMMouseScroll', function(e) {
+      var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+      if (delta > 0) {
+        $(this).scrollLeft(-delta + $(this).scrollLeft());
+      } else {
+        $(this).scrollLeft(-delta + $(this).scrollLeft());
+      }
+      e.preventDefault();
+    });
+  }

@@ -40,6 +40,10 @@ header {
         #menu-btn {
             display: none;
             z-index: 11;
+            img {
+                width: 1rem;
+            }
+
         }
         .nav-cont {
             display: flex;
@@ -290,6 +294,9 @@ a {
 }
 
 @media (max-width: 1200px) {
+    main {
+        padding-top: 5rem;
+    }
     header .nav-cont {
         display: none;
         position: absolute;
@@ -304,5 +311,9 @@ a {
     }
     #menu-btn {
         display: inline-block !important;
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
     }
 }

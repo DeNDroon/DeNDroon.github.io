@@ -43,6 +43,9 @@ header #menu-btn {
   display: none;
   z-index: 11;
 }
+header #menu-btn img {
+  width: 1rem;
+}
 header .nav-cont {
   display: flex;
   align-items: center;
@@ -279,6 +282,9 @@ a {
 }
 
 @media (max-width: 1200px) {
+  main {
+    padding-top: 5rem;
+  }
   header .nav-cont {
     display: none;
     position: absolute;
@@ -296,5 +302,9 @@ a {
   }
   #menu-btn {
     display: inline-block !important;
+  }
+  #menu-btn img {
+    width: 1rem;
+    height: 1rem;
   }
 }/*# sourceMappingURL=basic.css.map */

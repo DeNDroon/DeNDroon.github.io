@@ -104,6 +104,7 @@ main {
 }
 
 #finance-flow {
+  margin-top: 10rem;
   padding-bottom: 10rem;
   padding-inline: 4rem;
 }
@@ -137,6 +138,11 @@ section:not(#about-sec) {
     flex-direction: column;
   }
   #finance-flow p {
+    width: auto;
+  }
+}
+@media (max-width: 750px) {
+  #about-sec p {
     width: auto;
   }
 }

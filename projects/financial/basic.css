@@ -307,4 +307,9 @@ a {
     width: 1rem;
     height: 1rem;
   }
+}
+@media (max-width: 600px) {
+  #menu-btn {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=basic.css.map */

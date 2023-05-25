@@ -61,6 +61,14 @@ header .nav-cont .btn {
   margin-left: auto;
 }
 
+.bold {
+  font-weight: bolder;
+}
+
+main {
+  padding-top: 5rem;
+}
+
 .open-menu {
   display: flex !important;
 }

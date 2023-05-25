@@ -1,0 +1,69 @@
+#pricing-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 5rem;
+}
+#pricing-sec > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+#pricing-sec > ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#pricing-sec .card-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+#pricing-sec .card-cont h2, #pricing-sec .card-cont p, #pricing-sec .card-cont ul {
+  margin: 0 !important;
+}
+#pricing-sec .card-cont .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--d-blue);
+  border-radius: 2.5rem;
+  gap: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 2.625rem;
+  padding-inline: 1.875rem;
+}
+#pricing-sec .card-cont .card p {
+  max-width: 20rem;
+}
+#pricing-sec .card-cont .card span {
+  margin-top: 1rem;
+}
+#pricing-sec .card-cont .card ul {
+  list-style: none;
+}
+#pricing-sec .card-cont .card ul li {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1180px) {
+  #pricing-sec > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  #pricing-sec > ul {
+    grid-template-columns: 1fr;
+    margin-right: auto;
+  }
+}
+@media (max-width: 470px) {
+  html {
+    font-size: 12px !important;
+  }
+}/*# sourceMappingURL=pricing.css.map */

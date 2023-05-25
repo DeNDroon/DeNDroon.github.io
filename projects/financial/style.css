@@ -474,7 +474,14 @@ section h1 {
 }
 @media (max-width: 550px) {
   .comment {
-    transform: scale(0.7);
+    width: 50vw !important;
+  }
+  .comment p {
+    width: auto !important;
+  }
+  .comment .user-info {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
   .sub-top-sec h1 {
     white-space: break-spaces;
@@ -508,6 +515,9 @@ section h1 {
   }
 }
 @media (max-width: 413px) {
+  .comment {
+    font-size: 0.75rem;
+  }
   #download-sec img {
     top: 55% !important;
   }

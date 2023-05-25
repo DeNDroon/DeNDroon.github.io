@@ -323,3 +323,12 @@ a {
         padding: 1rem;
     }
 }
+
+@media (max-width: 460px) {
+    #logo {
+        width: 7rem;
+    }
+    .news-blog-card {
+        width: 90%;
+    }
+}

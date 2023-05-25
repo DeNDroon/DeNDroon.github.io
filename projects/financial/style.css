@@ -256,6 +256,7 @@
 }
 #start-sec .video-cont video {
   width: 100%;
+  background-color: var(--blue);
 }
 #start-sec .video-cont button {
   padding: 2.188rem;

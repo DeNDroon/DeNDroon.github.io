@@ -329,6 +329,9 @@ section h1 {
   header > .btn {
     margin-left: auto;
   }
+  section h1 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 1180px) {
   #earn-sec {
@@ -339,6 +342,9 @@ section h1 {
   }
 }
 @media (max-width: 1080px) {
+  section h1 {
+    font-size: 1.5rem;
+  }
   #cryp-port-sec .grid-cont {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,5 @@
+
+
 $("input[type='radio']").on("change", () => {
     let id = $("input[type='radio']:checked").attr("id") - 1;
     let each = window.innerWidth / (window.innerWidth / $(".comment").innerWidth());
@@ -13,7 +15,7 @@ $(".com-carousel").on("scroll", () => {
     let id = Math.floor(cur / each) + 1;
     $(".comment").css("opacity", "0.2");
     $(`.comment:nth-of-type(${id})`).css("opacity", "1");
-    $("#" + id).click();
+    $("#" + id).prop("checked", "true");
 })
 
 let playing = false;

@@ -44,6 +44,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    h1,
+    p {
+        margin: 0;
+    }
     .grid-cont {
         display: grid;
         margin-top: 5rem;
@@ -343,18 +347,7 @@ section {
     h1 {white-space: nowrap;}
 }
 
-@media (max-width: 1410px) {
-    #download-sec {
-        img {
-            top: 60% !important;
-        }
-    }
-}
-
 @media (max-width: 1200px) {
-    main {
-        padding-top: 5rem;
-    }
     header > .btn {
         margin-left: auto;
     }
@@ -390,6 +383,7 @@ section {
     }
     #earn-2-sec {
         flex-direction: column-reverse;
+        justify-content: center;
         div {
             max-width: none;
         }
@@ -420,6 +414,7 @@ section {
     }
     #start-sec {
         flex-direction: column;
+        justify-content: center;
         gap: 1rem;
         .video-cont {
             max-width: none;
@@ -446,6 +441,7 @@ section {
         }
     }
     #top-sec {
+        justify-content: center;
         flex-direction: column;
         gap: 1rem;
         div {
@@ -521,6 +517,7 @@ section {
         padding-inline: 1rem;
     }
     #download-sec {
+        margin-top: 3rem;
         .apps {
             .btn {
                 width: 100%;
@@ -544,14 +541,20 @@ section {
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 413px) {
     #download-sec img {
-        top: 70% !important;
+        top: 55% !important;
     }
 }
+
 @media (max-width: 370px) {
     #download-sec img {
-        top: 80% !important;
+        top: 60% !important;
+    }
+}
+@media (max-width: 330px) {
+    #download-sec img {
+        top: 70% !important;
     }
 }
 

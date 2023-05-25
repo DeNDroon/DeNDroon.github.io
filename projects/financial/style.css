@@ -41,6 +41,10 @@
   align-items: center;
   flex-direction: column;
 }
+#cryp-port-sec h1,
+#cryp-port-sec p {
+  margin: 0;
+}
 #cryp-port-sec .grid-cont {
   display: grid;
   margin-top: 5rem;
@@ -317,15 +321,7 @@ section h1 {
   white-space: nowrap;
 }
 
-@media (max-width: 1410px) {
-  #download-sec img {
-    top: 60% !important;
-  }
-}
 @media (max-width: 1200px) {
-  main {
-    padding-top: 5rem;
-  }
   header > .btn {
     margin-left: auto;
   }
@@ -357,6 +353,7 @@ section h1 {
   }
   #earn-2-sec {
     flex-direction: column-reverse;
+    justify-content: center;
   }
   #earn-2-sec div {
     max-width: none;
@@ -387,6 +384,7 @@ section h1 {
   }
   #start-sec {
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
   }
   #start-sec .video-cont {
@@ -410,6 +408,7 @@ section h1 {
     max-width: none !important;
   }
   #top-sec {
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
   }
@@ -473,6 +472,9 @@ section h1 {
   header {
     padding-inline: 1rem;
   }
+  #download-sec {
+    margin-top: 3rem;
+  }
   #download-sec .apps .btn {
     width: 100%;
   }
@@ -493,14 +495,19 @@ section h1 {
     align-items: center;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 413px) {
   #download-sec img {
-    top: 70% !important;
+    top: 55% !important;
   }
 }
 @media (max-width: 370px) {
   #download-sec img {
-    top: 80% !important;
+    top: 60% !important;
+  }
+}
+@media (max-width: 330px) {
+  #download-sec img {
+    top: 70% !important;
   }
 }
 .blured {

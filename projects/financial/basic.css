@@ -40,6 +40,7 @@ header .vl {
   background-color: var(--d-blue);
 }
 header #menu-btn {
+  display: none;
   z-index: 11;
 }
 header .nav-cont {
@@ -292,5 +293,8 @@ a {
   }
   header .nav-cont .btn {
     margin-left: 0 !important;
+  }
+  #menu-btn {
+    display: inline-block !important;
   }
 }/*# sourceMappingURL=basic.css.map */

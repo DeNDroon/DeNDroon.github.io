@@ -29,3 +29,6 @@ $("#video-player").on("click", () => {
 $("#menu-btn").on("click", () => {
     $(".nav-cont").toggleClass("open-menu");
 })
+$("#menu-btn").on("focus", () => {
+    $(".nav-cont").toggleClass("open-menu");
+})

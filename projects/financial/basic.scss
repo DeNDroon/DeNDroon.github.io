@@ -38,6 +38,7 @@ header {
             background-color: var(--d-blue);
         }
         #menu-btn {
+            display: none;
             z-index: 11;
         }
         .nav-cont {
@@ -300,5 +301,8 @@ a {
         .btn {
             margin-left: 0 !important;
         }
+    }
+    #menu-btn {
+        display: inline-block !important;
     }
 }

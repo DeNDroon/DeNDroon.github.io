@@ -187,6 +187,10 @@
   align-items: center;
 }
 #users-sec .com-carousel {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-top: 3rem;
   display: grid;
   grid-auto-flow: column;
   overflow-x: auto;
@@ -218,6 +222,9 @@
 #users-sec .comment > p {
   width: 25rem;
   margin-bottom: 1.563rem;
+}
+#users-sec .comment:hover {
+  opacity: 1 !important;
 }
 #users-sec #buttons-sec {
   width: -moz-fit-content;

@@ -569,4 +569,13 @@ section h1 {
 }
 .blured else:nth-of-type(7) {
   left: 5rem;
+}
+.blured:nth-of-type(8) {
+  top: 350rem;
+}
+.blured:nth-of-type(8) {
+  right: 5rem;
+}
+.blured else:nth-of-type(8) {
+  left: 5rem;
 }/*# sourceMappingURL=style.css.map */

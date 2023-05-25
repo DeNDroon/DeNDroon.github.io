@@ -566,7 +566,7 @@ section {
     border-radius: 50%;
     position: absolute;
     z-index: -1;
-    @for $i from 1 to 8 {
+    @for $i from 1 to 9 {
         &:nth-of-type(#{$i}) {
             top: calc(50rem * ($i - 1));
         }

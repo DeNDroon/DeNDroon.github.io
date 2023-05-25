@@ -176,7 +176,6 @@
 #users-sec {
   padding-inline: 0;
   padding-block: 12.5rem;
-  overflow-x: hidden;
   min-height: auto;
 }
 #users-sec .flex-row {
@@ -186,6 +185,8 @@
 #users-sec .com-carousel {
   display: grid;
   grid-auto-flow: column;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 1rem;
   width: 100%;
   transition: margin-left 0.2s;
@@ -497,9 +498,9 @@ section h1 {
   }
 }
 .blured {
-  width: 40rem;
-  height: 40rem;
-  filter: blur(10rem);
+  width: 40%;
+  height: 40%;
+  filter: blur(5rem);
   background-color: var(--d-blue);
   border-radius: 50%;
   position: absolute;

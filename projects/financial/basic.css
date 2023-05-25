@@ -310,7 +310,8 @@ a {
 }
 @media (max-width: 600px) {
   #menu-btn {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
+    padding-bottom: 0.7rem;
   }
 }
 @media (max-width: 460px) {

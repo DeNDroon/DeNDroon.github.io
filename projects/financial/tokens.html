@@ -6,79 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="pricing.css"> 
+    <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="basic.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKVG8H3HG9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YKVG8H3HG9');
+    </script>
 </head>
 
 <body>
     <header>
-            <img id="logo" src="./assets/logo.svg" alt="Logo">
-            <div class="vl"></div>
-            <button id="menu-btn" class="btn blue-db-btn"><img src="./assets/menu.svg" alt="Menu"></button>
-            <div class="nav-cont">
-                <a href="./index.html">HOME</a>
-                <a href="./about.html">ABOUT</a>
-                <a href="./pricing.html" class="active">PRICING</a>
-                <a href="./tokens.html">TOKENS</a>
-                <a href="./blog.html">BLOG</a>
-                <a href="./contact.html">CONTACT US</a>
-                <button class="btn blue-db-btn">DOWNLOAD APP</button>
-            </div>
+        <img id="logo" src="./assets/logo.svg" alt="Logo">
+        <div class="vl"></div>
+        <button id="menu-btn" class="btn blue-db-btn"><img src="./assets/menu.svg" alt="Menu"></button>
+        <div class="nav-cont">
+            <a href="./index.html" class="active">HOME</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="./pricing.html">PRICING</a>
+            <a href="./tokens.html">TOKENS</a>
+            <a href="./blog.html">BLOG</a>
+            <a href="./contact.html">CONTACT US</a>
+            <button class="btn blue-db-btn">DOWNLOAD APP</button>
+        </div>
     </header>
     <main>
-        <section id="pricing-sec">
+        <section id="tokens-sec">
             <div>
-                <h1>Pricing</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat. Scelerisque</p>
+                <h1>Tokens</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis
+                    placerat. Scelerisque</p>
             </div>
-            <ul>
-                <li><img src="./assets/divpricing.svg">Send & receive</li>
-                <li><img src="./assets/divpricing-1.svg">Trading Charts</li>
-                <li><img src="./assets/divpricing-2.svg">Wallet</li>
-                <li><img src="./assets/divpricing-3.svg">Real Time Trading</li>
-            </ul>
-            <div class="card-cont">
-                <div class="card">
-                    <span class="featured">BASIC</span>
-                    <h2>$ 100 USD</h2>
-                    <p>Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.</p>
-                    <span class="bold">Features</span>
-                    <ul>
-                        <li>Everything included in Basic</li>
-                        <li>Trading up to $1MM per Month</li>
-                        <li>Windows & macOS App</li>
-                        <li>Premium Support</li>
-                    </ul>
-                    <button class="btn blue-db-btn">CONTACT US</button>
-                </div>
-                <div class="card">
-                    <span class="featured">PRO</span>
-                    <h2>$ 100 USD</h2>
-                    <p>Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.</p>
-                    <span class="bold">Features</span>
-                    <ul>
-                        <li>Everything included in Basic</li>
-                        <li>Trading up to $1MM per Month</li>
-                        <li>Windows & macOS App</li>
-                        <li>Premium Support</li>
-                    </ul>
-                    <button class="btn blue-db-btn">CONTACT US</button>
-                </div>
-                <div class="card">
-                    <span class="featured">EXPERT</span>
-                    <h2>$ 100 USD</h2>
-                    <p>Lorem ipsum dolor sit amet, ametor consectetur adipiscing elit. Et nibh.</p>
-                    <span class="bold">Features</span>
-                    <ul>
-                        <li>Everything included in Basic</li>
-                        <li>Trading up to $1MM per Month</li>
-                        <li>Windows & macOS App</li>
-                        <li>Premium Support</li>
-                    </ul>
-                    <button class="btn blue-db-btn">CONTACT US</button>
-                </div>
+            <table>
+                <tr class="head-row">
+                    <th class="name">NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>MARKET CAP</th>
+                    <th>VOLUME</th>
+                    <th class="link">WEBSITE</th>
+                </tr>
+                <tr>
+                    <td class="name bold btc"><img src='./assets/icontable-icons.svg'>Bitcoin</td>
+                    <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td class="market-cap bold">$252,844,036453 USD</td>
+                    <td class="volume bold">$30,504,879,301 USD</td>
+                    <td class="link"><a href="#">Visit Website</a></td>
+                </tr>
+                <tr>
+                    <td class="name bold eth"><img src='./assets/icontable-icons-1.svg'>Etherium</td>
+                    <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td class="market-cap bold">$252,844,036453 USD</td>
+                    <td class="volume bold">$30,504,879,301 USD</td>
+                    <td class="link"><a href="#">Visit Website</a></td>
+                </tr>
+                <tr>
+                    <td class="name bold ltc"><img src='./assets/icontable-icons-2.svg'>Litecoin</td>
+                    <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td class="market-cap bold">$252,844,036453 USD</td>
+                    <td class="volume bold">$30,504,879,301 USD</td>
+                    <td class="link"><a href="#">Visit Website</a></td>
+                </tr>
+                <tr>
+                    <td class="name bold trx"><img src='./assets/icontable-icons-3.svg'>TRON</td>
+                    <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td class="market-cap bold">$252,844,036453 USD</td>
+                    <td class="volume bold">$30,504,879,301 USD</td>
+                    <td class="link"><a href="#">Visit Website</a></td>
+                </tr>
+            </table>
             </div>
         </section>
     </main>

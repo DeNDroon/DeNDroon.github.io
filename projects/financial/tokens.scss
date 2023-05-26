@@ -1,0 +1,110 @@
+main {
+    padding-top: 10rem !important;
+}
+
+#tokens-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h1,
+    p {
+        text-align: center;
+    }
+    p {
+        max-width: 30rem;
+    }
+}
+
+table {
+    margin-top: 6.313rem;
+    th {
+        text-align: left;
+        font-weight: 100;
+    }
+    td {
+        padding-right: 3rem;
+        padding-block: 4rem;
+        width: 20%;
+    }
+    .link {
+        width: 7rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+    .name.bold {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &::after {
+            background-color: var(--d-blue);
+            font-weight: 100;
+            font-size: 0.6rem;
+            letter-spacing: 0.1rem;
+        }
+        &.btc::after {content: "BTC"}
+        &.eth::after {content: "ETH"}
+        &.ltc::after {content: "LTC"}
+        &.trx::after {content: "TRX"}
+    }
+}
+
+footer {
+    margin-top : 7.5rem;
+}
+
+@media (max-width: 1420px) {
+    td {
+        width: fit-content !important;
+    }
+}
+
+@media (max-width: 1350px) {
+    .head-row {
+        display: none;
+    }
+    tbody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        tr {
+            background-color: var(--d-blue);
+            padding: 1rem;
+            border-radius: 2.5rem;
+            width: 13em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        td {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+    }
+    *::before {
+        font-weight: 100;
+        margin-bottom: 0.25rem;
+    }
+    .desc::before {
+        content: "Description :";
+    }
+    .market-cap::before {
+        content: "Market Cap :";
+    }
+    .volume::before {
+        content: "Volume :";
+    }
+    section {
+        padding-inline: 5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        padding-inline: 1rem !important;
+    }
+}

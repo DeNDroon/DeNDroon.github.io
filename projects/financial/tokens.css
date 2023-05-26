@@ -1,0 +1,117 @@
+main {
+  padding-top: 10rem !important;
+}
+
+#tokens-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#tokens-sec h1,
+#tokens-sec p {
+  text-align: center;
+}
+#tokens-sec p {
+  max-width: 30rem;
+}
+
+table {
+  margin-top: 6.313rem;
+}
+table th {
+  text-align: left;
+  font-weight: 100;
+}
+table td {
+  padding-right: 3rem;
+  padding-block: 4rem;
+  width: 20%;
+}
+table .link {
+  width: 7rem;
+}
+table .link a {
+  text-decoration: underline;
+}
+table .name.bold {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+table .name.bold::after {
+  background-color: var(--d-blue);
+  font-weight: 100;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+}
+table .name.bold.btc::after {
+  content: "BTC";
+}
+table .name.bold.eth::after {
+  content: "ETH";
+}
+table .name.bold.ltc::after {
+  content: "LTC";
+}
+table .name.bold.trx::after {
+  content: "TRX";
+}
+
+footer {
+  margin-top: 7.5rem;
+}
+
+@media (max-width: 1420px) {
+  td {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+}
+@media (max-width: 1350px) {
+  .head-row {
+    display: none;
+  }
+  tbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  tbody tr {
+    background-color: var(--d-blue);
+    padding: 1rem;
+    border-radius: 2.5rem;
+    width: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  tbody td {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  *::before {
+    font-weight: 100;
+    margin-bottom: 0.25rem;
+  }
+  .desc::before {
+    content: "Description :";
+  }
+  .market-cap::before {
+    content: "Market Cap :";
+  }
+  .volume::before {
+    content: "Volume :";
+  }
+  section {
+    padding-inline: 5rem;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding-inline: 1rem !important;
+  }
+}/*# sourceMappingURL=tokens.css.map */

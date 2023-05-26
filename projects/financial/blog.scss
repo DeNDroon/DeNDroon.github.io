@@ -1,0 +1,119 @@
+.news-blog {
+    margin: 3rem auto;
+}
+
+#blog-sec {
+    margin-bottom: 5.75rem;
+}
+
+#subsc-sec {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-inline: 10rem;
+    padding-block: 5.25rem;
+}
+
+#posts-sec {
+    margin-top: 9.25rem;
+    margin-bottom: 3.5rem;
+}
+
+#filter-radios {
+        input {
+            visibility: hidden;
+        }
+
+        label {
+            background-color: var(--d-blue);
+            padding: 0.45rem 1.5rem;
+            border-radius: 2rem;
+        }
+
+        #rad-all:checked~.filter-all {
+            background-color: var(--blue);
+        }
+
+        #rad-apps:checked~.filter-apps {
+            background-color: var(--blue);
+        }
+
+        #rad-products:checked~.filter-products {
+            background-color: var(--blue);
+        }
+
+        #rad-tutorial:checked~.filter-tutorials {
+            background-color: var(--blue);
+        }
+
+    }
+#news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    .news-blog {
+        margin: 0;
+    }
+}
+
+.mail-input {
+    display: flex;
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: 3rem;
+
+    &:focus-within {
+        outline: 3px solid var(--blue);
+    }
+
+    input {
+        border: none;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    input[type="mail"] {
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+section {
+    min-height:auto !important;
+}
+
+#page-control {
+    width: fit-content;
+    margin: 0 auto;
+    cursor:default;
+    input {
+        position: absolute;
+        visibility: hidden;
+    }
+    label {
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--d-blue);
+            border-radius: 50%;
+        }
+    }
+    #page-1:checked ~ .page-1 {
+        color: var(--blue);
+    }
+    #page-2:checked ~ .page-2 {
+        color: var(--blue);
+    }
+    #page-3:checked ~ .page-3 {
+        color: var(--blue);
+    }
+}
+
+footer {
+    margin-top: 5rem;
+}

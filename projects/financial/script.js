@@ -37,8 +37,6 @@ $("#video-player").on("click", () => {
     playing = !playing
 })
 
-
-
 $("#menu-btn").on("click", () => {
     $(".nav-cont").toggleClass("open-menu");
 })

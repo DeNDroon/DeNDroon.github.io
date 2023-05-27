@@ -100,3 +100,7 @@ $("input[name='filter']").on("change", () => {
   };
   countPages()
 })
+
+$("#menu-btn").on("click", () => {
+  $(".nav-cont").toggleClass("open-menu");
+})

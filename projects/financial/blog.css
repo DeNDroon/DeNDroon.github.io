@@ -20,11 +20,20 @@
   margin-bottom: 3.5rem;
 }
 
+.sub-top-sec {
+  margin-bottom: 2rem;
+}
+
 #filter-radios {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  align-items: start;
   cursor: default;
 }
 #filter-radios input {
   visibility: hidden;
+  position: absolute;
 }
 #filter-radios label {
   background-color: var(--d-blue);
@@ -46,6 +55,8 @@
 
 #news-container {
   display: grid;
+  place-items: center;
+  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -109,4 +120,90 @@ section {
 
 footer {
   margin-top: 5rem;
+}
+
+@media (max-width: 1500px) {
+  .news-blog.news-blog-full {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .news-blog.news-blog-full img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 1460px) {
+  section,
+  #subsc-sec {
+    padding-inline: 4rem;
+  }
+}
+@media (max-width: 1330px) {
+  #news-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .news-blog.news-blog-full {
+    flex-direction: column-reverse;
+  }
+  .news-blog.news-blog-full .left {
+    padding: 1rem;
+  }
+  .news-blog.news-blog-full img {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #subsc-sec {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #subsc-sec h1 {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+  #subsc-sec form {
+    background: transparent;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  #subsc-sec form input[type=mail] {
+    background: var(--white);
+    border-radius: 5rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #subsc-sec form .btn {
+    background-color: var(--d-blue);
+    width: 100%;
+  }
+  #subsc-sec form .btn:hover {
+    background-color: var(--white);
+    color: var(--vd-blue);
+  }
+}
+@media (max-width: 900px) {
+  #news-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 12px !important;
+  }
+  section {
+    padding-inline: 1rem;
+  }
+  #filter-radios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 460px) {
+  .news-blog-card {
+    width: 80vw !important;
+  }
 }/*# sourceMappingURL=blog.css.map */

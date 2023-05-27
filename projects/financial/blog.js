@@ -29,7 +29,6 @@ for (let i = 0; i < 15; i++) {
 
 var filter = "All";
 function countPages() {
-  console.log(blogs);
   $("#page-control").html(`
               <input type="radio" name="page" id="page-1" checked>
               <label for="page-1" class="page-1">1</label>

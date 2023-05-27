@@ -104,6 +104,7 @@ ul {
 .news-blog-card {
     flex-direction: column;
     width: 23rem;
+    transition: background-color 0.2s;
     .featured {
         position: absolute;
         top: -2rem;
@@ -115,6 +116,9 @@ ul {
     }
     .user-info {
         padding-bottom: 1rem;
+    }
+    &:hover {
+        background-color: var(--blue);
     }
 }
 
@@ -338,6 +342,6 @@ a {
         width: 7rem;
     }
     .news-blog-card {
-        width: 90%;
+        width: 80%;
     }
 }

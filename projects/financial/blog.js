@@ -69,3 +69,4 @@ $("input[name='page']").on("click", () => {
       `);
     }
   }
+  addPost(1);

@@ -323,6 +323,11 @@ a {
   header .nav-cont .btn {
     margin-left: 0 !important;
   }
+  header .nav-cont a {
+    margin-right: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
   #menu-btn {
     display: inline-block !important;
   }

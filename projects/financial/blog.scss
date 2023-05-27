@@ -21,6 +21,7 @@
 }
 
 #filter-radios {
+    cursor: default;
         input {
             visibility: hidden;
         }
@@ -31,19 +32,19 @@
             border-radius: 2rem;
         }
 
-        #rad-all:checked~.filter-all {
+        #rad-All:checked~.filter-All {
             background-color: var(--blue);
         }
 
-        #rad-apps:checked~.filter-apps {
+        #rad-Apps:checked~.filter-Apps {
             background-color: var(--blue);
         }
 
-        #rad-products:checked~.filter-products {
+        #rad-Products:checked~.filter-Products {
             background-color: var(--blue);
         }
 
-        #rad-tutorial:checked~.filter-tutorials {
+        #rad-Tutorial:checked~.filter-Tutorial {
             background-color: var(--blue);
         }
 

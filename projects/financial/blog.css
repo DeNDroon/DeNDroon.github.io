@@ -20,6 +20,9 @@
   margin-bottom: 3.5rem;
 }
 
+#filter-radios {
+  cursor: default;
+}
 #filter-radios input {
   visibility: hidden;
 }
@@ -28,16 +31,16 @@
   padding: 0.45rem 1.5rem;
   border-radius: 2rem;
 }
-#filter-radios #rad-all:checked ~ .filter-all {
+#filter-radios #rad-All:checked ~ .filter-All {
   background-color: var(--blue);
 }
-#filter-radios #rad-apps:checked ~ .filter-apps {
+#filter-radios #rad-Apps:checked ~ .filter-Apps {
   background-color: var(--blue);
 }
-#filter-radios #rad-products:checked ~ .filter-products {
+#filter-radios #rad-Products:checked ~ .filter-Products {
   background-color: var(--blue);
 }
-#filter-radios #rad-tutorial:checked ~ .filter-tutorials {
+#filter-radios #rad-Tutorial:checked ~ .filter-Tutorial {
   background-color: var(--blue);
 }
 

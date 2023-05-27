@@ -295,6 +295,14 @@ a {
   color: var(--blue);
 }
 
+@keyframes showIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 1200px) {
   main {
     padding-top: 5rem;
@@ -310,6 +318,7 @@ a {
     height: 100vh;
     left: 0;
     right: 0;
+    animation: showIn 0.2s forwards ease-in;
   }
   header .nav-cont .btn {
     margin-left: 0 !important;

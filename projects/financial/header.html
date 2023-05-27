@@ -1,0 +1,33 @@
+<header>
+    <img id="logo" src="./assets/logo.svg" alt="Logo">
+    <div class="vl"></div>
+    <button id="menu-btn" class="btn blue-db-btn"><img src="./assets/menu.svg" alt="Menu"></button>
+    <div class="nav-cont">
+        <a id="home" href="./index.html">HOME</a>
+        <a id="about" href="./about.html">ABOUT</a>
+        <a id="pricing" href="./pricing.html">PRICING</a>
+        <a id="tokens" href="./tokens.html">TOKENS</a>
+        <a id="blog" href="./blog.html">BLOG</a>
+        <a id="contact-us" href="./contact.html">CONTACT US</a>
+        <button class="btn blue-db-btn">DOWNLOAD APP</button>
+    </div>
+    <script>
+        let i = window.location.pathname;
+        if (i.endsWith("index.html")) {
+            $("#home").addClass("active");
+        } else if (i.endsWith("about.html")) {
+            $("#about").addClass("active");
+        } else if (i.endsWith("pricing.html")) {
+            $("#pricing").addClass("active");
+        } else if (i.endsWith("tokens.html")) {
+            $("#tokens").addClass("active");
+        } else if (i.endsWith("blog.html")) {
+            $("#blog").addClass("active");
+        } else if (i.endsWith("contact.html")) {
+            $("#contact-us").addClass("active");
+        }
+        $("#menu-btn").on("click", () => {
+            $(".nav-cont").toggleClass("open-menu");
+        })
+    </script>
+</header>

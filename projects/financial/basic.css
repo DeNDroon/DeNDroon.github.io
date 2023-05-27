@@ -22,6 +22,10 @@ body {
   z-index: 10;
 }
 
+footer, header, .nav-cont {
+  animation: showIn 0.2s forwards ease-in-out;
+}
+
 header {
   z-index: 9;
   position: fixed;
@@ -318,7 +322,6 @@ a {
     height: 100vh;
     left: 0;
     right: 0;
-    animation: showIn 0.2s forwards ease-in;
   }
   header .nav-cont .btn {
     margin-left: 0 !important;

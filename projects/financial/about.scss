@@ -158,9 +158,6 @@ section:not(#about-sec) {
 }
 
 @media (max-width: 450px) {
-    html {
-        font-size: 12px !important;
-    }
     #team-sec {
         img {
             max-width: 100%;

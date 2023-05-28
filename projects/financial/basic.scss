@@ -441,6 +441,17 @@ a {
     .news-blog-card {
         width: 80%;
     }
+
+    html {
+        font-size: 12px;
+    }
+    #menu-btn {
+        padding: 1.3rem;
+        padding-bottom: 1rem;
+        img {
+            width: 1.3rem !important;
+        }
+    }
 }
 
 .blured {

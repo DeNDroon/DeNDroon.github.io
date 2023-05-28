@@ -379,6 +379,9 @@ a {
 @media (max-width: 990px) {
     .sub-top-sec {
         flex-direction: column;
+        h1 {
+            white-space:break-spaces !important;
+        }
         p {
             max-width: none !important;
         }
@@ -412,9 +415,6 @@ a {
 }
 
 @media (max-width: 550px) {
-    .sub-top-sec {
-        h1 {white-space:break-spaces}
-    }
     section,
     footer,
     header {

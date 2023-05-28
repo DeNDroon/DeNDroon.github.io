@@ -13,18 +13,24 @@
     </div>
     <script>
         let i = window.location.pathname;
-        if (i.endsWith("index.html")) {
+        if (i.endsWith("index.html") || i.endsWith("l/")) {
             $("#home").addClass("active");
+            $("title").text("Home");
         } else if (i.endsWith("about.html")) {
             $("#about").addClass("active");
+            $("title").text("About");
         } else if (i.endsWith("pricing.html")) {
             $("#pricing").addClass("active");
+            $("title").text("Pricing");
         } else if (i.endsWith("tokens.html")) {
             $("#tokens").addClass("active");
+            $("title").text("Tokens");
         } else if (i.endsWith("blog.html")) {
             $("#blog").addClass("active");
+            $("title").text("Blog");
         } else if (i.endsWith("contact.html")) {
             $("#contact-us").addClass("active");
+            $("title").text("Contact us");
         }
         $("#menu-btn").on("click", () => {
             $(".nav-cont").toggleClass("open-menu");

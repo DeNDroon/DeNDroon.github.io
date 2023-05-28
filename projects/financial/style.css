@@ -324,7 +324,7 @@
 }
 
 section {
-  min-height: 100vh;
+  min-height: max(50rem, 100vh - 12rem);
   padding-inline: 8.313rem;
 }
 section h1 {

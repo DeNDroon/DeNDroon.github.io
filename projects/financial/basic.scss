@@ -108,6 +108,7 @@ ul {
     flex-direction: column;
     width: 23rem;
     transition: background-color 0.2s;
+    animation: showIn 0.2s ease-in-out forwards;
     .featured {
         position: absolute;
         top: -2rem;

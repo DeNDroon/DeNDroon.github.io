@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     overflow-x: hidden;
-
     &>div {
         display: flex;
         flex-direction: column;
@@ -351,7 +350,7 @@
 }
 
 section {
-    min-height: 100vh;
+    min-height: max(50rem, calc(100vh - 12rem));
     padding-inline: 8.313rem;
 
     h1 {

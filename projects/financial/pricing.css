@@ -61,9 +61,4 @@
     grid-template-columns: 1fr;
     margin-right: auto;
   }
-}
-@media (max-width: 470px) {
-  html {
-    font-size: 12px !important;
-  }
 }/*# sourceMappingURL=pricing.css.map */

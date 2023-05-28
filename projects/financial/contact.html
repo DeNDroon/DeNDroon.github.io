@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="basic.css">
     <link rel="stylesheet" href="style.css">
@@ -16,22 +17,22 @@
     <main>
         <h1>Get in touch</h1>
         <section id="contact-sec">
-            <form>
+            <form id="contact-form">
                 <label>
                     NAME
-                    <input name="name" type="text" autocomplete="name" required>
+                    <input name="from_name" type="text" autocomplete="name" required>
                 </label>
                 <label>
                     EMAIL
-                    <input name="mail" type="mail" required>
+                    <input name="user_mail" type="mail" required>
                 </label>
                 <label>
                     COMPANY
-                    <input name="company" type="text" autocomplete="organization" required>
+                    <input name="company" type="text" autocomplete="organization">
                 </label>
                 <label>
                     SUBJECT
-                    <input name="subject" type="text" required>
+                    <input name="subject" type="text">
                 </label>
                 <label class="message">
                     MESSAGE
@@ -39,6 +40,26 @@
                 </label>
                 <button class="btn blue-db-btn" type="submit">SEND MESSAGE</button>
             </form>
+            <div id="thx">
+                <h1>Sucesfully sent!</h1>
+                <p>Thanks for contacting</p>
+            </div>
+            <script>
+                (function() {emailjs.init('EA-3RrG_w1F1m5nHq')})();
+                window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_0k7yua7', 'template_0qcmeep', this)
+                    .then(function() {
+                        $("#contact-form").fadeOut();
+                        $("#thx").css("display","flex");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+            </script>
             <div class="r-sec">
                 <h2>Want to reach us directly</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui pharetra elementum sit id sagittis non donec egestas.</p>

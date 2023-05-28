@@ -105,6 +105,15 @@ section {
     }
 }
 
+#thx {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 1.5rem;
+}
+
 @media (max-width: 1420px) {
     #contact-sec {
         .r-sec {

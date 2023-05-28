@@ -163,6 +163,13 @@ footer {
     text-align: center;
     margin-top: 0.75rem;
   }
+}
+@media (max-width: 900px) {
+  #news-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
   #subsc-sec form {
     background: transparent;
     flex-direction: column;
@@ -182,11 +189,6 @@ footer {
   #subsc-sec form .btn:hover {
     background-color: var(--white);
     color: var(--vd-blue);
-  }
-}
-@media (max-width: 900px) {
-  #news-container {
-    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 550px) {

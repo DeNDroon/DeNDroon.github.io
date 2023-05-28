@@ -360,15 +360,8 @@ section {
 
 .sub-top-sec {
     flex-wrap: wrap;
-    h1 {white-space: nowrap;}
-}
-
-@media (max-width: 1200px) {
-    header > .btn {
-        margin-left: auto;
-    }
-    section h1 {
-        font-size: 2rem;
+    h1 {
+        white-space: nowrap;
     }
 }
 
@@ -382,9 +375,6 @@ section {
 }
 
 @media (max-width: 1080px) {
-    section h1 {
-        font-size: 1.5rem;
-    }
     #cryp-port-sec {
         .grid-cont {
         display: flex;
@@ -436,26 +426,10 @@ section {
             max-width: none;
         }
     }
-    footer {
-        .foot-bot {
-            flex-direction: column;
-            justify-content: center !important;
-            align-items: center !important;
-            gap: 1rem;
-        }
-        .flex-row {
-            justify-content: space-between !important;
-        }
-    }
+    
 }
 
 @media (max-width: 990px) {
-    .sub-top-sec {
-        flex-direction: column;
-        p {
-            max-width: none !important;
-        }
-    }
     #top-sec {
         justify-content: center;
         flex-direction: column;
@@ -496,10 +470,6 @@ section {
             padding-inline: 4rem;
         }
     }
-    section,
-    header {
-        padding-inline: 4rem;
-    }
 }
 
 @media (max-width: 700px) {
@@ -508,18 +478,6 @@ section {
         .img-div {
             width: 90%;
         }
-    }
-}
-
-@media (max-width: 650px) {
-    .foot-top {
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-    .foot-bot {
-        margin-top: 3rem !important;
     }
 }
 
@@ -533,14 +491,6 @@ section {
             width: fit-content !important;
         }
     }
-    .sub-top-sec {
-        h1 {white-space:break-spaces}
-    }
-    section,
-    footer,
-    header {
-        padding-inline: 1rem;
-    }
     #download-sec {
         margin-top: 3rem;
         .apps {
@@ -552,18 +502,7 @@ section {
             }
         }
     }
-    .bot-right {
-        width: 100% !important;
-        height: fit-content !important;
-        .flex-row {
-            flex-direction: column;
-            button {
-                width: 100% !important;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
+    
 }
 
 @media (max-width: 413px) {
@@ -583,29 +522,5 @@ section {
 @media (max-width: 330px) {
     #download-sec img {
         top: 70% !important;
-    }
-}
-
-.blured {
-    width: 40%;
-    height: 40%;
-    filter: blur(5rem);
-    background-color: var(--d-blue);
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    @for $i from 1 to 9 {
-        &:nth-of-type(#{$i}) {
-            top: calc(50rem * ($i - 1));
-        }
-        @if $i % 2 == 0 {
-            &:nth-of-type(#{$i}) {
-                right: 5rem;
-            }
-        } else {
-            &:nth-of-type(#{$i}) {
-            left: 5rem;
-            }
-        }
     }
 }

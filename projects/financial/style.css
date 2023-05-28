@@ -338,14 +338,6 @@ section h1 {
   white-space: nowrap;
 }
 
-@media (max-width: 1200px) {
-  header > .btn {
-    margin-left: auto;
-  }
-  section h1 {
-    font-size: 2rem;
-  }
-}
 @media (max-width: 1180px) {
   #earn-sec {
     flex-direction: column;
@@ -355,9 +347,6 @@ section h1 {
   }
 }
 @media (max-width: 1080px) {
-  section h1 {
-    font-size: 1.5rem;
-  }
   #cryp-port-sec .grid-cont {
     display: flex;
     flex-direction: column;
@@ -407,23 +396,8 @@ section h1 {
   #start-sec .video-cont {
     max-width: none;
   }
-  footer .foot-bot {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 1rem;
-  }
-  footer .flex-row {
-    justify-content: space-between !important;
-  }
 }
 @media (max-width: 990px) {
-  .sub-top-sec {
-    flex-direction: column;
-  }
-  .sub-top-sec p {
-    max-width: none !important;
-  }
   #top-sec {
     justify-content: center;
     flex-direction: column;
@@ -456,10 +430,6 @@ section h1 {
   #users-sec .flex-row {
     padding-inline: 4rem;
   }
-  section,
-  header {
-    padding-inline: 4rem;
-  }
 }
 @media (max-width: 700px) {
   #explore-sec {
@@ -467,17 +437,6 @@ section h1 {
   }
   #explore-sec .img-div {
     width: 90%;
-  }
-}
-@media (max-width: 650px) {
-  .foot-top {
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .foot-bot {
-    margin-top: 3rem !important;
   }
 }
 @media (max-width: 550px) {
@@ -491,14 +450,6 @@ section h1 {
     width: -moz-fit-content !important;
     width: fit-content !important;
   }
-  .sub-top-sec h1 {
-    white-space: break-spaces;
-  }
-  section,
-  footer,
-  header {
-    padding-inline: 1rem;
-  }
   #download-sec {
     margin-top: 3rem;
   }
@@ -507,19 +458,6 @@ section h1 {
   }
   #download-sec .apps img {
     width: 80%;
-  }
-  .bot-right {
-    width: 100% !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
-  .bot-right .flex-row {
-    flex-direction: column;
-  }
-  .bot-right .flex-row button {
-    width: 100% !important;
-    justify-content: center;
-    align-items: center;
   }
 }
 @media (max-width: 413px) {
@@ -539,73 +477,4 @@ section h1 {
   #download-sec img {
     top: 70% !important;
   }
-}
-.blured {
-  width: 40%;
-  height: 40%;
-  filter: blur(5rem);
-  background-color: var(--d-blue);
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-}
-.blured:nth-of-type(1) {
-  top: 0rem;
-}
-.blured else:nth-of-type(1) {
-  left: 5rem;
-}
-.blured:nth-of-type(2) {
-  top: 50rem;
-}
-.blured:nth-of-type(2) {
-  right: 5rem;
-}
-.blured else:nth-of-type(2) {
-  left: 5rem;
-}
-.blured:nth-of-type(3) {
-  top: 100rem;
-}
-.blured else:nth-of-type(3) {
-  left: 5rem;
-}
-.blured:nth-of-type(4) {
-  top: 150rem;
-}
-.blured:nth-of-type(4) {
-  right: 5rem;
-}
-.blured else:nth-of-type(4) {
-  left: 5rem;
-}
-.blured:nth-of-type(5) {
-  top: 200rem;
-}
-.blured else:nth-of-type(5) {
-  left: 5rem;
-}
-.blured:nth-of-type(6) {
-  top: 250rem;
-}
-.blured:nth-of-type(6) {
-  right: 5rem;
-}
-.blured else:nth-of-type(6) {
-  left: 5rem;
-}
-.blured:nth-of-type(7) {
-  top: 300rem;
-}
-.blured else:nth-of-type(7) {
-  left: 5rem;
-}
-.blured:nth-of-type(8) {
-  top: 350rem;
-}
-.blured:nth-of-type(8) {
-  right: 5rem;
-}
-.blured else:nth-of-type(8) {
-  left: 5rem;
 }/*# sourceMappingURL=style.css.map */

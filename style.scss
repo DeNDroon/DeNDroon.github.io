@@ -310,12 +310,15 @@ section:not(:first-of-type) {
     }
 }
 
+#financial {
+    background: url(./assets/financial.png);
+    background-size: cover;
+}
+
 #product {
     background: url(./assets/product.jpg);
     background-size: cover;
-    
 }
-
 
 #multi {
 background: url(./assets/multi.jpg);

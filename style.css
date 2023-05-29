@@ -332,6 +332,11 @@ section:not(:first-of-type) h1 {
   padding-top: 2rem;
 }
 
+#financial {
+  background: url(./assets/financial.png);
+  background-size: cover;
+}
+
 #product {
   background: url(./assets/product.jpg);
   background-size: cover;

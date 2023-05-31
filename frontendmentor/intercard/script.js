@@ -1,10 +1,20 @@
-document.getElementById("submit").addEventListener('click', () => {
-    document.getElementById("main-form").classList.add("submitted");
-})
+const form = document.getElementById("main-form");
+const cont = document.getElementById("container");
+const thx = document.createElement(`div`); thx.id = "thankSec";
+const img = new Image(); img.src = './images/icon-complete.svg'; img.alt = "success"
+const hText = document.createElement("h1"); hText.innerText = "Thank you!";
+const pText = document.createElement("p"); pText.innerText = "We've added your card details";
+const btn = document.createElement("input"); btn.value = "Continue"; btn.type = "submit"; btn.classList.add("but");
+thx.append(img, hText, pText, btn)
 
-function cardHol() {
-    document.getElementById("card-holder").innerText = document.getElementById("card-holder-in").value;
-}
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("main-form").style.display = "none";
+    cont.appendChild(thx);
+    btn.addEventListener("click", () => {
+        location.reload();
+    })
+})
 
 function cardNum() {
     var inputTxt = document.getElementById("card-number-in").value;
@@ -27,12 +37,8 @@ function changeCVC() {
     document.getElementById("card-cvc").innerText = document.getElementById("cvc-in").value;
 }
 
-function saveData() {
-    localStorage.setItem("cardHol", document.getElementById("card-holder").innerText);
-    localStorage.setItem("cardNum", document.getElementById("card-number").innerText);
-    localStorage.setItem("cardMM", document.getElementById("month").innerText);
-    localStorage.setItem("cardYY", document.getElementById("year").innerText);
-    localStorage.setItem("cardCVC", document.getElementById("card-cvc").innerText);
+function cardHol() {
+    document.getElementById("card-holder").innerText = document.getElementById("card-holder-in").value;
 }
 
 function limitMax(item, x) {

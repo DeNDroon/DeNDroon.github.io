@@ -12,7 +12,7 @@
 <body>
 
   <main>
-    <div class="container">
+    <div id="container">
     <section class="leftSec">
       <div class="front-side card">
         <img src="images/card-logo.svg" alt="card_logo">
@@ -44,7 +44,7 @@
           <div class="no-back"><input type="number" id="year-in" placeholder="YY" min="23" max="30" required oninput="limitMax(this, 2);changeYY()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
           <div class="no-back"><input type="number" id="cvc-in" placeholder="e.g. 123" minlength="3" maxlength="3" required oninput="limitMax(this, 3);changeCVC()" onfocus="backLight(this)" onfocusout="disLight(this)"></div>
       </div>
-      <input id="submit" class="but" type="submit" value="Confirm" onclick="saveData()">
+      <input id="submit" class="but" type="submit" value="Confirm">
     </form>
   </main>
 

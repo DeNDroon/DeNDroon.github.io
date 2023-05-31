@@ -43,7 +43,7 @@ body {
     min-height: 100vh;
 }
 
-.container {
+#container {
     display: flex;
     gap: 50px;
     padding: 50px;
@@ -77,7 +77,7 @@ body {
     justify-content: space-between;
 }
 
-.leftSec {
+#leftSec {
     display: flex;
     flex-direction: column;
 }
@@ -214,14 +214,14 @@ form.submitted input:invalid {
         background-repeat: no-repeat;
         background-size: 100vmax 300px;
     }
-    .container {
+    #container {
         flex-direction: column;
         align-items: center;
     }
     .card {
         margin: 0;
     }
-    .leftSec {
+    #leftSec {
         flex-direction: column-reverse;
     }
     .back-side {
@@ -255,7 +255,7 @@ form.submitted input:invalid {
     #card-number {
         margin-top: 25px;
     }
-    .container {
+    #container {
         width: 100%;
     }
     #thankSec {

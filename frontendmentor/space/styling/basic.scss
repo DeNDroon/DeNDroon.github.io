@@ -174,7 +174,7 @@ body {
 main {
     padding-top: 14rem;
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -630,11 +630,11 @@ main {
     #technology {
         
         main {
-            grid-template-rows: min-content min-content 1fr;
-            gap: 1rem;
+            grid-template-rows: min-content min-content min-content;
+            gap: 2rem;
         }
         .radio-cont .for_radio {
-                width: 2rem;height: 2rem;
-                font-size: 1rem;
+                width: 3rem;height: 3rem;
+                font-size: 1.5rem;
     }}
 }

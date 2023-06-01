@@ -36,25 +36,26 @@
   <main class="io">
   <div class="radio-cont">
     <input id="space1" type="radio" name="space_launch" checked>
-    <label data-aos="zoom-in-right" data-aos-delay="100" for="space1" class="for_radio">1</label>
-    <input id="space2" type="radio" name="space_launch">
+    <label data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor-placement="top-bottom" for="space1" class="for_radio">1</label>
+    <input id="space2" type="radio" name="space_launch" data-aos-anchor-placement="top-bottom">
     <label data-aos="zoom-in-right" data-aos-delay="300" for="space2" class="for_radio">2</label>
-    <input id="space3" type="radio" name="space_launch">
+    <input id="space3" type="radio" name="space_launch" data-aos-anchor-placement="top-bottom">
     <label data-aos="zoom-in-right" data-aos-delay="500" for="space3" class="for_radio">3</label>
   </div>
   <div class="left-sec">
-    <p data-aos="zoom-in-down" class="nav-txt">The terminology...</p>
-    <h3 data-aos="zoom-in-down" id="technology_name">Launch Vehicle</h3>
+    <p data-aos="zoom-in-down" data-aos-anchor-placement="top-bottom" class="nav-txt">The terminology...</p>
+    <h3 data-aos="zoom-in-down" data-aos-anchor-placement="top-bottom" id="technology_name">Launch Vehicle</h3>
   
-    <p data-aos="zoom-in-up" id="technology_title" class="sub-h1">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+    <p data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom" id="technology_title" class="sub-h1">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
   </div>
-  <img data-aos="zoom-in-left" id="technology_image" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Technology photo">
+  <img data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" id="technology_image" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Technology photo">
 </main>
 
-<script>
-  AOS.init();
-</script>
 <script src="./technology.js"></script>
 <script src="./menu.js"></script>
+<script>
+  placePhoto(bigSize, smallSize);
+  AOS.init();
+</script>
 </body>
 </html>

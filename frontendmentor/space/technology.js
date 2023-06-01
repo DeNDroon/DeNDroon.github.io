@@ -42,9 +42,8 @@ function changeOver(infoId) {
 window.addEventListener('resize', function() {
     placePhoto(bigSize, smallSize)
 }, true);
-$(document).on("load", function() {
-    placePhoto(bigSize, smallSize)
-})
+
+placePhoto(bigSize, smallSize);
 
 function placePhoto(bigger,smaller) {
     console.log(window.innerWidth);

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styling/basic.css">
+  <link rel="stylesheet" href="./styling/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body id="home">
+
+
+  <header>
+    <img id="logo" src="./assets/shared/logo.svg" alt="Logo">
+    <div class="hr"></div>
+    <div id="menu-cont">
+      <input id="menu-btn" type="checkbox">
+      <label for="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+      </label>
+    </div>
+    <nav>
+      <ul class="nav-txt">
+        <li class="active"><a href="./index.html"><b>00</b> Home</a></li>
+        <li><a href="./destination.html"><b>01</b> Destination</a></li>
+        <li><a href="./crew.html"><b>02</b> Crew</a></li>
+        <li><a href="./technology.html"><b>03</b> Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="left-sec">
+      <h5  data-aos="zoom-in-right" data-aos-delay="100">So, you want to travel to</h5>
+      <h1  data-aos="zoom-in-right" data-aos-delay="200">Space</h1>
+      <p  data-aos="zoom-in-right" data-aos-delay="300" class="sub-h1">Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!</p>
+      </div>
+      <div data-aos="flip-up" data-aos-delay="300"  class="right-sec">
+        <input class="main-btn" type='button' value='Explore'>
+      </div>
+  </main>
+
+
+  <script>
+    AOS.init();
+  </script>
+  <script src="./menu.js"></script>
+</body>
+</html>

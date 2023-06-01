@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styling/basic.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body id="dest">
+  <header>
+    <img id="logo" src="./assets/shared/logo.svg" alt="Logo">
+    <div class="hr"></div>
+    <div id="menu-cont">
+      <input id="menu-btn" type="checkbox">
+      <label for="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+      </label>
+    </div>
+    <nav>
+      <ul class="nav-txt">
+        <li><a href="./index.html"><b>00</b> Home</a></li>
+        <li class="active"><a href="./destination.html"><b>01</b> Destination</a></li>
+        <li><a href="./crew.html"><b>02</b> Crew</a></li>
+        <li><a href="./technology.html"><b>03</b> Technology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h5 data-aos="flip-up" class="page-title"><span style="color: rgba(255, 255, 255, 0.25)">01</span> Pick your destination</h5>
+    <div class="left-sec" data-aos="zoom-in-right">
+      <img id="planet_image" src="./assets/destination/image-moon.webp" alt="Planet">
+    </div>
+    <div class="right-sec" data-aos="zoom-in-left">
+      <ul id="dest-menu" class="nav-txt">
+        <li class="active"><a href="#" id="moon_btn">Moon</a></li>
+        <li><a href="#" id="mars_btn">Mars</a></li>
+        <li><a href="#" id="europa_btn">Europa</a></li>
+        <li><a href="#" id="titan_btn">Titan</a></li>
+      </ul>
+
+      <h2 id="planet_name">Moon</h2>
+
+      <p id="description" class="sub-h2">See our planet as you’ve never seen it before. A perfect relaxing trip away to
+        help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2
+        and Apollo 11 landing sites.</p>
+
+      <div id="dist-trav-info">
+        <span class="sub-h2">Avg. distance</span>
+        <span class="sub-h2">Est. travel time</span>
+        <span id="distance" class="sub-h1">384,400 km</span>
+        <span id="travel_time" class="sub-h1">3 days</span>
+      </div>
+
+    </div>
+  </main>
+  <script>
+    AOS.init();
+  </script>
+  <script src="./script.js"></script>
+  <script src="./menu.js"></script>
+</body>
+
+</html>

@@ -285,13 +285,14 @@ main {
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr;
         grid-template-rows: 2fr 0.25fr;
 
         img {
             grid-row: 1 / 3;
             grid-column: 2 / 3;
-            height: 100%;
+            max-height: 100%;
+            border-bottom: 1px solid var(--white);
         }
 
         .nav-txt {
@@ -389,6 +390,9 @@ main {
 }
 
 @media (max-width: 1430px) {
+    main {
+        padding-inline: 5rem;
+    }
     #technology>main {
         padding-left: 5rem;
     }
@@ -420,6 +424,11 @@ main {
         &>main {
             padding-top: 8rem;
             padding-inline: 5rem;
+        }
+    }
+    #crew {
+        .left-sec {
+            width: auto;
         }
     }
 
@@ -645,7 +654,6 @@ main {
             flex-direction: column-reverse;
 
             img {
-                border-bottom: 1px solid var(--white);
                 max-height: 40%;
             }
         }

@@ -46,10 +46,6 @@ window.addEventListener('resize', function() {
 placePhoto(bigSize, smallSize);
 
 function placePhoto(bigger,smaller) {
-    console.log(window.innerWidth);
-        if(window.innerWidth > 990) {
-            $("#technology_image").attr("src", smaller);
-        } else {
-            $("#technology_image").attr("src", bigger);
-        }
+    let img = window.innerWidth > 990 ? smaller : bigger;
+    $("#technology_image").attr("src", img);
 }

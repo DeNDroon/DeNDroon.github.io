@@ -26,11 +26,10 @@ function changeOver(crewId) {
         success: function(jsonData) {
             var i = jsonData.crew[crewId - 1];
             $("#name-last, #crew-bio, #position").css("transform", "rotateX(90deg)")
-            $("#crew-img").css("transform", "translateX(50vw) scale(0.4)");
+            $("#crew-img").css("transform", "translateX(80vw) scale(0)");
             setTimeout(() => {
                 var newSrc = i.images.png;
-                var image = document.getElementById("crew-img");
-                image.src = newSrc;
+                $("#crew-img").attr("src", newSrc);
                 loadImage(newSrc, function() {
                     $("#name-last").text(i.name);
                     $("#crew-bio").text(i.bio);
@@ -47,10 +46,3 @@ function loadImage(url, callback) {
     img.onload = callback;
     img.src = url;
 }
-function changeImageSrcAndLoad() {
-    var newSrc = "new_image.jpg";
-    var image = document.getElementById("myImage");
-    image.src = newSrc;
-
-    
-  }

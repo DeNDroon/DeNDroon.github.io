@@ -332,6 +332,9 @@ main .right-sec {
   flex-shrink: 0;
   width: 30rem;
 }
+#technology #technology_name, #technology #technology_title {
+  transition: 0.2s;
+}
 
 @media (max-width: 1430px) {
   #technology > main {

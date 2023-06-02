@@ -391,6 +391,12 @@ main {
 }
 
 @media (max-width: 1430px) {
+    html {
+        font-size: 12px
+    }
+    .page-title {
+        top: 10rem;
+    }
     main {
         padding-inline: 5rem;
     }

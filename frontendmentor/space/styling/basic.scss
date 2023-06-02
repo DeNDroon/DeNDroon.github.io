@@ -220,7 +220,12 @@ main {
 #home {
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-size: cover;
-
+    main {
+        padding-inline: 10rem;
+        padding-bottom: 10rem;
+        justify-content: space-between;
+        align-items: end
+    }
     h5 {
         color: var(--blue);
     }
@@ -659,4 +664,20 @@ main {
                 width: 3rem;height: 3rem;
                 font-size: 1.5rem;
     }}
+}
+
+@media (min-width: 1800px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media (min-width: 2000px) {
+    html {
+        font-size: 22px;
+    }
+}
+@media (min-width: 2400px) {
+    html {
+        font-size: 26px;
+    }
 }

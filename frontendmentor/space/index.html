@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,16 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>Space tourism website</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXZXN6BQNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-DXZXN6BQNC');
+  </script>
 </head>
+
 <body id="home">
 
 
@@ -19,7 +29,11 @@
     <div id="menu-cont">
       <input id="menu-btn" type="checkbox">
       <label for="menu-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
       </label>
     </div>
     <nav>
@@ -37,26 +51,28 @@
     <div class="left-sec">
       <h5 data-aos="zoom-in-right" data-aos-delay="100">So, you want to travel to</h5>
       <h1 data-aos="zoom-in-right" data-aos-delay="200">Space</h1>
-      <p data-aos="zoom-in-right" data-aos-delay="300" class="sub-h1">Let’s face it; if you want to go to space, you might as well genuinely go to 
-        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      <p data-aos="zoom-in-right" data-aos-delay="300" class="sub-h1">Let’s face it; if you want to go to space, you
+        might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and relax
         because we’ll give you a truly out of this world experience!</p>
-      </div>
-      <div data-aos="flip-up" data-aos-delay="300"  class="right-sec">
-        <a class="main-btn" type='button' href="./destination.html">Explore</a>
-      </div>
+    </div>
+    <div data-aos="flip-up" data-aos-delay="300" class="right-sec">
+      <a class="main-btn" type='button' href="./destination.html">Explore</a>
+    </div>
   </main>
 
 
   <script>
     AOS.init();
-    $(".main-btn").on("click", function() {
-        event.preventDefault(); // Prevents the default navigation behavior
+    $(".main-btn").on("click", function () {
+      event.preventDefault(); // Prevents the default navigation behavior
 
-        setTimeout(function() {
-          window.location.href = "./destination.html"; // Navigates to the specified URL after the delay
-        }, 200);
-      })
+      setTimeout(function () {
+        window.location.href = "./destination.html"; // Navigates to the specified URL after the delay
+      }, 200);
+    })
   </script>
   <script src="./menu.js"></script>
 </body>
+
 </html>

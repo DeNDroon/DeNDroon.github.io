@@ -310,6 +310,11 @@ section:not(:first-of-type) {
     }
 }
 
+#space {
+    background: url(./assets/space.png);
+    background-size: cover;
+}
+
 #financial {
     background: url(./assets/financial.png);
     background-size: cover;

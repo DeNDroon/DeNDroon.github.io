@@ -50,6 +50,13 @@
 
   <script>
     AOS.init();
+    $(".main-btn").on("click", function() {
+        event.preventDefault(); // Prevents the default navigation behavior
+
+        setTimeout(function() {
+          window.location.href = "./destination.html"; // Navigates to the specified URL after the delay
+        }, 200);
+      })
   </script>
   <script src="./menu.js"></script>
 </body>

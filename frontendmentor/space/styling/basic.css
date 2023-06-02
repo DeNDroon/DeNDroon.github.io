@@ -106,10 +106,10 @@ label {
   font-size: 2rem;
   border-radius: 50%;
   text-transform: uppercase;
-  transition: box-shadow 0.2s;
-  border: none;
   background-color: var(--white);
   color: var(--black);
+  outline: none;
+  transition: box-shadow 0.2s;
 }
 .main-btn:hover {
   box-shadow: 0 0 0 5.5rem hsla(0, 0%, 59%, 0.5);
@@ -553,6 +553,7 @@ main .right-sec {
   }
   #home > main {
     gap: 5rem;
+    padding-bottom: 5rem;
   }
   #technology main {
     grid-template-rows: min-content min-content min-content;

@@ -66,6 +66,7 @@ input,
 label {
     cursor: pointer;
 }
+
 #menu-cont {
     display: none;
 }
@@ -112,6 +113,7 @@ label {
     color: var(--black);
     outline: none;
     transition: box-shadow 0.2s;
+
     &:hover {
         box-shadow: 0 0 0 5.5rem hsla(0, 0%, 59%, 0.5);
     }
@@ -119,7 +121,10 @@ label {
 
 header {
     position: absolute;
-    top: 0; left: 0; right: 0;;
+    top: 0;
+    left: 0;
+    right: 0;
+    ;
     margin-top: 2.5rem;
     margin-left: 3.45rem;
     z-index: 9;
@@ -181,6 +186,7 @@ main {
     box-sizing: border-box;
     padding-inline: 10rem;
     height: 100svh;
+
     .left-sec {
         width: min-content;
         display: flex;
@@ -220,12 +226,14 @@ main {
 #home {
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-size: cover;
+
     main {
         padding-inline: 10rem;
         padding-bottom: 10rem;
         justify-content: space-between;
         align-items: end
     }
+
     h5 {
         color: var(--blue);
     }
@@ -335,6 +343,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
         .for_radio {
             width: 5rem;
             height: 5rem;
@@ -366,27 +375,31 @@ main {
         place-items: center;
         gap: 5rem;
         padding-top: 12rem;
+
         .left-sec {
             flex-shrink: 0;
             width: 30rem;
         }
     }
-    #technology_name, #technology_title {
+
+    #technology_name,
+    #technology_title {
         transition: 0.2s;
     }
 }
 
 @media (max-width: 1430px) {
-    #technology > main {
+    #technology>main {
         padding-left: 5rem;
     }
 }
 
 @media (max-width: 1320px) {
-    #technology > main {
+    #technology>main {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+
         .radio-cont {
             flex-direction: row;
             grid-row: 2 / 3
@@ -404,11 +417,11 @@ main {
     }
 
     #home {
-    & > main {
-        padding-top: 6.625rem;
-        padding-inline: 5rem;
+        &>main {
+            padding-top: 8rem;
+            padding-inline: 5rem;
+        }
     }
-}
 
     nav {
         &>.nav-txt {
@@ -421,38 +434,46 @@ main {
     html {
         font-size: 12px;
     }
+
     .page-title {
         left: 2.375rem;
         top: 8.5rem;
     }
+
     #dest {
         main {
             place-items: center;
             grid-template-columns: 1fr;
             row-gap: 2rem;
+
             img {
                 width: 18.75rem;
                 height: 18.75rem;
             }
         }
+
         .right-sec {
             grid-row: 2 / 3;
             grid-column: 1 / 2;
             place-items: center;
         }
+
         #description {
             text-align: center;
         }
+
         #dist-trav-info {
             border-top: 1px solid white;
             place-items: center;
             padding-top: 1.75rem;
             row-gap: 0.75rem;
+
             .sub-h1 {
                 color: var(--white);
             }
         }
     }
+
     #crew {
         main {
             display: flex;
@@ -460,10 +481,12 @@ main {
             justify-content: space-between;
             align-items: center;
             padding-inline: 9.688rem;
+
             img {
                 width: auto;
                 max-height: 60%;
             }
+
             .nav-txt {
                 input {
                     width: 1.25rem !important;
@@ -471,37 +494,45 @@ main {
                 }
             }
         }
+
         .left-sec {
             align-items: center;
             width: 100%;
             gap: 0.75rem;
-            #name-last, #crew-bio {
+
+            #name-last,
+            #crew-bio {
                 margin-bottom: 0.75rem;
                 text-align: center;
             }
+
             #crew-bio {
                 line-height: 2.5rem;
             }
+
             #position {
                 text-align: center;
             }
         }
     }
-    
+
 }
 
 @media (max-width: 1050px) {
     b {
         display: none;
     }
+
     header {
         margin-top: 0;
+
         nav {
             padding-inline: 3rem;
-    
+
             &>.nav-txt {
                 margin-right: 0;
                 gap: 0;
+
                 li {
                     margin-left: 0;
                 }
@@ -511,27 +542,16 @@ main {
 
     #home {
         background-image: url(../assets/home/background-home-tablet.jpg);
-        main {
-        flex-direction: column;
-        align-items: center;
-        gap: 9.75rem;
-            p {
-                text-align: center;
-            }
-        .left-sec,
-        .right-sec {
-            width: auto;
-            align-items: center;
-            justify-content: center;
-        }
     }
-}
+
     #crew {
         background-image: url(../assets/crew/background-crew-tablet.jpg);
     }
+
     #destination {
         background-image: url(../assets/destination/background-destination-tablet.jpg);
     }
+
     #technology {
         background-image: url(../assets/technology/background-technology-tablet.jpg);
     }
@@ -544,25 +564,51 @@ main {
             grid-template-rows: 1fr 5rem 1fr;
             padding-left: 0;
             place-items: center;
-            & > * {
+
+            &>* {
                 grid-column: 1 / 2;
             }
+
             img {
                 grid-row: 1 / 2;
                 width: 100%;
             }
+
             .left-sec {
                 grid-row: 3 / 4;
                 width: auto;
                 align-items: center;
                 padding-inline: 10rem;
                 text-align: center;
-            }   
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #home {
+        main {
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 5rem;
+
+            p {
+                text-align: center;
+            }
+
+            .left-sec,
+            .right-sec {
+                width: auto;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
 
 @media (max-width: 750px) {
+
     #technology {
         main {
             .left-sec {
@@ -576,27 +622,35 @@ main {
     main:not(.io) {
         padding-inline: 1rem !important;
     }
+
     #home {
         background-image: url(../assets/home/background-home-mobile.jpg);
     }
+
     #destination {
         background-image: url(../assets/destination/background-destination-mobile.jpg);
+
         main {
             img {
-                height: 14rem; width: 14rem;
+                height: 14rem;
+                width: 14rem;
             }
         }
     }
+
     #crew {
         background-image: url(../assets/crew/background-crew-mobile.jpg);
+
         main {
             flex-direction: column-reverse;
+
             img {
                 border-bottom: 1px solid var(--white);
                 max-height: 40%;
             }
         }
     }
+
     #technology {
         background-image: url(../assets/technology/background-technology-mobile.jpg);
 
@@ -607,28 +661,35 @@ main {
     h3 {
         font-size: 2.5rem;
     }
+
     h4 {
         font-size: 1.5rem;
     }
+
     #menu-cont {
         position: absolute;
         right: 3rem;
         top: 1rem;
         display: block;
         z-index: 11;
+
         input {
             position: absolute;
             visibility: hidden;
         }
     }
+
     header {
         margin-top: 2rem;
+
         b {
             display: inline;
         }
+
         nav {
             position: fixed;
-            top: 0; right: 0;
+            top: 0;
+            right: 0;
             height: 100vh;
 
 
@@ -639,31 +700,39 @@ main {
             transition: transform 0.2s;
             transform: translate(100%);
         }
+
         .nav-txt {
             flex-direction: column;
+
             li {
                 margin: 0;
             }
+
             a {
                 padding-left: 4rem;
                 padding-right: 7.917rem;
             }
-        }   
+        }
     }
-    #home > main {
+
+    #home>main {
         gap: 5rem;
-            padding-bottom: 5rem;
+        padding-bottom: 5rem;
     }
+
     #technology {
         main {
             grid-template-rows: min-content min-content min-content;
             align-content: space-evenly;
             gap: 2rem;
         }
+
         .radio-cont .for_radio {
-                width: 3rem;height: 3rem;
-                font-size: 1.5rem;
-    }}
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+        }
+    }
 }
 
 @media (min-width: 2000px) {
@@ -671,11 +740,13 @@ main {
         font-size: 20px;
     }
 }
+
 @media (min-width: 2400px) {
     html {
         font-size: 22px;
     }
 }
+
 @media (min-width: 2800px) {
     html {
         font-size: 26px;

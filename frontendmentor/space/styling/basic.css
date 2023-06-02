@@ -596,17 +596,17 @@ main .right-sec {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 2000px) {
   html {
     font-size: 20px;
   }
 }
-@media (min-width: 2000px) {
+@media (min-width: 2400px) {
   html {
     font-size: 22px;
   }
 }
-@media (min-width: 2400px) {
+@media (min-width: 2800px) {
   html {
     font-size: 26px;
   }

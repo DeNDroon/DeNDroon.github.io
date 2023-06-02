@@ -28,12 +28,29 @@ function changeOver(crewId) {
             $("#name-last, #crew-bio, #position").css("transform", "rotateX(90deg)")
             $("#crew-img").css("transform", "translateX(50vw) scale(0.4)");
             setTimeout(() => {
-                $("#crew-img").attr("src", i.images.png);
-                $("#name-last").text(i.name);
-                $("#crew-bio").text(i.bio);
-                $("#position").text(i.role);
-                $("#crew-img, #name-last, #crew-bio, #position").css("transform", "none")
-            }, 100)
+                var newSrc = i.images.png;
+                var image = document.getElementById("crew-img");
+                image.src = newSrc;
+                loadImage(newSrc, function() {
+                    $("#name-last").text(i.name);
+                    $("#crew-bio").text(i.bio);
+                    $("#position").text(i.role);
+                    $("#crew-img, #name-last, #crew-bio, #position").css("transform", "none")
+                });
+            }, 300)
         }
       });
 }
+
+function loadImage(url, callback) {
+    var img = new Image();
+    img.onload = callback;
+    img.src = url;
+}
+function changeImageSrcAndLoad() {
+    var newSrc = "new_image.jpg";
+    var image = document.getElementById("myImage");
+    image.src = newSrc;
+
+    
+  }

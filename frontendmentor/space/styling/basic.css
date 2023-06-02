@@ -173,7 +173,7 @@ main {
   width: 100%;
   box-sizing: border-box;
   padding-inline: 10rem;
-  height: 100dvh;
+  height: 100svh;
 }
 main .left-sec {
   width: -moz-min-content;
@@ -285,13 +285,12 @@ main .right-sec {
   grid-row: 1/2;
 }
 #crew #crew-img {
-  transition: 0.2s;
+  transition: 0.3s;
 }
-#crew #crew-img,
 #crew #name-last,
 #crew #crew-bio,
 #crew #position {
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 #technology {

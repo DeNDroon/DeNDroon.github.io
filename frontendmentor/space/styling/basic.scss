@@ -180,7 +180,7 @@ main {
     width: 100%;
     box-sizing: border-box;
     padding-inline: 10rem;
-    height: 100dvh;
+    height: 100svh;
     .left-sec {
         width: min-content;
         display: flex;
@@ -312,14 +312,13 @@ main {
     }
 
     #crew-img {
-        transition: 0.2s;
+        transition: 0.3s;
     }
 
-    #crew-img,
     #name-last,
     #crew-bio,
     #position {
-        transition: 0.2s;
+        transition: 0.3s;
     }
 }
 

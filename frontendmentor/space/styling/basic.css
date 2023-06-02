@@ -556,6 +556,7 @@ main .right-sec {
   }
   #technology main {
     grid-template-rows: min-content min-content min-content;
+    align-content: space-evenly;
     gap: 2rem;
   }
   #technology .radio-cont .for_radio {

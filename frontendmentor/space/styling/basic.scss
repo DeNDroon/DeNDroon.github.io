@@ -633,6 +633,7 @@ main {
         
         main {
             grid-template-rows: min-content min-content min-content;
+            align-content: space-evenly;
             gap: 2rem;
         }
         .radio-cont .for_radio {

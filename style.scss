@@ -259,8 +259,7 @@ section:not(:first-of-type) {
 
 #skills-sec .grid-container {
     place-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
 }
 
 .skill {
@@ -268,12 +267,16 @@ section:not(:first-of-type) {
     --y: 0px;
     transition: --x 0.2s, --y 0.2s;
     display: grid;
-    place-items: center;
+    justify-items: center;
+    align-content: center;
     background: radial-gradient(200px at calc(var(--x) + 100px) calc(var(--y) + 100px), rgba(255, 255, 255, 0.5), transparent),
                 var(--warning);
     border-radius: 50%;
-    height: 12rem; aspect-ratio: 1;
-
+    height: 5rem; aspect-ratio: 1;
+    svg {
+        width: 50%;
+        aspect-ratio: 1;
+    }
 }
 
 
@@ -415,6 +418,9 @@ background-size: cover;
 }
 
 @media (max-width: 1250px) {
+    #skills-sec .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
     #contact {
         
         form {

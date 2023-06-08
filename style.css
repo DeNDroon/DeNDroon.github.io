@@ -332,6 +332,11 @@ section:not(:first-of-type) h1 {
   padding-top: 2rem;
 }
 
+#space {
+  background: url(./assets/space.png);
+  background-size: cover;
+}
+
 #financial {
   background: url(./assets/financial.png);
   background-size: cover;
@@ -397,6 +402,7 @@ section:not(:first-of-type) h1 {
   color: var(--white);
   font-size: 1.5rem;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 #contact form .left button:hover {
   background-color: var(--black);

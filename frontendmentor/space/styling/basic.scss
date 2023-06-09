@@ -241,7 +241,8 @@ main {
 
 #dest {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
-    background-size: cover;
+    background-size: calc(100% + 3rem);
+    animation: backAnim 25s infinite ease-in-out;
 
     main {
         display: grid;
@@ -267,6 +268,10 @@ main {
         color: var(--blue);
     }
 
+    #planet_image {
+        animation: rotation 40s infinite forwards;
+    }
+
     #planet_name,
     #distance,
     #description,
@@ -275,6 +280,31 @@ main {
         transition: filter 0.2s;
     }
 
+}
+
+@keyframes backAnim {
+    from, to {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: -1.5rem 0;
+    }
+    50% {
+        background-position: -1.5rem -1.5rem;
+    }
+    75% {
+        background-position: 0 -1.5rem;
+
+    }
+}
+
+@keyframes rotation {
+    from, to {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
 }
 
 #crew {

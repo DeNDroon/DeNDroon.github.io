@@ -206,7 +206,8 @@ main .right-sec {
 
 #home {
   background-image: url(../assets/home/background-home-desktop.jpg);
-  background-size: cover;
+  background-size: calc(100% + 3rem);
+  animation: backAnim 10s infinite ease-in-out;
 }
 #home main {
   padding-inline: 10rem;
@@ -221,7 +222,7 @@ main .right-sec {
 #dest {
   background-image: url(../assets/destination/background-destination-desktop.jpg);
   background-size: calc(100% + 3rem);
-  animation: backAnim 25s infinite ease-in-out;
+  animation: backAnim 10s infinite ease-in-out;
 }
 #dest main {
   display: grid;
@@ -260,13 +261,13 @@ main .right-sec {
     background-position: 0 0;
   }
   25% {
-    background-position: -1.5rem 0;
+    background-position: -1.5rem -0.75;
   }
   50% {
     background-position: -1.5rem -1.5rem;
   }
   75% {
-    background-position: 0 -1.5rem;
+    background-position: -0.75 -1.5rem;
   }
 }
 @keyframes rotation {
@@ -279,7 +280,8 @@ main .right-sec {
 }
 #crew {
   background-image: url(../assets/crew/background-crew-desktop.jpg);
-  background-size: cover;
+  background-size: calc(100% + 3rem);
+  animation: backAnim 10s infinite ease-in-out;
   padding-bottom: 0;
   overflow: hidden;
 }
@@ -329,7 +331,8 @@ main .right-sec {
 
 #technology {
   background-image: url(../assets/technology/background-technology-desktop.jpg);
-  background-size: cover;
+  background-size: calc(100% + 3rem);
+  animation: backAnim 10s infinite ease-in-out;
 }
 #technology .radio-cont {
   display: flex;

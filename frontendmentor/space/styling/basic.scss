@@ -225,15 +225,16 @@ main {
 
 #home {
     background-image: url(../assets/home/background-home-desktop.jpg);
-    background-size: cover;
-
+    background-size: calc(100% + 3rem);
+    animation: backAnim 10s infinite ease-in-out;
+    
     main {
         padding-inline: 10rem;
         padding-bottom: 10rem;
         justify-content: space-between;
         align-items: end
     }
-
+    
     h5 {
         color: var(--blue);
     }
@@ -242,8 +243,8 @@ main {
 #dest {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
     background-size: calc(100% + 3rem);
-    animation: backAnim 25s infinite ease-in-out;
-
+    animation: backAnim 10s infinite ease-in-out;
+    
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -287,13 +288,13 @@ main {
         background-position: 0 0;
     }
     25% {
-        background-position: -1.5rem 0;
+        background-position: -1.5rem -0.75;
     }
     50% {
         background-position: -1.5rem -1.5rem;
     }
     75% {
-        background-position: 0 -1.5rem;
+        background-position: -0.75 -1.5rem;
 
     }
 }
@@ -309,7 +310,8 @@ main {
 
 #crew {
     background-image: url(../assets/crew/background-crew-desktop.jpg);
-    background-size: cover;
+    background-size: calc(100% + 3rem);
+    animation: backAnim 10s infinite ease-in-out;
     padding-bottom: 0;
     overflow: hidden;
 
@@ -369,7 +371,8 @@ main {
 
 #technology {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
-    background-size: cover;
+    background-size: calc(100% + 3rem);
+    animation: backAnim 10s infinite ease-in-out;
 
     .radio-cont {
         display: flex;

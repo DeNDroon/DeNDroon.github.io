@@ -226,7 +226,7 @@ main {
 #home {
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-size: calc(100% + 3rem);
-    animation: backAnim 10s infinite ease-in-out;
+    animation: backAnim 20s infinite ease-in-out;
     
     main {
         padding-inline: 10rem;
@@ -243,7 +243,7 @@ main {
 #dest {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
     background-size: calc(100% + 3rem);
-    animation: backAnim 10s infinite ease-in-out;
+    animation: backAnim 20s infinite ease-in-out;
     
     main {
         display: grid;
@@ -311,7 +311,7 @@ main {
 #crew {
     background-image: url(../assets/crew/background-crew-desktop.jpg);
     background-size: calc(100% + 3rem);
-    animation: backAnim 10s infinite ease-in-out;
+    animation: backAnim 20s infinite ease-in-out;
     padding-bottom: 0;
     overflow: hidden;
 
@@ -372,7 +372,7 @@ main {
 #technology {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
     background-size: calc(100% + 3rem);
-    animation: backAnim 10s infinite ease-in-out;
+    animation: backAnim 20s infinite ease-in-out;
 
     .radio-cont {
         display: flex;
@@ -591,18 +591,22 @@ main {
 
     #home {
         background-image: url(../assets/home/background-home-tablet.jpg);
+        background-size: calc(100% + 3rem);
     }
 
     #crew {
         background-image: url(../assets/crew/background-crew-tablet.jpg);
+        background-size: calc(100% + 3rem);
     }
 
     #dest {
         background-image: url(../assets/destination/background-destination-tablet.jpg);
+        background-size: calc(100% + 3rem);
     }
 
     #technology {
         background-image: url(../assets/technology/background-technology-tablet.jpg);
+        background-size: calc(100% + 3rem);
     }
 }
 
@@ -674,10 +678,12 @@ main {
 
     #home {
         background-image: url(../assets/home/background-home-mobile.jpg);
+        background-size: calc(100% + 3rem);
     }
 
     #dest {
         background-image: url(../assets/destination/background-destination-mobile.jpg);
+        background-size: calc(100% + 3rem);
         main {
             img {
                 height: 14rem;
@@ -688,7 +694,7 @@ main {
 
     #crew {
         background-image: url(../assets/crew/background-crew-mobile.jpg);
-
+        background-size: calc(100% + 3rem);
         main {
             flex-direction: column-reverse;
 
@@ -700,7 +706,7 @@ main {
 
     #technology {
         background-image: url(../assets/technology/background-technology-mobile.jpg);
-
+        background-size: calc(100% + 3rem);
     }
 }
 

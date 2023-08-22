@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 let itemList = {
     132541: {
         name: "Fall Limited Edition Sneakers",

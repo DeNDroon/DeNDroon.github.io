@@ -1,5 +1,3 @@
-import $ from 'jquery'
-
 let itemList = {
     132541: {
         name: "Fall Limited Edition Sneakers",
@@ -82,9 +80,6 @@ let images = {
         }
     }
 }
-
-
-
 
 $('#main-cont input[name="photo-carousel"]').on("click", function () {
     images.placeFull($(this).index(), $(".main-photo"));
